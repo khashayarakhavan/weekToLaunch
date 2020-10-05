@@ -26,7 +26,10 @@ dotenv.config({ path: "./.env.development" });
 // //Database connect -->
 // mongoose.connect(keys.mongoURI, { useUnifiedTopology: true, useNewUrlParser: true }, () => {console.log("successfully connected to MongoDB ATLAS")});
 // // <-- Database connect
+console.log('next is arguments :D');
 
+console.log(arguments);
+console.log("the previous one was arguments :D");
 // data parsing -->
 app.use(bodyParser.json());
 // app.use(compression()); // apply Gzip for optimizing server requests. 
