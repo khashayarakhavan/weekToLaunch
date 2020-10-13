@@ -19,6 +19,7 @@ import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import GlobalStyle from './design/global.styles';
 import GlobalConstants from './design/constants.styles';
+
 import {
   invertTheme, noChange,
 
@@ -27,6 +28,7 @@ import {
 import { ViewportProvider } from './design/viewPort';
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const LandingPage = lazy(() => import('./pages/landingpage/landingpage.component'));
+const Vegeloper = lazy(() => import('./pages/vegeloperPage/vegeloper.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInAndSignUpPage = lazy(() =>
   import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component')
@@ -52,11 +54,11 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
 
   return (
     <ViewportProvider>
-    <ThemeProvider theme={ThemeLight}>
-      <ThemeProvider theme={darkMode ? invertTheme : noChange}>
-        <div>
-          <GlobalConstants />
-          <GlobalStyle darkMode />
+      <ThemeProvider theme={ThemeLight}>
+        <ThemeProvider theme={darkMode ? invertTheme : noChange}>
+          <div>
+            <GlobalConstants />
+            <GlobalStyle darkMode />
             <ThemeProvider theme={noChange}>
               <Header darkMode />
             </ThemeProvider>
@@ -71,6 +73,7 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
                   <Route path="/articles/:slug" component={SingleArticlePage} />
                   <Route exact path="/hello" component={HomePage} />
                   <Route exact path="/landing" component={LandingPage} />
+                  <Route exact path="/vegeloper" component={Vegeloper} />
                   <Route path="/shop" component={ShopPage} />
                   <Route path="/jquery" component={SetTimeOut} />
                   <Route exact path="/checkout" component={CheckoutPage} />
