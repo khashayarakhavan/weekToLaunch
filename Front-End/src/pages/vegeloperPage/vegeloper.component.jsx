@@ -13,12 +13,10 @@ import HeroHeader from '../../components/complex/hero-header/heroHeader.componen
 
 const LandingPage = () => (
   <div>
-    
     <HeroHeader />
     <SectionCards />
     <SectionFeatures />
     <SectionFeature />
-    
   </div>
 );
 
