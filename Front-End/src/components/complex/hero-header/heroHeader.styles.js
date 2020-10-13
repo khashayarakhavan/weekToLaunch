@@ -1,5 +1,5 @@
 //Libraries
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 //Mixins
 import mixins from '../../../design/mixins.styles';
 //Designs
@@ -9,6 +9,11 @@ import sizes from '../../../design/sizes';
 import shadows from '../../../design/shadows.styles';
 import events from '../../../design/events.styles';
 import {background_change} from '../../../design/motions.styles';
+
+import Lottie from "react-lottie";
+//Assets
+import {AnimationCreateRobot} from '../../../design/animations.styles';
+
 
 
 //Code
@@ -23,16 +28,26 @@ export const HeroHeaderContainer = styled.header`
 `;
 
 export const HeroHeaderLeft = styled.div`
-  flex: 0 0 50%;
-  background-color: lightblue;
-  padding-top: 100px;
-  padding-left: 50px;
+  flex: 0 0 30%;
+  ${'' /* background-color: lightblue; */}
+  padding-top: 20rem;
+  padding-left: 10rem;
 `;
 export const HeroHeaderRight = styled.div`
-  flex: 0 0 50%;
+  ${'' /* display: fle; */}
+  ${'' /* grid-template-columns: auto auto; */}
+  flex: 1 0 10%;
+  ${'' /* background-color: lightgreen; */}
+  padding-top: 10rem;
+  ${"" /* padding-right: 5rem; */}
+`;
+export const HeroHeaderLottie = styled(Lottie)`
+
+
+  
   background-color: lightgreen;
-  padding-top: 100px;
-  padding-right: 50px;
+ 
+  ${"" /* padding-right: 5rem; */}
 `;
 
 export const TEXT = styled.span`

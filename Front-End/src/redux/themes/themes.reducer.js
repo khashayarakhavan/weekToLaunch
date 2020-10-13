@@ -2,6 +2,8 @@ import ThemesActionTypes from './themes.types';
 
 const INITIAL_STATE = {
   darkMode: false,
+  lottieHeight: 100,
+  lottieWidth: 100,
 };
 
 const themesReducer = (state = INITIAL_STATE, action) => {

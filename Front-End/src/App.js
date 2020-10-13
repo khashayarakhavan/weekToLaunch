@@ -24,6 +24,7 @@ import {
 
   ThemeLight
 } from "./design/themes";
+import { ViewportProvider } from './design/viewPort';
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const LandingPage = lazy(() => import('./pages/landingpage/landingpage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
@@ -50,46 +51,52 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
   }, [checkUserSession]);
 
   return (
+    <ViewportProvider>
     <ThemeProvider theme={ThemeLight}>
       <ThemeProvider theme={darkMode ? invertTheme : noChange}>
         <div>
           <GlobalConstants />
           <GlobalStyle darkMode />
-          <ThemeProvider theme={noChange}>
-            <Header darkMode />
-          </ThemeProvider>
-          <UpButton />
-          {/* <SectionFeatures /> */}
-          {/* <HeroHeader />  */}
-          <MenuNavigation />
-          <Switch>
-            <ErrorBoundary>
-              <Suspense fallback={<Spinner />}>
-                <Route exact path="/" component={HeroHeader} />
-                <Route path="/articles/:slug" component={SingleArticlePage} />
-                <Route exact path="/hello" component={HomePage} />
-                <Route exact path="/landing" component={LandingPage} />
-                <Route path="/shop" component={ShopPage} />
-                <Route path="/jquery" component={SetTimeOut} />
-                <Route exact path="/checkout" component={CheckoutPage} />
-                <Route
-                  exact
-                  path="/firebaseDBUpload"
-                  component={FirebasePage}
-                />
-                <Route
-                  exact
-                  path="/signin"
-                  render={() =>
-                    currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
-                  }
-                />
-              </Suspense>
-            </ErrorBoundary>
-          </Switch>
-        </div>
+            <ThemeProvider theme={noChange}>
+              <Header darkMode />
+            </ThemeProvider>
+            <UpButton />
+            {/* <SectionFeatures /> */}
+            {/* <HeroHeader />  */}
+            <MenuNavigation />
+            <Switch>
+              <ErrorBoundary>
+                <Suspense fallback={<Spinner />}>
+                  <Route exact path="/" component={HeroHeader} />
+                  <Route path="/articles/:slug" component={SingleArticlePage} />
+                  <Route exact path="/hello" component={HomePage} />
+                  <Route exact path="/landing" component={LandingPage} />
+                  <Route path="/shop" component={ShopPage} />
+                  <Route path="/jquery" component={SetTimeOut} />
+                  <Route exact path="/checkout" component={CheckoutPage} />
+                  <Route
+                    exact
+                    path="/firebaseDBUpload"
+                    component={FirebasePage}
+                  />
+                  <Route
+                    exact
+                    path="/signin"
+                    render={() =>
+                      currentUser ? (
+                        <Redirect to="/" />
+                      ) : (
+                        <SignInAndSignUpPage />
+                      )
+                    }
+                  />
+                </Suspense>
+              </ErrorBoundary>
+            </Switch>
+          </div>
+        </ThemeProvider>
       </ThemeProvider>
-    </ThemeProvider>
+    </ViewportProvider>
   );
 };
 
