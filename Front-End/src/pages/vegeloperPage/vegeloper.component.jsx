@@ -7,6 +7,7 @@ import SectionFeatures from "../../components/complex/section/feature/sectionFea
 import SectionFooter from "../../components/complex/section/landing.footer/landing.footer.component";
 import SectionHome from "../../components/complex/section/landing.home/landing.home.component";
 import SectionCards from "../../components/Sections/Cards/Cards";
+import SectionSkills from "../../components/Sections/skills/skills.component";
 import SectionStoriesPicture from "../../components/complex/section/stories-picture/stories-picture.component";
 import { LandingPageContainer } from "./vegeloper.styles";
 import HeroHeader from '../../components/complex/hero-header/heroHeader.component';
@@ -14,6 +15,7 @@ import HeroHeader from '../../components/complex/hero-header/heroHeader.componen
 const LandingPage = () => (
   <div>
     <HeroHeader />
+    <SectionSkills />
     <SectionCards />
     <SectionFeatures />
     <SectionFeature />
