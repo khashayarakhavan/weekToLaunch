@@ -26,7 +26,7 @@ export const InheritedBody = styled.div`
   font-size: 14px;
   line-height: 1.42857143;
   color: #545454;
-  background-color: #fff;
+  ${'' /* background-color: red ; */}
   -webkit-font-smoothing: antialiased;
       margin: 0;
 `;
@@ -71,6 +71,7 @@ export const SkillsContainer = styled.div`
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  ${'' /* background-color: red; */}
 
   @media (min-width: 768px) {
     max-width: 750px;
@@ -123,21 +124,25 @@ export const ColMd12 = styled.div`
   padding-left: 15px;
   padding-right: 15px;
 
-  @media (min-width: 992px) {
-    width: 100%;
-  }
+  
 
 `;
 export const ColMd4 = styled.div`
+  ${"" /* margin: 10rem auto; */}
   position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  display: flex;
+  ${"" /* flex-direction: column; */}
+  ${"" /* align-content: center; */}
+  align-items: center;
 
-  @media (min-width: 992px) {
+  min-height: 1px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  ${"" /* @media (min-width: 992px) {
     width: 33.33333333%;
     margin-left: 8.33333333%;
-  }
+  } */}
 `;
 export const ColMd6 = styled.div`
   position: relative;
@@ -162,10 +167,8 @@ export const DesignRow = styled(Row)`
 
 export const HomeDesign = styled.div`
   margin: 0 auto;
-  ${'' /* background-image: url(../../../assets/icon/line-bg.png); */}
-  background-image: url("../../../assets/icon/line-bg.png");
-  
-
+  ${"" /* background-image: url(../../../assets/icon/line-bg.png); */}
+  background-image: url("https://res.cloudinary.com/khashi-dev/image/upload/v1603465770/line-bg_scoevc.png");
   background-position: center center;
   background-repeat: repeat-x;
   position: relative;
@@ -184,19 +187,28 @@ export const Image2 = styled(Image)`
   max-width: 180px;
 `;
 export const BubbleRight = styled.div`
-  background: #f3f2f1;
-  width: 77px;
-  height: 77px;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
+  ${shadows.mixins.neumorphic.button};
+  ${"" /* background: #f3f2f1; */}
+  width: 97px;
+  height: 97px;
   border-radius: 60px;
-  position: absolute;
-  overflow: hidden;
-  top: 2.6em;
-  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ${"" /* align-self: center;
+  justify-self: center; */}
+
+  ${"" /* -webkit-border-radius: 60px;
+  -moz-border-radius: 60px; */}
+  ${"" /* position: absolute;
+  overflow: hidden; */}
+  ${"" /* top: 2.6em;
+  right: 0; */}
 `;
 export const BubbleLeft = styled.div`
-  background: #f3f2f1;
+  ${shadows.mixins.neumorphic.original};
+  ${'' /* background: #f3f2f1; */}
   width: 77px;
   height: 77px;
   -webkit-border-radius: 60px;
@@ -206,6 +218,23 @@ export const BubbleLeft = styled.div`
   overflow: hidden;
   top: 2.6em;
   left: 0;
+`;
+export const BubbleButton = styled.div`
+  ${shadows.mixins.neumorphic.invert};
+  ${"" /* background: rgba(#f3a2f1, 0.2); */}
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  ${"" /* position: absolute; */}
+  overflow: hidden;
+  position: absolute;
+  left: 30rem;
+  ${"" /* top: 0em;
+  left:10rem; */}
 `;
 
 
@@ -376,7 +405,7 @@ export const MdPush7 = styled(ColMd4)`
   }
 `;
 export const HomeDev = styled.div`
-  margin: 0 auto;
+  ${"" /* margin: 0 auto;
   background-image: url(../../../assets/icon/line-bg.png);
   background-position: center center;
   background-repeat: repeat-x;
@@ -384,7 +413,14 @@ export const HomeDev = styled.div`
   min-height: 155px;
   float: right;
   width: 100%;
-  max-width: 180px;
+  max-width: 180px; */}
+  margin: 0 auto;
+  ${"" /* background-image: url(../../../assets/icon/line-bg.png); */}
+  background-image: url("https://res.cloudinary.com/khashi-dev/image/upload/v1603465770/line-bg_scoevc.png");
+
+  background-position: center center;
+  background-repeat: repeat-x;
+  position: relative;
 `;
 
 

@@ -8,23 +8,35 @@ const shadows = {
   mixins: {
     neumorphic: {
       onActive_orange: (...args) => css`
-        box-shadow:  ${({ variant }) =>
+        box-shadow: ${({ variant }) =>
           variant === "active"
             ? shadows.neumorphic.orange
             : shadows.neumorphic.norm};
-        `,
+      `,
+      orange: (...args) => css`
+        box-shadow: ${shadows.neumorphic.orange};
+      `,
       norm: (...args) => css`
         box-shadow: ${shadows.neumorphic.norm};
-        `,
+      `,
       light: (...args) => css`
         box-shadow: ${shadows.neumorphic.light};
-        `,
+      `,
       red: (...args) => css`
         box-shadow: ${shadows.neumorphic.red};
-        `,
+      `,
       original: (...args) => css`
         box-shadow: ${shadows.neumorphic.original};
-        `,
+      `,
+      invert: (...args) => css`
+        box-shadow: ${shadows.neumorphic.invert};
+      `,
+      extra: (...args) => css`
+        box-shadow: ${shadows.neumorphic.extra};
+      `,
+      button: (...args) => css`
+        box-shadow: ${shadows.neumorphic.button};
+      `,
     },
   },
   neumorphic: {
@@ -32,16 +44,25 @@ const shadows = {
     lighter: " rgba(125, 126, 127, 0.4)",
     light: `0px 0px 15px 2px ${colors.shadows.light},
           -1px -1px 12px 2px ${colors.highlights.lighter}`,
-    dark: "4px 4px 15px 2px ${colors.greyDark}",
+    dark: `4px 4px 15px 2px ${colors.greyDark}`,
     norm: `4px 4px 15px 2px ${colors.shadows.lighter},
           -3px -3px 12px 2px ${colors.highlights.lightest}`,
     orange: `4px 4px 15px 2px ${colors.shadows.lighter},
           -3px -3px 12px 2px ${colors.highlights.lightest},
-          inset 0px -4px 0px 0px ${colors.accent}`,
+          inset -40px -40px 0px 0px ${colors.accent}`,
+    orange2: `4px 4px 15px 2px ${colors.shadows.lighter},
+          -3px -3px 12px 2px ${colors.highlights.lightest},
+           0px 4px 20px 5px ${colors.accent}`,
     red: `4px 4px 15px 2px ${colors.redLight},
           -3px -3px 12px 2px ${colors.redDark}`,
     original: `4px 4px 15px 2px  ${colors.shadows.light},
            -3px -3px 12px 2px ${colors.highlights.lightest}`,
+    extra: `4px 4px 10px 0px  ${colors.shadows.dark},
+           -4px -4px 10px 0px ${colors.highlights.lightest}`,
+    invert: `4px 4px 10px 0px inset  ${colors.shadows.lighter},
+           -3px -3px 10px 2px inset ${colors.highlights.lightest}`,
+    button: `4px 4px 15px 2px   ${colors.shadows.lighter},
+           -3px -3px 12px 2px  white`,
   },
 
   highlights: {

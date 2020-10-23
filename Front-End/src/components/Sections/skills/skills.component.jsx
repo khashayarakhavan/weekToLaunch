@@ -41,6 +41,7 @@ import {
   BubbleLeft,
   DevIconVert,
   ColMd6_Pull3,
+  BubbleButton,
 } from "./skills.styles";
 
 
@@ -56,28 +57,31 @@ export const Header = (props) => {
             <ColMd12>
               <Article>
                 <header class="">
-                  <h2>What I can do.</h2>
+                  <h2>I help people ...</h2>
+                  <span>...</span>
                 </header>
 
                 <DesignRow>
                   <ColMd4>
-                    <HomeDesign>
+                    
                       <Figure>
                         <Image src={meSVG} />
                       </Figure>
-                      <BubbleRight>
-                        <DesignIconVert></DesignIconVert>
-                      </BubbleRight>
-                    </HomeDesign>
+                      <BubbleButton>
+                        <BubbleRight>
+                          <DesignIconVert />
+                        </BubbleRight>
+                      </BubbleButton>
+                    
                   </ColMd4>
                   {/* <!-- 4 --> */}
                   <ColMd6>
                     <Deets>
-                      <h3>Design what you want.</h3>
+                      <h3>create blazing fast website.</h3>
                       <p>
-                        I like to keep it simple. My goals are to focus on
-                        typography, content and conveying the message that you
-                        want to send.
+                        My ultimate goal is to perfectly match your real needs
+                        to the best solutions available. So I always make sure
+                        to follow the tech community's best practices.
                       </p>
                     </Deets>
                   </ColMd6>
@@ -89,19 +93,19 @@ export const Header = (props) => {
                       <Figure>
                         <Image2 src={meDev} />
                       </Figure>
+
                       <BubbleLeft>
-                        <DevIconVert></DevIconVert>
+                        <DevIconVert />
                       </BubbleLeft>
                     </HomeDev>
                   </MdPush7>
                   {/* <!-- col --> */}
                   <ColMd6_Pull3>
                     <Deets>
-                      <h3>Develop what you need.</h3>
+                      <h3>inifinitely scale your website</h3>
                       <p>
-                        I'm a developer, so I know how to create your website to
-                        run across devices using the latest technologies
-                        available.
+                        I tend to code in the cloud to make sure your website
+                        can infinitely scale as your business grows.
                       </p>
                     </Deets>
                   </ColMd6_Pull3>
