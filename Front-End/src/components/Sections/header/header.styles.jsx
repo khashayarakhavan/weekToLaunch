@@ -155,6 +155,7 @@ export const MenuButton = styled(Link)`
 
 export const MenuButtonOrange = styled(MenuButton)`
   ${shadows.mixins.neumorphic.onActive_orange};
+  background-color: #fff !important;
 `;
 
 MenuButton.displayName = "OptionLink";
