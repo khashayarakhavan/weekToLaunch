@@ -11,15 +11,17 @@ import SectionSkills from "../../components/Sections/skills/skills.component";
 import SectionStoriesPicture from "../../components/complex/section/stories-picture/stories-picture.component";
 import { LandingPageContainer } from "./vegeloper.styles";
 import HeroHeader from '../../components/complex/hero-header/heroHeader.component';
+//Design
+import {VegeloperContainer} from './vegeloper.styles';
 
 const LandingPage = () => (
-  <div>
+  <VegeloperContainer>
     <HeroHeader />
     <SectionSkills />
     <SectionCards />
     <SectionFeatures />
     <SectionFeature />
-  </div>
+  </VegeloperContainer>
 );
 
 export default LandingPage;

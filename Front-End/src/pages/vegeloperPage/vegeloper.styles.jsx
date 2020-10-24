@@ -17,3 +17,15 @@ export const LandingPageContainer = styled.div`
            ) [center-end] minmax(6rem, 1fr) [full-end];
          
        `;
+
+export const VegeloperContainer = styled.div`
+  background: linear-gradient(
+    -180deg,
+    rgb(242, 243, 247),
+    rgb(234, 241, 249),
+    rgb(234, 241, 249),
+    rgb(242, 143, 247),
+    rgb(242, 243, 147),
+    rgb(242, 143, 147)
+  );
+`;

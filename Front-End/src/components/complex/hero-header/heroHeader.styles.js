@@ -21,7 +21,7 @@ export const HeroHeaderContainer = styled.header`
   
   display: flex;
   height: 90vh;
-  background: linear-gradient(-180deg, rgb(242, 243, 247), rgb(234, 241, 249));
+  ${'' /* background: linear-gradient(-180deg, rgb(242, 243, 247), rgb(234, 241, 249)); */}
   ${"" /* grid-template-columns: 1fr 1fr; */}
   ${"" /* max-width: 100%; */}
   ${"" /* padding: ${sizes.padding.medium}; */}

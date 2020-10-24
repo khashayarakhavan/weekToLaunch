@@ -50,74 +50,75 @@ export const Header = (props) => {
   const { hidden } = props;
 
   return (
-    <InheritedBody>
-      <WhatIDo>
-        <SkillsContainer>
-          <Row>
-            <ColMd12>
-              <Article>
-                <header class="">
-                  <h2>I help people ...</h2>
-                  <span>...</span>
-                </header>
+    <WhatIDo>
+      <SkillsContainer>
+        <Row>
+          <ColMd12>
+            <Article>
+              <header class="">
+                <h2>I help people ...</h2>
+                <span>...</span>
+              </header>
 
-                <DesignRow>
-                  <ColMd4>
-                    
-                      <Figure>
+              <DesignRow>
+                <ColMd4>
+                  {/* <Figure>
                         <Image src={meSVG} />
-                      </Figure>
-                      <BubbleButton>
-                        <BubbleRight>
-                          <DesignIconVert />
-                        </BubbleRight>
-                      </BubbleButton>
-                    
-                  </ColMd4>
-                  {/* <!-- 4 --> */}
-                  <ColMd6>
-                    <Deets>
-                      <h3>create blazing fast website.</h3>
-                      <p>
-                        My ultimate goal is to perfectly match your real needs
-                        to the best solutions available. So I always make sure
-                        to follow the tech community's best practices.
-                      </p>
-                    </Deets>
-                  </ColMd6>
-                </DesignRow>
-                {/* <!-- /row --> */}
-                <Develop>
-                  <MdPush7>
-                    <HomeDev>
-                      <Figure>
-                        <Image2 src={meDev} />
-                      </Figure>
+                      </Figure> */}
+                  {/* <BubbleButton>
+                    <BubbleRight>
+                      <DesignIconVert />
+                    </BubbleRight>
+                  </BubbleButton> */}
+                </ColMd4>
+                {/* <!-- 4 --> */}
+                <ColMd6>
+                  <BubbleButton>
+                    <BubbleRight>
+                      <DesignIconVert />
+                    </BubbleRight>
+                  </BubbleButton>
+                  <Deets>
+                    <h3>Create blazing fast websites.</h3>
+                    <p>
+                      My ultimate goal is to perfectly match your real needs to
+                      the best solutions available. So I always make sure to
+                      follow the tech community's best practices.
+                    </p>
+                  </Deets>
+                </ColMd6>
+              </DesignRow>
+              {/* <!-- /row --> */}
+              <Develop>
+                <MdPush7>
+                  <HomeDev>
+                    <Figure>
+                      <Image2 src={meDev} />
+                    </Figure>
 
-                      <BubbleLeft>
-                        <DevIconVert />
-                      </BubbleLeft>
-                    </HomeDev>
-                  </MdPush7>
-                  {/* <!-- col --> */}
-                  <ColMd6_Pull3>
-                    <Deets>
-                      <h3>inifinitely scale your website</h3>
-                      <p>
-                        I tend to code in the cloud to make sure your website
-                        can infinitely scale as your business grows.
-                      </p>
-                    </Deets>
-                  </ColMd6_Pull3>
-                  {/* <!-- col --> */}
-                </Develop>
-                {/* <!-- /row --> */}
-              </Article>
-            </ColMd12>
-          </Row>
-        </SkillsContainer>
-      </WhatIDo>
-    </InheritedBody>
+                    <BubbleLeft>
+                      <DevIconVert />
+                    </BubbleLeft>
+                  </HomeDev>
+                </MdPush7>
+                {/* <!-- col --> */}
+                <ColMd6_Pull3>
+                  <Deets>
+                    <h3>inifinitely scale your website</h3>
+                    <p>
+                      I tend to code in the cloud to make sure your website can
+                      infinitely scale as your business grows.
+                    </p>
+                  </Deets>
+                </ColMd6_Pull3>
+                {/* <!-- col --> */}
+              </Develop>
+              {/* <!-- /row --> */}
+            </Article>
+          </ColMd12>
+        </Row>
+      </SkillsContainer>
+    </WhatIDo>
   );
 };
 

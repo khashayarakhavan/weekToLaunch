@@ -36,21 +36,28 @@ export const inheritedHtml = styled.div`
 `;
 export const Article = styled.article`
   display: block;
-
+  ${'' /* border: 30px solid green; */}
   header {
-    background: 0 0;
+    ${'' /* background: blue; */}
 
     h2 {
-      color: #1e836c;
+      ${fonts.mixins.heroHeader};
+      color: ${colors.primary};
+      line-height: ${sizes.lineHeight.extraLarge};
+      margin-bottom: ${sizes.margin.large};
+      margin-block-end: ${sizes.margin.large};
+
+      ${'' /* color: red; */}
       text-align: center;
-      font-size: 3.8em;
-      font-weight: 400;
+      ${'' /* font-size: 3.8rem;
+      font-weight: 400; */}
     }
   }
 `;
 export const Figure = styled.figure`
   display: block;
   max-width: 150px;
+  min-height: 1px;
   margin: 0;
 `;
 
@@ -58,11 +65,11 @@ export const WhatIDo = styled.section`
   //What_I_Do
   z-index: 980;
   position: relative;
-  background: #fff;
+  ${'' /* background: red; */}
   padding: 0;
-  @media (min-width: 992px) {
-    padding: 3em 0;
-  }
+  ${'' /* @media (min-width: 992px) {
+    padding: 3rem 0;
+  } */}
 `;
 export const SkillsContainer = styled.div`
   //Container
@@ -113,9 +120,9 @@ export const Row = styled.div`
     clear: both;
   }
 
-  @media (min-width: 992px) #what-i-do #design {
+  @media (min-width: 992px) #what-i-do, #design {
     text-align: left;
-    margin: 3em 0 6em;
+    margin: 3rem 0 6rem;
   }
 `;
 export const ColMd12 = styled.div`
@@ -145,24 +152,26 @@ export const ColMd4 = styled.div`
   } */}
 `;
 export const ColMd6 = styled.div`
+  display: flex;
+  flex-flow: no-wrap;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 
-  @media (min-width: 992px) {
+  ${'' /* @media (min-width: 992px) {
     float: left;
     width: 50%;
-  }
+  } */}
 `;
 export const ColMd6_Pull3 = styled(ColMd6)`
-  right: 25%;
+  ${'' /* right: 25%; */}
 `;
 
 
 export const DesignRow = styled(Row)`
   text-align: left;
-  margin: 3em 0 6em;
+  margin: 3rem 0 6rem;
 `;
 
 export const HomeDesign = styled.div`
@@ -216,7 +225,7 @@ export const BubbleLeft = styled.div`
   border-radius: 60px;
   position: absolute;
   overflow: hidden;
-  top: 2.6em;
+  top: 2.6rem;
   left: 0;
 `;
 export const BubbleButton = styled.div`
@@ -226,13 +235,13 @@ export const BubbleButton = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
-  width: 115px;
-  height: 115px;
-  border-radius: 50%;
+  min-width: 115px;
+  height: 250px;
+  border-radius: 600px;
   ${"" /* position: absolute; */}
   overflow: hidden;
-  position: absolute;
-  left: 30rem;
+  ${'' /* position: absolute; */}
+  ${'' /* margin-left: 10rem; */}
   ${"" /* top: 0em;
   left:10rem; */}
 `;
@@ -378,31 +387,34 @@ export const DevIconVert = styled.div`
   }
 `;
 export const Deets = styled.div`
-  padding: 0 0 0 2em;
+  padding: 0 0 0 2rem;
+
 
   h3 {
-    padding: 0 0 1em;
+    ${fonts.mixins.heroHeader};
+    padding: 0 0 1rem;
     margin: 0;
-    font-size: 2em;
-    color: #45b29a;
+    font-size: 3rem;
+    ${'' /* color: #45b29a; */}
   }
 
   p {
     margin: 0 0 10px;
-    font-family: adobe-garamond-pro, HelveticaNeue-Light, "Helvetica Neue Light",
-      "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    font-size: 1.5em;
+    ${"" /* font-family: adobe-garamond-pro, HelveticaNeue-Light, "Helvetica Neue Light",
+      "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */}
+    ${fonts.mixins.text};
+    ${'' /* font-weight: 300; */}
+    font-size: 2rem;
   }
 `;
 export const Develop = styled(Row)`
   text-align: left;
-  margin: 3em 0;
+  margin: 3rem 0;
 `;
 export const MdPush7 = styled(ColMd4)`
-  @media (min-width: 992px) {
+  ${'' /* @media (min-width: 992px) {
     left: 58.33333333%;
-  }
+  } */}
 `;
 export const HomeDev = styled.div`
   ${"" /* margin: 0 auto;
