@@ -36,10 +36,11 @@ export const inheritedHtml = styled.div`
 `;
 export const Article = styled.article`
   display: block;
-  ${'' /* border: 30px solid green; */}
+  
+  ${"" /* border: 30px solid green; */}
   header {
-    ${'' /* background: blue; */}
-
+    ${"" /* background: blue; */}
+    margin-bottom: 20rem;
     h2 {
       ${fonts.mixins.heroHeader};
       color: ${colors.primary};
@@ -47,9 +48,9 @@ export const Article = styled.article`
       margin-bottom: ${sizes.margin.large};
       margin-block-end: ${sizes.margin.large};
 
-      ${'' /* color: red; */}
+      ${"" /* color: red; */}
       text-align: center;
-      ${'' /* font-size: 3.8rem;
+      ${"" /* font-size: 3.8rem;
       font-weight: 400; */}
     }
   }
@@ -87,7 +88,7 @@ export const SkillsContainer = styled.div`
     max-width: 970px;
   }
 
-  &::before,
+  ${'' /* &::before,
   &::after {
     content: " ";
     display: table;
@@ -96,7 +97,7 @@ export const SkillsContainer = styled.div`
   
   &::after {
     clear: both;
-  }
+  } */}
   
   &::selection {
     background: #e0ebe8;
@@ -108,7 +109,9 @@ export const SkillsContainer = styled.div`
 export const Row = styled.div`
   margin-left: -15px;
   margin-right: -15px;
-
+  
+  
+${'' /* 
   &::before,
   &::after {
     content: " ";
@@ -118,7 +121,7 @@ export const Row = styled.div`
 
   &::after {
     clear: both;
-  }
+  } */}
 
   @media (min-width: 992px) #what-i-do, #design {
     text-align: left;
@@ -153,6 +156,20 @@ export const ColMd4 = styled.div`
 `;
 export const ColMd6 = styled.div`
   display: flex;
+  margin-bottom: 3rem;
+  flex-flow: no-wrap;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  ${"" /* @media (min-width: 992px) {
+    float: left;
+    width: 50%;
+  } */}
+`;
+export const ColMd7 = styled.div`
+  display: flex;
   flex-flow: no-wrap;
   position: relative;
   min-height: 1px;
@@ -170,6 +187,34 @@ export const ColMd6_Pull3 = styled(ColMd6)`
 
 
 export const DesignRow = styled(Row)`
+  ${"" /* &:last-child {
+    margin-bottom: 3rem;
+    background-color: red;
+    font-size: 20rem;
+  } */}
+  ${"" /* ${ColMd6} {
+    margin-bottom: 3rem;
+  }
+  &:hover:not(:first-child) {
+    background-color: yellow;
+  } */}
+  ${"" /* div:last-of-type {
+    font-size: 0.75em;
+    background-color: green;
+  } */}
+  
+  & ${ColMd6}:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+  ${'' /* & ${ColMd6}:last-of-type {
+    background: yellow;
+  }
+  & ${ColMd6}:nth-last-child(2) {
+    background: pink;
+  } */}
+  ${"" /* div:nth-last-child(1) {
+    background-color: green;
+  } */}
   text-align: left;
   margin: 3rem 0 6rem;
 `;

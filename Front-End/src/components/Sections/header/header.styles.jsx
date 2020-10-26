@@ -74,7 +74,7 @@ export const MenuButtonsContainer = styled.div`
 
 
 export const MenuButton = styled(Link)`
-  ${shadows.mixins.neumorphic.original};
+  ${shadows.mixins.neumorphic.button};
   ${fonts.mixins.menuButton}
   ${mix_flex.center};
   color: ${colors.primary};
@@ -82,7 +82,7 @@ export const MenuButton = styled(Link)`
   height: 4rem;
   width: 8rem;
   cursor: pointer;
-
+  transition: background-color 0.3s ease;
   border-radius: 1px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -144,7 +144,7 @@ export const MenuButton = styled(Link)`
   }
 
   &:hover {
-    background-color: ${colors.white};
+    background-color: white;
   }
 
   &:active {

@@ -33,6 +33,7 @@ import {
   DesignIconVert,
   Image,
   ColMd6,
+  ColMd7,
   Deets,
   Develop,
   MdPush7,
@@ -57,21 +58,39 @@ export const Header = (props) => {
             <Article>
               <header class="">
                 <h2>I help people ...</h2>
-                <span>...</span>
               </header>
 
               <DesignRow>
-                <ColMd4>
-                  {/* <Figure>
-                        <Image src={meSVG} />
-                      </Figure> */}
-                  {/* <BubbleButton>
+                <ColMd6>
+                  <BubbleButton>
                     <BubbleRight>
                       <DesignIconVert />
                     </BubbleRight>
-                  </BubbleButton> */}
-                </ColMd4>
-                {/* <!-- 4 --> */}
+                  </BubbleButton>
+                  <Deets>
+                    <h3>Create blazing fast websites.</h3>
+                    <p>
+                      My ultimate goal is to perfectly match your real needs to
+                      the best solutions available. So I always make sure to
+                      follow the tech community's best practices.
+                    </p>
+                  </Deets>
+                </ColMd6>
+                <ColMd6>
+                  <Deets>
+                    <h3>Create blazing fast websites.</h3>
+                    <p>
+                      My ultimate goal is to perfectly match your real needs to
+                      the best solutions available. So I always make sure to
+                      follow the tech community's best practices.
+                    </p>
+                  </Deets>
+                  <BubbleButton>
+                    <BubbleRight>
+                      <DevIconVert />
+                    </BubbleRight>
+                  </BubbleButton>
+                </ColMd6>
                 <ColMd6>
                   <BubbleButton>
                     <BubbleRight>
