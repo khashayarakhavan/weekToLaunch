@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import {CardsContainer} from './Cards.styles';
 
 class Template extends Component {
     render() {
 
         return (
-            <section className="section-tours" id="section-tours">
+            <CardsContainer id="section-tours">
                 <div className="u-center-text u-margin-bottom-medium">
                     <h2 className="heading-secondary">Exciting experience</h2>
                 </div>
@@ -106,7 +107,7 @@ class Template extends Component {
                     <a href="#" onClick={e => { e.preventDefault() }} className="btn btn--green">Discover all tours</a>
                 </div>
 
-            </section>
+            </CardsContainer>
         );
     }
 }

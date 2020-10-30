@@ -74,12 +74,16 @@ export const WhatIDo = styled.section`
 `;
 export const SkillsContainer = styled.div`
   //Container
+  grid-column: center-start / center-end;
+  grid-row-start: 2;
+  margin-top: 50vh;
   transition: all 0.5s ease-in-out;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  ${'' /* background-color: red; */}
+  position: relative;
+  ${"" /* background-color: red; */}
 
   @media (min-width: 768px) {
     max-width: 750px;
@@ -88,7 +92,7 @@ export const SkillsContainer = styled.div`
     max-width: 970px;
   }
 
-  ${'' /* &::before,
+  ${"" /* &::before,
   &::after {
     content: " ";
     display: table;
@@ -98,7 +102,7 @@ export const SkillsContainer = styled.div`
   &::after {
     clear: both;
   } */}
-  
+
   &::selection {
     background: #e0ebe8;
     color: #545454;

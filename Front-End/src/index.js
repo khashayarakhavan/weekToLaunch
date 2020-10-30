@@ -10,7 +10,7 @@ import * as serviceWorker from './serviceWorker';
 import './css/compiled/style.compress.css';
 // import './css/compiled/style.comp.css';
 import './css/compiled/icon-font.css';
-import './index.css';
+// import './index.css';
 import App from './App';
 
 ReactDOM.render(

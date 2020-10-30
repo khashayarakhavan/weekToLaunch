@@ -1,9 +1,10 @@
 import React from "react";
 import sprite from "../../../../assets/spriteSVG/sprite-medals.svg";
+import {FeaturesContainer} from './feature.styles';
 
 const Template = () => {
   return (
-    <section className="features">
+    <FeaturesContainer className="features">
       <div className="feature">
         <svg className="feature__icon">
           <use href={sprite + "#icon-global"} />
@@ -66,7 +67,7 @@ const Template = () => {
           quae.
         </p>
       </div>
-    </section>
+    </FeaturesContainer>
   );
 };
 

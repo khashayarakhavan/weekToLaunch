@@ -80,10 +80,10 @@ ORDER: Base + Typography > General layout + Grid > Page layout > Components
         @media only screen and (max-width: 71.875em) { @content }; // 1150px
     }
     @if $breakpoint == medium-1 {
-        @media only screen and (max-width: 59.375em) { @content }; // 950px
+        @media only screen and (max-width: 59.375rem) { @content }; // 950px
     }
     @if $breakpoint == medium-2 {
-        @media only screen and (max-width: 46.875em) { @content }; // 750px
+        @media only screen and (max-width: 46.875rem) { @content }; // 750px
     }
     @if $breakpoint == small-1 {
         @media only screen and (max-width: 40.625em) { @content }; // 650px

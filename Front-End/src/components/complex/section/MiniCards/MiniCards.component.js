@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import {MiniCardsContainer} from './MiniCards.styles'
 
 class Template extends Component {
     render() {
 
         return (
-            <section className="section-features">
+            <MiniCardsContainer className="section-features">
                 <div className="row">
                     <div className="col-1-of-4">
                         <div className="feature-box u-center-text">
@@ -58,7 +59,7 @@ class Template extends Component {
                         </div>
                     </div>
                 </div>
-            </section>
+            </MiniCardsContainer>
         );
     }
 }

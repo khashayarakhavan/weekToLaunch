@@ -18,28 +18,41 @@ import {AnimationCreateRobot} from '../../../design/animations.styles';
 
 //Code
 export const HeroHeaderContainer = styled.header`
-  
-  display: flex;
-  height: 90vh;
-  ${'' /* background: linear-gradient(-180deg, rgb(242, 243, 247), rgb(234, 241, 249)); */}
-  ${"" /* grid-template-columns: 1fr 1fr; */}
-  ${"" /* max-width: 100%; */}
-  ${"" /* padding: ${sizes.padding.medium}; */}
+  grid-column: center-start / center-end;
+  height: 90vh;  
+  justify-items: start;
+  display: grid;
+  grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
+
+  @media (max-width: 1100px) {
+    
+  }
+
 `;
 
 export const HeroHeaderLeft = styled.div`
-  flex: 0 0 30%;
-  ${'' /* background-color: lightblue; */}
-  padding-top: 20rem;
-  padding-left: 10rem;
+  background-color: lightblue;
+  max-height: 90vh;
+  max-width: 100%;
+  ${'' /* padding-top: 30vh; */}
+  
+    grid-column: span 1;
+  @media (max-width: 1100px) {
+    grid-row-start: 2;
+    max-height: 50rem;
+  }
 `;
 export const HeroHeaderRight = styled.div`
-  ${'' /* display: fle; */}
-  ${'' /* grid-template-columns: auto auto; */}
-  flex: 1 0 10%;
-  ${'' /* background-color: lightgreen; */}
-  padding-top: 10rem;
-  ${"" /* padding-right: 5rem; */}
+  max-height: 90vh;
+  max-width: 100%;
+  background-color: red;
+  ${"" /* padding-top: 20rem; */}
+
+  grid-column: span 1;
+  @media (max-width: 1100px) {
+    grid-row-start: 1;
+    max-height: 50rem;
+  }
 `;
 export const HeroHeaderLottie = styled(Lottie)`
 
@@ -65,7 +78,8 @@ export const H1 = styled.span`
   color: ${colors.primary};
   line-height: ${sizes.lineHeight.extraLarge};
   margin-bottom: ${sizes.margin.large};
-  margin-block-end: ${sizes.margin.large};  
+  margin-block-end: ${sizes.margin.large};
+  display: block;
 `;
 
 export const Skill_1 = styled.span`

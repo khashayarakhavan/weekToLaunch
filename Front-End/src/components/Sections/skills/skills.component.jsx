@@ -51,7 +51,7 @@ export const Header = (props) => {
   const { hidden } = props;
 
   return (
-    <WhatIDo>
+    
       <SkillsContainer>
         <Row>
           <ColMd12>
@@ -137,7 +137,7 @@ export const Header = (props) => {
           </ColMd12>
         </Row>
       </SkillsContainer>
-    </WhatIDo>
+    
   );
 };
 
