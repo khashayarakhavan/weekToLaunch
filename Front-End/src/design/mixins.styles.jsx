@@ -51,11 +51,11 @@ export const mix_header = {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    ${respond.handheld`
+    ${'' /* ${respond.handheld`
       height: 60px;
       padding: 10px;
       margin-bottom: 20px;
-    `}
+    `} */}
     }`,
 };
 export const mix_flex = {
@@ -108,11 +108,11 @@ export const mix_containers = {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    ${respond.handheld`
+    ${'' /* ${respond.handheld`
       height: 60px;
       padding: 10px;
       margin-bottom: 20px;
-    `}
+    `} */}
   }`,
 };
 

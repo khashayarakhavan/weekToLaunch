@@ -10,14 +10,19 @@ import Cards from "../../components/Sections/Cards/Cards.component";
 import Skills from "../../components/Sections/skills/skills.component";
 import SectionStoriesPicture from "../../components/complex/section/stories-picture/stories-picture.component";
 import { LandingPageContainer } from "./vegeloper.styles";
-import HeroHeader from '../../components/complex/hero-header/heroHeader.component';
+import {
+  HeroHeaderLeftContainer,
+  HeroHeaderRightContainer,
+} from "../../components/complex/hero-header/heroHeader.component";
+// import { HeroLeftSide, HeroRightSide } from "./vegeloper.styles";
 //Design
 import {VegeloperContainer, LeftSide, RightSide} from './vegeloper.styles';
 
 const LandingPage = () => (
   <VegeloperContainer>
     <RightSide />
-    <HeroHeader />
+    <HeroHeaderLeftContainer />
+    <HeroHeaderRightContainer />
     <Skills />
     <Cards />
     <MiniCards />

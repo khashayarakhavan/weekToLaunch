@@ -36,7 +36,7 @@ export const inheritedHtml = styled.div`
 `;
 export const Article = styled.article`
   display: block;
-  
+
   ${"" /* border: 30px solid green; */}
   header {
     ${"" /* background: blue; */}
@@ -47,7 +47,30 @@ export const Article = styled.article`
       line-height: ${sizes.lineHeight.extraLarge};
       margin-bottom: ${sizes.margin.large};
       margin-block-end: ${sizes.margin.large};
-
+      @media (max-width: 600px) {
+        font-size: 4.75rem;
+      }
+      @media (max-width: 550px) {
+        font-size: 4.5rem;
+      }
+      @media (max-width: 500px) {
+        font-size: 4.25rem;
+      }
+      @media (max-width: 400px) {
+        font-size: 3.75rem;
+      }
+      @media (max-width: 350px) {
+        font-size: 3.25rem;
+      }
+      @media (max-width: 300px) {
+        font-size: 2.75rem;
+      }
+      @media (max-width: 250px) {
+        font-size: 2.25rem;
+      }
+      @media (max-width: 200px) {
+        font-size: 1.75rem;
+      }
       ${"" /* color: red; */}
       text-align: center;
       ${"" /* font-size: 3.8rem;
@@ -75,21 +98,19 @@ export const WhatIDo = styled.section`
 export const SkillsContainer = styled.div`
   //Container
   grid-column: center-start / center-end;
-  grid-row-start: 2;
-  margin-top: 50vh;
+  ${"" /* grid-row-start: 2; */}
+  ${"" /* margin-top: 50vh; */}
   transition: all 0.5s ease-in-out;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  ${'' /* padding-left: 15px; */}
+  ${'' /* padding-right: 15px; */}
   position: relative;
   ${"" /* background-color: red; */}
 
-  @media (min-width: 768px) {
-    max-width: 750px;
-  }
-  @media (min-width: 992px) {
-    max-width: 970px;
+  @media (max-width: 1100px) {
+    grid-column: center-start / center-end;
+    ${"" /* padding: 3rem; */}
   }
 
   ${"" /* &::before,
@@ -438,13 +459,30 @@ export const DevIconVert = styled.div`
 export const Deets = styled.div`
   padding: 0 0 0 2rem;
 
-
   h3 {
     ${fonts.mixins.heroHeader};
     padding: 0 0 1rem;
     margin: 0;
     font-size: 3rem;
-    ${'' /* color: #45b29a; */}
+    @media (max-width: 500px) {
+      font-size: 2.75rem;
+    }
+    @media (max-width: 400px) {
+      font-size: 2.25rem;
+    }
+    @media (max-width: 350px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 300px) {
+      font-size: 1.75rem;
+    }
+    @media (max-width: 250px) {
+      font-size: 1.25rem;
+    }
+    @media (max-width: 200px) {
+      font-size: 1rem;
+    }
+    ${"" /* color: #45b29a; */}
   }
 
   p {
@@ -452,8 +490,26 @@ export const Deets = styled.div`
     ${"" /* font-family: adobe-garamond-pro, HelveticaNeue-Light, "Helvetica Neue Light",
       "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */}
     ${fonts.mixins.text};
-    ${'' /* font-weight: 300; */}
+    ${"" /* font-weight: 300; */}
     font-size: 2rem;
+    @media (max-width: 500px) {
+      font-size: 1.75rem;
+    }
+    @media (max-width: 400px) {
+      font-size: 1.25rem;
+    }
+    @media (max-width: 350px) {
+      font-size: 1rem;
+    }
+    ${'' /* @media (max-width: 300px) {
+      font-size: 0.75rem;
+    }
+    @media (max-width: 250px) {
+      font-size: 0.25rem;
+    }
+    @media (max-width: 200px) {
+      font-size: 1rem;
+    } */}
   }
 `;
 export const Develop = styled(Row)`

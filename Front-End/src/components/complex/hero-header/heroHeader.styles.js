@@ -31,28 +31,40 @@ export const HeroHeaderContainer = styled.header`
 `;
 
 export const HeroHeaderLeft = styled.div`
-  background-color: lightblue;
+  grid-column: center-start / col-end 4;
+  height: 90vh;
   max-height: 90vh;
   max-width: 100%;
-  ${'' /* padding-top: 30vh; */}
-  
-    grid-column: span 1;
+  background-color: lightblue;
+
   @media (max-width: 1100px) {
+    grid-column: center-start / center-end;
+    ${"" /* padding: 3rem; */}
+  }
+
+  ${"" /* padding-top: 30vh; */}
+  ${"" /* @media (max-width: 1100px) {
     grid-row-start: 2;
     max-height: 50rem;
-  }
+  } */}
 `;
 export const HeroHeaderRight = styled.div`
+  grid-column: col-start 5 / center-end;
+  height: 90vh;
   max-height: 90vh;
   max-width: 100%;
   background-color: red;
-  ${"" /* padding-top: 20rem; */}
 
-  grid-column: span 1;
   @media (max-width: 1100px) {
+    grid-column: center-start / center-end;
+    grid-row: 2 / 3;
+  }
+
+  ${"" /* padding-top: 20rem; */}
+  ${"" /* @media (max-width: 1100px) {
     grid-row-start: 1;
     max-height: 50rem;
-  }
+  } */}
 `;
 export const HeroHeaderLottie = styled(Lottie)`
 
@@ -68,7 +80,7 @@ export const TEXT = styled.span`
   color: ${colors.primary};
   margin-left: ${sizes.margin.smaller};
   margin-top: ${sizes.margin.largest} ;
-  margin-bottom: ${sizes.margin.large};
+  ${'' /* margin-bottom: ${sizes.margin.large}; */}
   line-height: ${sizes.lineHeight.large} ;
   display:block;
 `;
@@ -80,6 +92,24 @@ export const H1 = styled.span`
   margin-bottom: ${sizes.margin.large};
   margin-block-end: ${sizes.margin.large};
   display: block;
+  @media (max-width: 500px) {
+    font-size: 4.25rem;
+  };
+  @media (max-width: 400px) {
+    font-size: 3.75rem;
+  };
+  @media (max-width: 350px) {
+    font-size: 3.25rem;
+  };
+  @media (max-width: 300px) {
+    font-size: 2.75rem;
+  };
+  @media (max-width: 250px) {
+    font-size: 2.25rem;
+  };
+  @media (max-width: 200px) {
+    font-size: 1.75rem;
+  };
 `;
 
 export const Skill_1 = styled.span`
@@ -125,16 +155,16 @@ export const Button = styled.div`
   &:visited {
     ${fonts.mixins.CTA.visitProfile}};
     display: block;
-    line-height: 30px !important;
-    margin-top: 60px !important;
-    margin-bottom: 30px !important;
-    margin-right: 30px !important;
-    margin-block-end: 30px !important;
+    ${'' /* line-height: 2.5rem !important; */}
+    ${'' /* margin-top: 2rem !important; */}
+    margin-bottom: 5rem !important;
+    margin-right: 2rem !important;
+    margin-block-end: 2rem !important;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1rem 3rem;
+    padding: 0rem 3rem;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 1rem;
     transition: all 0.4s;
     position: relative;
     border: none;

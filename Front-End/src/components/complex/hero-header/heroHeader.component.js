@@ -106,3 +106,76 @@ const mapDispatchToProps = (dispatch) => ({
 //   mapDispatchToProps
 // )(HeroHeaderComponent);
 export default connect(mapStateToProps, mapDispatchToProps)(HeroHeaderComponent);
+
+
+
+export const HeroHeaderLeftContainer = (props) => {
+  const { width, height } = useViewport();
+  const mobileBreak = 500;
+  const tabletBreak = 1000;
+  const desktopBreak = 1300;
+  console.log("this is width: ", width);
+  console.log("this is height: ", height);
+
+  return (
+      <HeroHeaderLeft>
+        <H1>
+          <p>
+            Hi<Accent_fireOrange>.</Accent_fireOrange>
+          </p>
+          <p>
+            I<Accent_mateBlue>’</Accent_mateBlue>m
+            <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hashi
+          </p>
+        </H1>
+        <TEXT>
+          a full stack web developer and I love &nbsp;
+          <Skill_1>coding</Skill_1>, &nbsp;
+          <Skill_2>science</Skill_2> &&nbsp;
+          <Skill_3>French</Skill_3>
+          &nbsp;language!
+        </TEXT>
+        <Button>
+          Pleased to meet you 😊 <br />
+          <span>tea or coffee ? </span>
+        </Button>
+      </HeroHeaderLeft>
+    
+  );
+};
+
+
+export const HeroHeaderRightContainer = (props) => {
+  const { width, height } = useViewport();
+  const mobileBreak = 500;
+  const tabletBreak = 1000;
+  const desktopBreak = 1300;
+  console.log("this is width: ", width);
+  console.log("this is height: ", height);
+
+  return (
+      <HeroHeaderRight>
+        <H1>
+          <p>
+            Hi<Accent_fireOrange>.</Accent_fireOrange>
+          </p>
+          <p>
+            I<Accent_mateBlue>’</Accent_mateBlue>m
+            <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hashi
+          </p>
+        </H1>
+        <TEXT>
+          a full stack web developer and I love &nbsp;
+          <Skill_1>coding</Skill_1>, &nbsp;
+          <Skill_2>science</Skill_2> &&nbsp;
+          <Skill_3>French</Skill_3>
+          &nbsp;language!
+        </TEXT>
+        <Button>
+          Pleased to meet you 😊 <br />
+          <span>tea or coffee ? </span>
+        </Button>
+      </HeroHeaderRight>
+    
+  );
+};
