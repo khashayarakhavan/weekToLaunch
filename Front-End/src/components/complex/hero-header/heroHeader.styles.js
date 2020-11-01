@@ -35,7 +35,7 @@ export const HeroHeaderLeft = styled.div`
   height: 90vh;
   max-height: 90vh;
   max-width: 100%;
-  background-color: lightblue;
+  ${'' /* background-color: lightblue; */}
 
   @media (max-width: 1100px) {
     grid-column: center-start / center-end;
@@ -53,7 +53,7 @@ export const HeroHeaderRight = styled.div`
   height: 90vh;
   max-height: 90vh;
   max-width: 100%;
-  background-color: red;
+  ${'' /* background-color: red; */}
 
   @media (max-width: 1100px) {
     grid-column: center-start / center-end;
@@ -92,6 +92,7 @@ export const H1 = styled.span`
   margin-bottom: ${sizes.margin.large};
   margin-block-end: ${sizes.margin.large};
   display: block;
+
   @media (max-width: 500px) {
     font-size: 4.25rem;
   };

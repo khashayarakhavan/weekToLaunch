@@ -35,7 +35,6 @@ import {
 
 
 
-
 const HeroHeaderComponent = (props) => {
   const { width , height} = useViewport();
   const mobileBreak = 500;
@@ -147,35 +146,56 @@ export const HeroHeaderLeftContainer = (props) => {
 
 export const HeroHeaderRightContainer = (props) => {
   const { width, height } = useViewport();
-  const mobileBreak = 500;
+  const mobileBreak = 600;
   const tabletBreak = 1000;
   const desktopBreak = 1300;
   console.log("this is width: ", width);
   console.log("this is height: ", height);
+  let robotAnimation = <HeroHeaderLottie
+          options={AnimationCreateRobot}
+          resizeMode="cover"
+          width={400}
+          height={400}
+        />;
+  if ( width <= 600 && width > 500) {
+      robotAnimation = <HeroHeaderLottie
+          options={AnimationCreateRobot}
+          resizeMode="cover"
+          width={350}
+          height={350}
+        />;
+    } else if ( width <= 500 && width > 450) {
+      robotAnimation = <HeroHeaderLottie
+          options={AnimationCreateRobot}
+          resizeMode="cover"
+          width={300}
+          height={300}
+        />;
+    } else if ( width <= 450) {
+      robotAnimation = <HeroHeaderLottie
+          options={AnimationCreateRobot}
+          resizeMode="cover"
+          width={250}
+          height={250}
+        />;
+    } 
 
-  return (
-      <HeroHeaderRight>
-        <H1>
-          <p>
-            Hi<Accent_fireOrange>.</Accent_fireOrange>
-          </p>
-          <p>
-            I<Accent_mateBlue>’</Accent_mateBlue>m
-            <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hashi
-          </p>
-        </H1>
-        <TEXT>
-          a full stack web developer and I love &nbsp;
-          <Skill_1>coding</Skill_1>, &nbsp;
-          <Skill_2>science</Skill_2> &&nbsp;
-          <Skill_3>French</Skill_3>
-          &nbsp;language!
-        </TEXT>
-        <Button>
-          Pleased to meet you 😊 <br />
-          <span>tea or coffee ? </span>
-        </Button>
-      </HeroHeaderRight>
-    
-  );
+  return <HeroHeaderRight>{robotAnimation}</HeroHeaderRight>;
 };
+
+
+        // width < mobileBreak ? (
+        // <HeroHeaderLottie
+        //   options={AnimationCreateRobot}
+        //   resizeMode="cover"
+        //   width={300}
+        //   height={300}
+        // />
+      // ) :  (
+      //   <HeroHeaderLottie
+      //     options={AnimationCreateRobot}
+      //     resizeMode="cover"
+      //     width={400}
+      //     height={400}
+      //   />
+      // )

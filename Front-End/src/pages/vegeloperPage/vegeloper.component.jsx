@@ -20,14 +20,14 @@ import {VegeloperContainer, LeftSide, RightSide} from './vegeloper.styles';
 
 const LandingPage = () => (
   <VegeloperContainer>
-    <RightSide />
+    <LeftSide />
     <HeroHeaderLeftContainer />
     <HeroHeaderRightContainer />
     <Skills />
     <Cards />
     <MiniCards />
     <Features />
-    <LeftSide />
+    <RightSide />
   </VegeloperContainer>
 );
 
