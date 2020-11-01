@@ -30,9 +30,8 @@ export const LeftSide = styled.div`
   background: linear-gradient(
     -180deg,
     rgb(242, 243, 247),
-    rgb(234, 241, 249),
-    rgb(242, 243, 147),
-    rgb(234, 241, 249),
+   rgb(242, 213, 247),
+   
     rgb(234, 241, 249),
     rgb(242, 143, 247),
     rgb(242, 143, 147),
@@ -47,9 +46,8 @@ export const RightSide = styled.div`
   background: linear-gradient(
     -180deg,
     rgb(242, 243, 247),
-    rgb(234, 241, 249),
-    rgb(242, 243, 147),
-    rgb(234, 241, 249),
+    rgb(242, 213, 247),
+
     rgb(234, 241, 249),
     rgb(242, 143, 247),
     rgb(242, 143, 147),
@@ -112,11 +110,10 @@ export const VegeloperContainer = styled.div`
   background: linear-gradient(
     -180deg,
     rgb(242, 243, 247),
+    rgb(242, 223, 247),
     rgb(234, 241, 249),
-    rgb(234, 241, 249),
-    rgb(242, 143, 147),
     rgb(242, 143, 247),
-    rgb(242, 243, 147),
+    rgb(242, 153, 187),
     rgb(234, 241, 249)
   );
   @include respond(large-2) {

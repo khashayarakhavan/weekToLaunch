@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CardsContainer, Heading2 } from "./Cards.styles";
+import {CardsContainer} from './Cards.styles';
 
 class Template extends Component {
     render() {
@@ -7,7 +7,7 @@ class Template extends Component {
         return (
             <CardsContainer id="section-tours">
                 <div className="u-center-text u-margin-bottom-medium">
-                    <Heading2>Exciting experience</Heading2>
+                    <h2 className="heading-secondary">Exciting experience</h2>
                 </div>
                 <div className="row">
                     <div className="col-1-of-3">
@@ -17,7 +17,7 @@ class Template extends Component {
                                 <h4 className="card__heading">
                                     <span className="card__heading-span card__heading-span--1">
                                         The dream explorer
-                                    </span>
+                      </span>
                                 </h4>
                                 <div className="card__details">
                                     <ul>

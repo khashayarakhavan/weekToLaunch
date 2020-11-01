@@ -87,6 +87,7 @@ export const TEXT = styled.span`
 
 export const H1 = styled.span`
   ${fonts.mixins.heroHeader};
+  font-size-adjust: 0.9; 
   color: ${colors.primary};
   line-height: ${sizes.lineHeight.extraLarge};
   margin-bottom: ${sizes.margin.large};

@@ -47,7 +47,8 @@ export const Article = styled.article`
       line-height: ${sizes.lineHeight.extraLarge};
       margin-bottom: ${sizes.margin.large};
       margin-block-end: ${sizes.margin.large};
-      @media (max-width: 600px) {
+      font-size: 5vw;
+      ${'' /* @media (max-width: 600px) {
         font-size: 4.75rem;
       }
       @media (max-width: 550px) {
@@ -70,7 +71,7 @@ export const Article = styled.article`
       }
       @media (max-width: 200px) {
         font-size: 1.75rem;
-      }
+      } */}
       ${"" /* color: red; */}
       text-align: center;
       ${"" /* font-size: 3.8rem;
@@ -79,7 +80,8 @@ export const Article = styled.article`
   }
 `;
 export const Figure = styled.figure`
-  display: block;
+  display: flex;
+  justify-content: center;
   max-width: 150px;
   min-height: 1px;
   margin: 0;
@@ -132,8 +134,8 @@ export const SkillsContainer = styled.div`
 `;
 
 export const Row = styled.div`
-  margin-left: -15px;
-  margin-right: -15px;
+  ${'' /* margin-left: -15px;
+  margin-right: -15px; */}
   
   
 ${'' /* 
@@ -247,7 +249,7 @@ export const DesignRow = styled(Row)`
 export const HomeDesign = styled.div`
   margin: 0 auto;
   ${"" /* background-image: url(../../../assets/icon/line-bg.png); */}
-  background-image: url("https://res.cloudinary.com/khashi-dev/image/upload/v1603465770/line-bg_scoevc.png");
+  ${'' /* background-image: url("https://res.cloudinary.com/khashi-dev/image/upload/v1603465770/line-bg_scoevc.png"); */}
   background-position: center center;
   background-repeat: repeat-x;
   position: relative;
@@ -259,22 +261,25 @@ export const Image = styled.img`
   width: 100%;
 `;
 export const Image2 = styled(Image)`
-  @media (min-width: 992px) {
-    margin-right: -30px;
-  }
+  
   float: right;
   max-width: 180px;
 `;
 export const BubbleRight = styled.div`
   ${shadows.mixins.neumorphic.button};
   ${"" /* background: #f3f2f1; */}
-  width: 97px;
-  height: 97px;
-  border-radius: 60px;
+  width: 10rem;
+  height: 10rem;
+ 
+  border-radius: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  ${"" /*   
+  @media (max-width: 500px) {
+     width: 5rem;
+     height: 5rem;
+  }; */}
   ${"" /* align-self: center;
   justify-self: center; */}
 
@@ -287,16 +292,20 @@ export const BubbleRight = styled.div`
 `;
 export const BubbleLeft = styled.div`
   ${shadows.mixins.neumorphic.original};
-  ${'' /* background: #f3f2f1; */}
-  width: 77px;
-  height: 77px;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  border-radius: 60px;
+  ${"" /* background: #f3f2f1; */}
+  width: 10rem;
+  height: 10rem;
+  -webkit-border-radius: 6rem;
+  -moz-border-radius: 6rem;
+  border-radius: 6rem;
   position: absolute;
   overflow: hidden;
   top: 2.6rem;
   left: 0;
+  ${'' /* @media (max-width: 500px) {
+    width: 5rem;
+    height: 5rem;
+  } ; */}
 `;
 export const BubbleButton = styled.div`
   ${shadows.mixins.neumorphic.invert};
@@ -305,9 +314,9 @@ export const BubbleButton = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
-  min-width: 115px;
-  height: 250px;
-  border-radius: 600px;
+  min-width: 11.5rem;
+  height: 25rem;
+  border-radius: 60rem;
   ${"" /* position: absolute; */}
   overflow: hidden;
   ${'' /* position: absolute; */}
@@ -349,24 +358,17 @@ export const Translate = keyframes`
 `;
 
 export const DesignIconVert = styled.div`
-  ${"" /* ${Bubblinger};  */}
-  ${"" /* animation:  ${Translate} 5s ease infinite; */}
-  ${
-    "" /* &:active {
-    transform: translateY(50px);
-    transition: transform 0.25s ease; */
-  }
-  }
   animation: fourSkills 7s cubic-bezier(1, 0, 0, 1) infinite ; // steps(50)
-  border-radius: 60px;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  width: 77px;
-  height: 77px;
-
-  background-image: url(https://res.cloudinary.com/khashi-dev/image/upload/v1603146036/react-style-firebase_qyez2a.png);
+  background-size: 100%;
+  border-radius: 6rem;
+  width: 7.7rem;
+  height: 7.7rem;
+  ${'' /* background-image: url(https://res.cloudinary.com/khashi-dev/image/upload/v1603146036/react-style-firebase_qyez2a.png); */}
   background-image: url(https://res.cloudinary.com/khashi-dev/image/upload/v1603146749/4-skills_fz1ley.png);
-  background-repeat: no-repeat;
+  ${"" /* background-repeat: no-repeat; */}
+ ${"" /* background-size: 1.5; */}
+  ${"" /* background-position: center; */}
+  ${"" /* background-size: contain; */}
   ${"" /* background-position: center; */}
 
   @keyframes cyclist {
@@ -392,15 +394,15 @@ export const DesignIconVert = styled.div`
       background-position: 0 0px;
     }
     25% {
-      background-position: 0 -75px; //this should be cleaned up, my sprite sheet is 202px by accident, it should be 200px
+      background-position: 0 -7rem; //this should be cleaned up, my sprite sheet is 202px by accident, it should be 200px
     }
     50% {
-      background-position: 0 -150px;
+      background-position: 0 -14rem;
     }
     75% {
-      background-position: 0 -225px;
+      background-position: 0 -21rem;
     }
-    80% {
+    90% {
       background-position: 0 0px;
     }
     100% {
@@ -411,24 +413,39 @@ export const DesignIconVert = styled.div`
 `;
 
 export const DevIconVert = styled.div`
-  border-radius: 60px;
+  border-radius: 6rem;
+  background-size: 100%;
+  animation: fourSkills 7s cubic-bezier(1, 0, 0, 1) infinite; // steps(50)
+  background-image: url(https://res.cloudinary.com/khashi-dev/image/upload/v1603150550/GCP-AWS-Heroku-DO2_eogbkt.png);
+  ${"" /* display: grid;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center; */}
+  
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
-  width: 77px;
-  height: 77px;
-  animation: fourSkills 7s cubic-bezier(1, 0, 0, 1) infinite; // steps(50)
+  width: 7.7rem;
+  height: 7.7rem;
+  ${"" /* background-size: cover; */}
+  ${"" /* @media (max-width: 500px) {
+    width: 4.7rem;
+    height: 4.7rem;
+  } */}
 
-  background-image: url(https://res.cloudinary.com/khashi-dev/image/upload/v1603150550/GCP-AWS-Heroku-DO2_eogbkt.png);
-
+  ${"" /* background-attachment: fixed; */}
+  ${"" /* background-size: cover;
+  background-position: center; */}
   @keyframes threeSkills {
     0% {
       background-position: 0 0px;
     }
     25% {
-      background-position: 0 -75px; //this should be cleaned up, my sprite sheet is 202px by accident, it should be 200px
+      background-position: 0 -7.5rem; //this should be cleaned up, my sprite sheet is 202px by accident, it should be 200px
     }
     50% {
-      background-position: 0 -150px;
+      background-position: 0 -15rem;
     }
     75% {
       background-position: 0 0px;
@@ -440,15 +457,15 @@ export const DevIconVert = styled.div`
       background-position: 0 0px;
     }
     25% {
-      background-position: 0 -75px; //this should be cleaned up, my sprite sheet is 202px by accident, it should be 200px
+      background-position: 0 -7rem; //this should be cleaned up, my sprite sheet is 202px by accident, it should be 200px
     }
     50% {
-      background-position: 0 -150px;
+      background-position: 0 -14rem;
     }
     75% {
-      background-position: 0 -225px;
+      background-position: 0 -21rem;
     }
-    80% {
+    90% {
       background-position: 0 0px;
     }
     100% {
@@ -463,8 +480,8 @@ export const Deets = styled.div`
     ${fonts.mixins.heroHeader};
     padding: 0 0 1rem;
     margin: 0;
-    font-size: 3rem;
-    @media (max-width: 500px) {
+    font-size: 3vw;
+    ${'' /* @media (max-width: 500px) {
       font-size: 2.75rem;
     }
     @media (max-width: 400px) {
@@ -481,7 +498,7 @@ export const Deets = styled.div`
     }
     @media (max-width: 200px) {
       font-size: 1rem;
-    }
+    } */}
     ${"" /* color: #45b29a; */}
   }
 
@@ -491,8 +508,8 @@ export const Deets = styled.div`
       "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */}
     ${fonts.mixins.text};
     ${"" /* font-weight: 300; */}
-    font-size: 2rem;
-    @media (max-width: 500px) {
+    font-size: 2vw;
+    ${'' /* @media (max-width: 500px) {
       font-size: 1.75rem;
     }
     @media (max-width: 400px) {
@@ -500,7 +517,7 @@ export const Deets = styled.div`
     }
     @media (max-width: 350px) {
       font-size: 1rem;
-    }
+    } */}
     ${'' /* @media (max-width: 300px) {
       font-size: 0.75rem;
     }
@@ -533,7 +550,7 @@ export const HomeDev = styled.div`
   max-width: 180px; */}
   margin: 0 auto;
   ${"" /* background-image: url(../../../assets/icon/line-bg.png); */}
-  background-image: url("https://res.cloudinary.com/khashi-dev/image/upload/v1603465770/line-bg_scoevc.png");
+  ${'' /* background-image: url("https://res.cloudinary.com/khashi-dev/image/upload/v1603465770/line-bg_scoevc.png"); */}
 
   background-position: center center;
   background-repeat: repeat-x;
