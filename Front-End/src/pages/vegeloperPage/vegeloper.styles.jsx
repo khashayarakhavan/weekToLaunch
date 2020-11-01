@@ -23,16 +23,38 @@ export const LandingPageContainer = styled.div`
 `;
 export const LeftSide = styled.div`
   grid-column: leftSide-start / leftSide-end;
- 
+
   grid-row-start: first-line;
   grid-row-end: last-line;
-  background-color: lightblue;
+  ${"" /* background-color: lightblue; */}
+  background: linear-gradient(
+    -180deg,
+    rgb(242, 243, 247),
+    rgb(234, 241, 249),
+    rgb(242, 243, 147),
+    rgb(234, 241, 249),
+    rgb(234, 241, 249),
+    rgb(242, 143, 247),
+    rgb(242, 143, 147),
+    rgb(234, 241, 249)
+  );
 `;
 
 export const RightSide = styled.div`
   grid-column: rightSide-start / rightSide-end;
   grid-row: first-line / last-line;
-  background-color: pink;
+  ${"" /* background-color: pink; */}
+  background: linear-gradient(
+    -180deg,
+    rgb(242, 243, 247),
+    rgb(234, 241, 249),
+    rgb(242, 243, 147),
+    rgb(234, 241, 249),
+    rgb(234, 241, 249),
+    rgb(242, 143, 247),
+    rgb(242, 143, 147),
+    rgb(234, 241, 249)
+  );
 `;
 
 export const SampleContainer = styled.div`
@@ -92,8 +114,8 @@ export const VegeloperContainer = styled.div`
     rgb(242, 243, 247),
     rgb(234, 241, 249),
     rgb(234, 241, 249),
-    rgb(242, 143, 247),
     rgb(242, 143, 147),
+    rgb(242, 143, 247),
     rgb(242, 243, 147),
     rgb(234, 241, 249)
   );
