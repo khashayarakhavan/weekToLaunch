@@ -315,6 +315,12 @@ export const BubbleButton = styled.div`
   align-items: center;
   justify-content: center;
   min-width: 11.5rem;
+  @media (max-width: 400px) {
+    min-width: 5rem;
+  };
+  @media (max-width: 300px) {
+    display: none;
+  };
   height: 25rem;
   border-radius: 60rem;
   ${"" /* position: absolute; */}

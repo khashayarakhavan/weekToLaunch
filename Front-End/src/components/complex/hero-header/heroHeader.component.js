@@ -154,28 +154,28 @@ export const HeroHeaderRightContainer = (props) => {
   let robotAnimation = <HeroHeaderLottie
           options={AnimationCreateRobot}
           resizeMode="cover"
-          width={400}
+          
           height={400}
         />;
   if ( width <= 600 && width > 500) {
       robotAnimation = <HeroHeaderLottie
           options={AnimationCreateRobot}
           resizeMode="cover"
-          width={350}
+         
           height={350}
         />;
     } else if ( width <= 500 && width > 450) {
       robotAnimation = <HeroHeaderLottie
           options={AnimationCreateRobot}
           resizeMode="cover"
-          width={300}
+          
           height={300}
         />;
     } else if ( width <= 450) {
       robotAnimation = <HeroHeaderLottie
           options={AnimationCreateRobot}
           resizeMode="cover"
-          width={250}
+          
           height={250}
         />;
     } 

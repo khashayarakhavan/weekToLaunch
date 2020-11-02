@@ -22,6 +22,9 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 export const HeaderContainer = styled.div`
   ${mix_containers.header};
   height: 10vh;
+  @media (max-width: 400px) {
+    display: none;
+  };
   background-color: rgb(242, 243, 247);
   ${respond.desktop_large`
     
@@ -41,14 +44,16 @@ export const LogoContainer = styled(Link)`
   ${mix_containers.logo};
   height: 5rem;
   margin-left: 3rem;
+  
 `;
 
 export const LogoSVG = styled(VegeloperLogo)`
   width: 6rem;
   height: 6rem;
-  ${respond.tablet_medium`
+  padding: 0.1vw;
+  ${'' /* ${respond.tablet_medium`
     display: none;
-  `};
+  `}; */}
 `;
 
 export const LogoText = styled.p`

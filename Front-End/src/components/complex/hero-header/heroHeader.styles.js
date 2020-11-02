@@ -32,13 +32,17 @@ export const HeroHeaderContainer = styled.header`
 
 export const HeroHeaderLeft = styled.div`
   grid-column: center-start / col-end 4;
-  height: 90vh;
-  max-height: 90vh;
+  height: 80vh;
+  padding-top: 10vh;
+  ${"" /* max-height: 90vh; */}
   max-width: 100%;
-  ${'' /* background-color: lightblue; */}
+  ${"" /* background-color: lightblue; */}
+    background-color: red;
 
   @media (max-width: 1100px) {
     grid-column: center-start / center-end;
+    height: 80vh;
+    padding-top: 10vh;
     ${"" /* padding: 3rem; */}
   }
 
@@ -50,14 +54,18 @@ export const HeroHeaderLeft = styled.div`
 `;
 export const HeroHeaderRight = styled.div`
   grid-column: col-start 5 / center-end;
-  height: 90vh;
-  max-height: 90vh;
+  background-color: blue;
+  height: 80vh;
+  ${"" /* max-height: 90vh; */}
+  padding-top: 10vh;
   max-width: 100%;
-  ${'' /* background-color: red; */}
+  ${"" /* background-color: red; */}
 
   @media (max-width: 1100px) {
     grid-column: center-start / center-end;
     grid-row: 2 / 3;
+    height: 80vh;
+    padding-top: 5vh;
   }
 
   ${"" /* padding-top: 20rem; */}
@@ -69,7 +77,7 @@ export const HeroHeaderRight = styled.div`
 export const HeroHeaderLottie = styled(Lottie)`
 
 
-  
+  ${'' /* margin-top: 10vw; */}
   background-color: lightgreen;
  
   ${"" /* padding-right: 5rem; */}
@@ -79,7 +87,8 @@ export const TEXT = styled.span`
   ${fonts.mixins.text};
   color: ${colors.primary};
   margin-left: ${sizes.margin.smaller};
-  margin-top: ${sizes.margin.largest} ;
+  ${'' /* margin-top: ${sizes.margin.largest} ; */}
+  ${'' /* margin-top: 6vw; */}
   ${'' /* margin-bottom: ${sizes.margin.large}; */}
   line-height: ${sizes.lineHeight.large} ;
   display:block;
@@ -89,9 +98,11 @@ export const H1 = styled.span`
   ${fonts.mixins.heroHeader};
   font-size-adjust: 0.9; 
   color: ${colors.primary};
-  line-height: ${sizes.lineHeight.extraLarge};
-  margin-bottom: ${sizes.margin.large};
-  margin-block-end: ${sizes.margin.large};
+  ${'' /* line-height: ${sizes.lineHeight.extraLarge}; */}
+  line-height: 8vw;
+  ${'' /* margin-bottom: ${sizes.margin.large};
+  margin-block-end: ${sizes.margin.large}; */}
+  ${'' /* margin-bottom: 3vw; */}
   display: block;
 
   @media (max-width: 500px) {

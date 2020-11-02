@@ -62,7 +62,7 @@ export const SampleContainer = styled.div`
 `;
 
 export const VegeloperContainer = styled.div`
-  .container {
+  ${"" /* .container {
     display: grid;
     grid-template-rows: 80vh min-content min-content 40rem repeat(
         3,
@@ -94,15 +94,15 @@ export const VegeloperContainer = styled.div`
         )
         repeat(5, min-content);
     }
-  }
+  } */}
 
   display: grid;
   ${"" /* NOTE: row templates */}
   grid-template-rows: [first-line] repeat(
       8,
-      [row-start] minmax(min-content, 80vh) [row-end]
+      [row-start] min-content [row-end]
     ) [last-line];
-  ${"" /* grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax( */}
+  ${"" /* TODO: grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax( */}
   grid-template-columns: [leftSide-start] minmax(0.5rem, 1fr) [leftSide-end full-start] 5vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 5vw [full-end rightSide-start]
       minmax(0.5rem, 1fr) 
       [rightSide-end];
