@@ -59,7 +59,7 @@ export const VegeloperContainer = styled.div`
       [row-start] min-content [row-end]
     ) [last-line];
   ${"" /* TODO: grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax( */}
-  grid-template-columns: [leftSide-start] minmax(2vw, 1fr) [leftSide-end full-start] 10vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 10vw [full-end rightSide-start]
+  grid-template-columns: [leftSide-start] minmax(2vw, 1fr) [leftSide-end full-start] 5vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 5vw [full-end rightSide-start]
       minmax(2vw, 1fr) 
       [rightSide-end];
   ${respond.mobile.max`

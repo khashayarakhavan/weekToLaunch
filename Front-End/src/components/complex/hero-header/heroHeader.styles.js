@@ -24,9 +24,7 @@ export const HeroHeaderContainer = styled.header`
   display: grid;
   grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
 
-  @media (max-width: 1100px) {
-    
-  }
+  
 
 `;
 
@@ -36,12 +34,12 @@ export const HeroHeaderLeft = styled.div`
   padding-top: 10vh;
   ${"" /* max-height: 90vh; */}
   max-width: 100%;
+  background-color: red;
   ${"" /* background-color: lightblue; */}
-    background-color: red;
 
   @media (max-width: 1100px) {
     grid-column: center-start / center-end;
-    height: 80vh;
+    height: min-content;
     padding-top: 10vh;
     ${"" /* padding: 3rem; */}
   }
@@ -53,26 +51,24 @@ export const HeroHeaderLeft = styled.div`
   } */}
 `;
 export const HeroHeaderRight = styled.div`
-  grid-column: col-start 5 / center-end;
   background-color: blue;
+  grid-column: col-start 5 / center-end;
   height: 80vh;
-  ${"" /* max-height: 90vh; */}
-  padding-top: 10vh;
-  max-width: 100%;
-  ${"" /* background-color: red; */}
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  & > * {
+    justify-self: center;
+    align-self: center;
+  }
 
   @media (max-width: 1100px) {
     grid-column: center-start / center-end;
     grid-row: 2 / 3;
-    height: 80vh;
-    padding-top: 5vh;
+    height: min-content;
   }
 
-  ${"" /* padding-top: 20rem; */}
-  ${"" /* @media (max-width: 1100px) {
-    grid-row-start: 1;
-    max-height: 50rem;
-  } */}
 `;
 export const HeroHeaderLottie = styled(Lottie)`
 
@@ -96,7 +92,9 @@ export const TEXT = styled.span`
 
 export const H1 = styled.span`
   ${fonts.mixins.heroHeader};
-  font-size-adjust: 0.9; 
+  ${'' /* font-size-adjust: 0.9;  */}
+  font-size: 4vw;
+  width: 100%;
   color: ${colors.primary};
   ${'' /* line-height: ${sizes.lineHeight.extraLarge}; */}
   line-height: 8vw;
