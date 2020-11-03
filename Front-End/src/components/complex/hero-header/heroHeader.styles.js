@@ -41,14 +41,9 @@ export const HeroHeaderLeft = styled.div`
     grid-column: center-start / center-end;
     height: min-content;
     padding-top: 10vh;
-    ${"" /* padding: 3rem; */}
   }
 
-  ${"" /* padding-top: 30vh; */}
-  ${"" /* @media (max-width: 1100px) {
-    grid-row-start: 2;
-    max-height: 50rem;
-  } */}
+  
 `;
 export const HeroHeaderRight = styled.div`
   background-color: blue;
@@ -71,12 +66,7 @@ export const HeroHeaderRight = styled.div`
 
 `;
 export const HeroHeaderLottie = styled(Lottie)`
-
-
-  ${'' /* margin-top: 10vw; */}
   background-color: lightgreen;
- 
-  ${"" /* padding-right: 5rem; */}
 `;
 
 export const TEXT = styled.span`

@@ -3,15 +3,18 @@ import styled from "styled-components";
 
 //Code
 export const FeaturesContainer = styled.header`
-  
-  
   grid-column: center-start / center-end;
-  margin: 15rem 0;
+  margin: 15rem 5rem;
 
- 
   @supports (display: grid) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem,auto));
+    ${"" /*NOTE: grid-template-columns: repeat(auto-fit, minmax(25rem,auto)); */}
+    grid-template-columns: repeat(3, minmax(min-content,1fr));
+
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(1 , minmax(25rem,50vw)); 
+      grid-template-columns: repeat(1 , 65vw); 
+    }
     grid-gap: 1rem;
     align-items: start;
     justify-content: center;

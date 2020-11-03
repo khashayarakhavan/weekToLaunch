@@ -27,6 +27,15 @@ export const LeftSide = styled.div`
     rgb(242, 143, 147),
     rgb(234, 241, 249)
   );
+  background: linear-gradient(
+    -180deg,
+    rgb(242, 243, 247),
+    rgb(242, 223, 247),
+    rgb(234, 241, 249),
+    rgb(242, 223, 237),
+    rgb(242, 223, 227),
+    rgb(234, 241, 249)
+  );
 `;
 
 export const RightSide = styled.div`
@@ -41,6 +50,15 @@ export const RightSide = styled.div`
     rgb(234, 241, 249),
     rgb(242, 143, 247),
     rgb(242, 143, 147),
+    rgb(234, 241, 249)
+  );
+  background: linear-gradient(
+    -180deg,
+    rgb(242, 243, 247),
+    rgb(242, 223, 247),
+    rgb(234, 241, 249),
+    rgb(242, 223, 237),
+    rgb(242, 223, 227),
     rgb(234, 241, 249)
   );
 `;
@@ -74,8 +92,8 @@ export const VegeloperContainer = styled.div`
     rgb(242, 243, 247),
     rgb(242, 223, 247),
     rgb(234, 241, 249),
-    rgb(242, 143, 247),
-    rgb(242, 153, 187),
+    rgb(242, 223, 247),
+    rgb(242, 223, 237),
     rgb(234, 241, 249)
   );
   @include respond(large-2) {

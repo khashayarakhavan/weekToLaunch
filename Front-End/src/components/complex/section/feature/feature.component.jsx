@@ -37,7 +37,7 @@ const Template = () => {
           consequatur harum.
         </p>
       </Feature>
-      <Feature>
+      {/* <Feature>
         <svg className="feature__icon">
           <use href={sprite + "#icon-key"} />
         </svg>
@@ -66,7 +66,7 @@ const Template = () => {
           Pariatur voluptatibus quidem consequatur harum, voluptatum mollitia
           quae.
         </p>
-      </Feature>
+      </Feature> */}
     </FeaturesContainer>
   );
 };
