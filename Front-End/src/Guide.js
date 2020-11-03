@@ -52,3 +52,17 @@ h1, h2 {
 h1, h2, p {
   margin: .5em 0;
 }
+
+
+    &__text {
+      font-size: 1.7rem;
+     
+      ${'' /* line-height: 0.8em; */}
+      ${'' /* NOTE: justify text options */}
+      text-align: justify;
+      text-align-last: center;
+      text-justify: inter-character;
+      ${'' /* text-justify: inter-character; */}
+      
+      ${'' /* align-self: start; */}
+    }

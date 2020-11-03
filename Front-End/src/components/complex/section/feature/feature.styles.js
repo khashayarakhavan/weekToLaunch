@@ -48,7 +48,7 @@ export const Feature = styled.div`
   .feature {
     &__icon {
       fill: $color-primary;
-      background-color: green;
+      ${'' /* background-color: green; */}
       width: 4.5rem;
       height: 4.5rem;
       grid-row: 1 / span 2;
@@ -58,6 +58,14 @@ export const Feature = styled.div`
 
     &__text {
       font-size: 1.7rem;
+     
+      ${'' /* line-height: 0.8em; */}
+      ${'' /* NOTE: justify text options */}
+      text-align: justify;
+      text-align-last: center;
+      text-justify: inter-character;
+      ${'' /* text-justify: inter-character; */}
+      
       ${'' /* align-self: start; */}
     }
   }

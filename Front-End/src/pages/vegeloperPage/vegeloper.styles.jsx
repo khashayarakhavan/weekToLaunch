@@ -1,26 +1,16 @@
 import styled from 'styled-components';
 
+//Design
+import {respond} from '../../design/responsive';
+
 // import {
 //   HeroHeaderLeftContainer,
 //   HeroHeaderRightContainer,
 // } from "../../components/complex/hero-header/heroHeader.component";
 
 export const LandingPageContainer = styled.div`
-  ${'' /* display: grid;
-  grid-template-rows: 80vh min-content min-content minmax(40rem, min-content) repeat(
-      4,
-      min-content
-    );
-  ${"" /* grid-template-rows: 80vh 100rem; */}
-  ${'' /* grid-template-columns: [leftMargin-start] 100rem [leftMargin-end full-start] minmax(
-             6rem,
-             1fr
-           ) [center-start] repeat(
-             8,
-             [col-start] minmax(min-content, 12rem) [col-end]
-           ) [center-end] minmax(6rem, 1fr) [full-end]
-           [rightMargin-start] 10rem [rightMargin-end]; */} */}
 `;
+
 export const LeftSide = styled.div`
   grid-column: leftSide-start / leftSide-end;
 
@@ -62,40 +52,6 @@ export const SampleContainer = styled.div`
 `;
 
 export const VegeloperContainer = styled.div`
-  ${"" /* .container {
-    display: grid;
-    grid-template-rows: 80vh min-content min-content 40rem repeat(
-        3,
-        min-content
-      );
-    grid-template-columns:
-      [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
-      [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end])
-      [center-end] minmax(6rem, 1fr) [full-end];
-
-    @include respond(large-2) {
-      grid-template-rows: 6rem 80vh min-content min-content 40rem repeat(
-          3,
-          min-content
-        );
-      grid-template-columns:
-        [full-start] minmax(6rem, 1fr) [center-start] repeat(
-          8,
-          [col-start] minmax(min-content, 12rem) [col-end]
-        )
-        [center-end] minmax(6rem, 1fr) [full-end];
-    }
-
-    @include respond(medium-1) {
-      grid-template-rows:
-        6rem calc(100vh - 6rem) min-content min-content minmax(
-          15rem,
-          min-content
-        )
-        repeat(5, min-content);
-    }
-  } */}
-
   display: grid;
   ${"" /* NOTE: row templates */}
   grid-template-rows: [first-line] repeat(
@@ -103,9 +59,15 @@ export const VegeloperContainer = styled.div`
       [row-start] min-content [row-end]
     ) [last-line];
   ${"" /* TODO: grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax( */}
-  grid-template-columns: [leftSide-start] minmax(0.5rem, 1fr) [leftSide-end full-start] 5vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 5vw [full-end rightSide-start]
-      minmax(0.5rem, 1fr) 
+  grid-template-columns: [leftSide-start] minmax(2vw, 1fr) [leftSide-end full-start] 10vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 10vw [full-end rightSide-start]
+      minmax(2vw, 1fr) 
       [rightSide-end];
+  ${respond.mobile.max`
+       grid-template-columns: [full-start] 10vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 10vw [full-end] ;
+    `}
+  ${respond.mobile.medium`
+       grid-template-columns: [full-start center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end full-end] ;
+    `}
   background-size: cover;
   background: linear-gradient(
     -180deg,
