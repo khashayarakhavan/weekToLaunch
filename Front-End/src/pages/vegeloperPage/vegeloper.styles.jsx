@@ -9,6 +9,33 @@ import {respond} from '../../design/responsive';
 // } from "../../components/complex/hero-header/heroHeader.component";
 
 export const LandingPageContainer = styled.div`
+  display: grid;
+  grid-template-rows: 80vh min-content min-content 40rem repeat(3, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(
+      6rem,
+      1fr
+    ) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(
+      6rem,
+      1fr
+    ) [full-end];
+
+  @include respond(large-2) {
+    grid-template-rows: 6rem 80vh min-content min-content 40rem repeat(
+        3,
+        min-content
+      );
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 12rem) [col-end]
+      ) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  @include respond(medium-1) {
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content minmax(
+        15rem,
+        min-content
+      ) repeat(5, min-content);
+  }
 `;
 
 export const LeftSide = styled.div`
@@ -131,3 +158,13 @@ export const VegeloperContainer = styled.div`
 //     grid-row: 2 / 3;
 //   }
 // `;
+
+export const content = styled.div`
+  
+    display: flex;
+
+    @include respond(medium-1) {
+      flex-direction: column;
+    }
+  
+`;

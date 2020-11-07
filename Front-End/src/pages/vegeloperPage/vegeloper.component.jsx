@@ -14,6 +14,7 @@ import {
   HeroHeaderLeftContainer,
   HeroHeaderRightContainer,
 } from "../../components/complex/hero-header/heroHeader.component";
+import SideBar from '../../components/Sections/SideBar/SideBar.component';
 // import { HeroLeftSide, HeroRightSide } from "./vegeloper.styles";
 //Design
 import {VegeloperContainer, LeftSide, RightSide} from './vegeloper.styles';
@@ -21,6 +22,7 @@ import {VegeloperContainer, LeftSide, RightSide} from './vegeloper.styles';
 const LandingPage = () => (
   <VegeloperContainer>
     <LeftSide />
+    <SideBar />
     <HeroHeaderLeftContainer />
     <HeroHeaderRightContainer />
     <Skills />
