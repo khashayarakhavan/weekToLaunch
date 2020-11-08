@@ -56,28 +56,33 @@ export const HeroHeaderRight = styled.div`
   grid-column: center-start / center-end;
   grid-row: 1 / 2;
   height: 50vh;
-  ${'' /* padding-top: 20vh; */}
+  
+  padding-top: 5vh;
+  ${"" /* padding-top: 20vh; */}
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  ${'' /* background-color: blue; */}
+  ${'' /* background: blue; */}
 
   & > * {
-    justify-self: center;
-    align-self: center;
+    justify-self: flex-start;
+    align-self: flex-start;
   }
   ${respond.mobile.medium`
-    ${'' /* height: 50vh; */}
+    ${"" /* height: 50vh; */}
+    
   `}
-  
+
   ${respond.mobile.large`
-    height: 40vh;
+    height: min-content;
     grid-row: 2/3;
+    padding-top: 0vh;
   `}
   ${respond.pc.min`
     grid-row: 2 / 3;
     grid-column: col-start 5 / center-end;
     height: 70vh;
+    padding-top: 0vh;
   `}
 `;
 export const HeroHeaderLottie = styled(Lottie)`
