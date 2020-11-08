@@ -6,6 +6,7 @@ import mixins from '../../../design/mixins.styles';
 import fonts from '../../../design/fonts.styles';
 import colors from '../../../design/colors';
 import sizes from '../../../design/sizes';
+import {respond} from '../../../design/responsive';
 import shadows from '../../../design/shadows.styles';
 import events from '../../../design/events.styles';
 import {background_change} from '../../../design/motions.styles';
@@ -29,26 +30,23 @@ export const HeroHeaderContainer = styled.header`
 `;
 
 export const HeroHeaderLeft = styled.div`
-  grid-column: center-start / col-end 4;
-  height: 80vh;
+  grid-column: center-start / center-end;
+  height: min-content;
   padding-top: 10vh;
-  ${"" /* max-height: 90vh; */}
   max-width: 100%;
   background-color: red;
-  ${"" /* background-color: lightblue; */}
 
-  @media (max-width: 1100px) {
-    grid-column: center-start / center-end;
-    height: min-content;
-    padding-top: 10vh;
-  }
-
-  
+  ${respond.pc.min`
+    grid-column: center-start / col-end 4;
+    height: 80vh;
+    grid-row: 1 / 2;
+  `}
 `;
 export const HeroHeaderRight = styled.div`
   background-color: blue;
-  grid-column: col-start 5 / center-end;
-  height: 80vh;
+  grid-column: center-start / center-end;
+  grid-row: 2 / 3;
+  height: min-content;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -57,13 +55,11 @@ export const HeroHeaderRight = styled.div`
     justify-self: center;
     align-self: center;
   }
-
-  @media (max-width: 1100px) {
-    grid-column: center-start / center-end;
-    grid-row: 2 / 3;
-    height: min-content;
-  }
-
+  ${respond.pc.min`
+  grid-row: 1 / 2;
+    grid-column: col-start 5 / center-end;
+    height: 80vh;
+  `}
 `;
 export const HeroHeaderLottie = styled(Lottie)`
   background-color: lightgreen;

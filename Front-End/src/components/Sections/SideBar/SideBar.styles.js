@@ -11,28 +11,24 @@ import margins from "../../../design/margins.styles";
 
 export const SideBar = styled.section`
   background-color: grey;
-  flex: 0 0 18%;
+  grid-row: 1/2;
+  ${'' /* position: absolute; */}
+  grid-column: full-start / full-end;
+  ${'' /* flex: 0 0 18%; */}
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  grid-row: 2/3;
-  grid-column: center-start / center-end;
-  ${respond.mobile.max`
-    grid-row: 1/2;
-    grid-column: full-start / full-end;
-    `};
+
+  ${'' /* grid-column: center-start / center-end; */}
 `;
 
 export const SideNav = styled.ul`
     list-style: none;
     margin-top: 3.5rem;
-    font-size: 1.4rem;
+    font-size: 1.4rem;      
+    display: flex;
+    margin: 0;
     
-    ${respond.mobile.max`
-        
-        display: flex;
-        margin: 0;
-    `};
 `;
 
 // export const Scaling = css`
@@ -47,60 +43,57 @@ export const SideNav = styled.ul`
 // `;
 
 export const SideNavItem = styled.li`
-    
-    position: relative;
-    
-    ${respond.mobile.max`
+  position: relative;
+
+  ${respond.mobile.max`
         flex: 1;
-    `};          
-    
-    &:not(:last-child) {
-        margin-bottom: .5rem;
-        ${respond.mobile.max`
+    `};
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+    ${respond.mobile.max`
             margin: 0;
-        `};             
-    }
+        `};
+  }
 
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: .3rem;
-        height: 100%;
-        background-color: pink;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.3rem;
 
-        transform: scaleY(0);
-        transform-origin: bottom;
-        transition: transform .2s,
-                    width .4s cubic-bezier(1,0,0,1) .2s,
-                    height .4s cubic-bezier(1,0,0,1) .2s,
-                    background-color .05s;                
-        
-        // Define move up animation height start point to 0.3rem.
-        ${respond.mobile.max`
+  
+    background-color: pink;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.05s;
+
+    // Define move up animation height start point to 0.3rem.
+    ${'' /* ${respond.mobile.max`
             width: 100% ;
             height: .3rem ;
-        `};  
-    }
+        `}; */}
+  }
 
-    &:hover::before {
-        // Scale animation on hover in desktop mode. From left to right using width 0 to 100%.
-        transform: scaleY(1);
-        width: 100%;
+  &:hover::before {
+    // Scale animation on hover in desktop mode. From left to right using width 0 to 100%.
+    transform: scaleY(1);
+    width: 100%;
+    height: 100%;
 
-        // Move up animation on hover - navigation menu links. from bottom to top using height 0 to 100%.
-        ${respond.mobile.max`
+    // Move up animation on hover - navigation menu links. from bottom to top using height 0 to 100%.
+    ${respond.mobile.max`
             width: 100% ;
             height: 100% ;
         `};
-    }
+  }
 
-    &:active::before {
-        background-color: purple;
-    }
-
-    
+  &:active::before {
+    background-color: purple;
+  }
 `;
 
 export const ItemLink = styled.a`

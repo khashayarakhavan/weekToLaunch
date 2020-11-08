@@ -60,7 +60,7 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
             <GlobalConstants />
             <GlobalStyle darkMode />
             <ThemeProvider theme={noChange}>
-              <Header darkMode />
+              {/* <Header darkMode /> */}
             </ThemeProvider>
             <UpButton />
             {/* <SectionFeatures /> */}

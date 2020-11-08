@@ -19,6 +19,20 @@ const Constant = styled.div.attrs((props) => ({
 `;
 // Here is the End of Styled-component example.
 
+// NOTE: PURE CSS device detect 
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
+    /* ... */
+}/* stylus-based screens */
+@media (hover: none) and (pointer: fine) {
+    /* ... */
+}/* Nintendo Wii controller, Microsoft Kinect */
+@media (hover: hover) and (pointer: coarse) {
+    /* ... */
+}/* mouse, touch pad */
+@media (hover: hover) and (pointer: fine) {
+    /* ... */
+}
 
 // Responsive growth Rate using VW and VH css units.
 html {

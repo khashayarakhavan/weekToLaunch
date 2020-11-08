@@ -3,6 +3,7 @@ import styled from 'styled-components';
 //Design
 import {respond} from '../../design/responsive';
 
+
 // import {
 //   HeroHeaderLeftContainer,
 //   HeroHeaderRightContainer,
@@ -98,20 +99,34 @@ export const SampleContainer = styled.div`
 
 export const VegeloperContainer = styled.div`
   display: grid;
+  position: relative;
   ${"" /* NOTE: row templates */}
-  grid-template-rows: [first-line] repeat(
+
+  ${"" /* NOTE: mobile-first approach */}
+  grid-template-columns: [cover-start full-start center-start] repeat(
       8,
+      [col-start] minmax(min-content, 1fr) [col-end]
+    ) [center-end full-end cover-end];
+  grid-template-rows:
+    [first-line] min-content 10vh repeat(6, [row-start] min-content [row-end])
+    [last-line];
+
+  ${respond.mobile.max`
+       grid-template-columns: [cover-start full-start] 10vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 10vw [full-end cover-end] ;
+       grid-template-rows: [first-line] min-content 10vh repeat(
+      6,
       [row-start] min-content [row-end]
     ) [last-line];
-  ${"" /* TODO: grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax( */}
-  grid-template-columns: [leftSide-start] minmax(2vw, 1fr) [leftSide-end full-start] 5vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 5vw [full-end rightSide-start]
-      minmax(2vw, 1fr) 
-      [rightSide-end];
-  ${respond.mobile.max`
-       grid-template-columns: [full-start] 10vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 10vw [full-end] ;
     `}
-  ${respond.mobile.medium`
-       grid-template-columns: [full-start center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end full-end] ;
+  ${respond.pc.min`
+    grid-template-rows: [first-line] repeat(
+      10,
+      [row-start] min-content [row-end]
+    ) [last-line];
+
+    grid-template-columns: [cover-start leftSide-start] minmax(2vw, 1fr) [leftSide-end full-start] 5vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 5vw [full-end rightSide-start]
+      minmax(2vw, 1fr) 
+      [rightSide-end cover-end];
     `}
   background-size: cover;
   background: linear-gradient(
@@ -168,3 +183,4 @@ export const content = styled.div`
     }
   
 `;
+

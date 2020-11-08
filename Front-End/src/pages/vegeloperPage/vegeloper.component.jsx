@@ -10,6 +10,7 @@ import Cards from "../../components/Sections/Cards/Cards.component";
 import Skills from "../../components/Sections/skills/skills.component";
 import SectionStoriesPicture from "../../components/complex/section/stories-picture/stories-picture.component";
 import { LandingPageContainer } from "./vegeloper.styles";
+import Header from '../../components/Sections/header/header.component';
 import {
   HeroHeaderLeftContainer,
   HeroHeaderRightContainer,
@@ -21,8 +22,9 @@ import {VegeloperContainer, LeftSide, RightSide} from './vegeloper.styles';
 
 const LandingPage = () => (
   <VegeloperContainer>
+    <Header />
     <LeftSide />
-    <SideBar />
+    {/* <SideBar /> */}
     <HeroHeaderLeftContainer />
     <HeroHeaderRightContainer />
     <Skills />

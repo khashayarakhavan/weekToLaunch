@@ -22,9 +22,13 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 export const HeaderContainer = styled.div`
   ${mix_containers.header};
   height: 10vh;
-  @media (max-width: 400px) {
-    display: none;
-  };
+  grid-column: cover-start / cover-end;
+  grid-row: 2/ span 1;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  position: fixed;
+  ;
   background-color: rgb(242, 243, 247);
   ${respond.desktop_large`
     
