@@ -33,30 +33,45 @@ export const HeroHeaderLeft = styled.div`
   height: min-content;
   max-width: 100%;
   background-color: red;
+  ${'' /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr; */}
+
+
+  ${'' /* & > * {
+    justify-self: flex-start;
+    align-self: center;
+  } */}
 
   ${respond.pc.min`
     grid-column: center-start / col-end 4;
-    height: 80vh;
+    height: 70vh;
     grid-row: 2 / 3;
   `}
 `;
 export const HeroHeaderRight = styled.div`
   grid-column: center-start / center-end;
   grid-row: 3 / 4;
-  height: min-content;
-  background-color: blue;
+  height: 40vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  background-color: blue;
 
   & > * {
     justify-self: center;
     align-self: center;
   }
+  ${respond.mobile.medium`
+    height: 50vh;
+  `}
+  ${respond.mobile.large`
+    height: 60vh;
+  `}
   ${respond.pc.min`
-  grid-row: 2 / 3;
+    grid-row: 2 / 3;
     grid-column: col-start 5 / center-end;
-    height: 80vh;
+    height: 70vh;
   `}
 `;
 export const HeroHeaderLottie = styled(Lottie)`
@@ -77,10 +92,12 @@ export const TEXT = styled.span`
 export const H1 = styled.span`
   ${fonts.mixins.heroHeader};
   font-size: 4vmax;
+  ${'' /* font-size: 20vmin; */}
   width: 100%;
   color: ${colors.primary};
   display: block;
   line-height: 8vw;
+  ${'' /* line-height: 20vmin; */}
   ${'' /* font-size-adjust: 0.9;  */}
   ${'' /* line-height: ${sizes.lineHeight.extraLarge}; */}
   ${'' /* margin-bottom: ${sizes.margin.large};

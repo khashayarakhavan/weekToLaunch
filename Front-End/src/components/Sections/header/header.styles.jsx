@@ -21,6 +21,7 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 //Code
 export const HeaderContainer = styled.div`
   ${mix_containers.header};
+  margin-top: -10px;
   height: 10vh;
   grid-column: cover-start / cover-end;
   grid-row: 1/ span 1;
