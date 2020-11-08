@@ -67,7 +67,7 @@ html {
     @media (max-width: 1200px) {
     font-size: 56.25%;
     };
-    ${respond.pc.min`
+    ${respond.tablet.medium`
       font-size: 50%; /* 8px */
     `}
 }

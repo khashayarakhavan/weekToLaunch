@@ -23,11 +23,11 @@ export const HeaderContainer = styled.div`
   ${mix_containers.header};
   height: 10vh;
   grid-column: cover-start / cover-end;
-  grid-row: 2/ span 1;
-  bottom: 0;
+  grid-row: 1/ span 1;
+  top: 0;
   left: 0;
   z-index: 1000;
-  position: fixed;
+  position: sticky;
   ;
   background-color: rgb(242, 243, 247);
   ${respond.desktop_large`

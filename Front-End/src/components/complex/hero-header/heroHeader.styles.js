@@ -24,29 +24,27 @@ export const HeroHeaderContainer = styled.header`
   justify-items: start;
   display: grid;
   grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
-
-  
-
 `;
 
 export const HeroHeaderLeft = styled.div`
+  padding-top: 5vh;
   grid-column: center-start / center-end;
+  grid-row: 2 / 3;
   height: min-content;
-  padding-top: 10vh;
   max-width: 100%;
   background-color: red;
 
   ${respond.pc.min`
     grid-column: center-start / col-end 4;
     height: 80vh;
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
   `}
 `;
 export const HeroHeaderRight = styled.div`
-  background-color: blue;
   grid-column: center-start / center-end;
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
   height: min-content;
+  background-color: blue;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -56,7 +54,7 @@ export const HeroHeaderRight = styled.div`
     align-self: center;
   }
   ${respond.pc.min`
-  grid-row: 1 / 2;
+  grid-row: 2 / 3;
     grid-column: col-start 5 / center-end;
     height: 80vh;
   `}
@@ -78,18 +76,18 @@ export const TEXT = styled.span`
 
 export const H1 = styled.span`
   ${fonts.mixins.heroHeader};
-  ${'' /* font-size-adjust: 0.9;  */}
-  font-size: 4vw;
+  font-size: 4vmax;
   width: 100%;
   color: ${colors.primary};
-  ${'' /* line-height: ${sizes.lineHeight.extraLarge}; */}
+  display: block;
   line-height: 8vw;
+  ${'' /* font-size-adjust: 0.9;  */}
+  ${'' /* line-height: ${sizes.lineHeight.extraLarge}; */}
   ${'' /* margin-bottom: ${sizes.margin.large};
   margin-block-end: ${sizes.margin.large}; */}
   ${'' /* margin-bottom: 3vw; */}
-  display: block;
 
-  @media (max-width: 500px) {
+  ${'' /* @media (max-width: 500px) {
     font-size: 4.25rem;
   };
   @media (max-width: 400px) {
@@ -106,7 +104,7 @@ export const H1 = styled.span`
   };
   @media (max-width: 200px) {
     font-size: 1.75rem;
-  };
+  }; */}
 `;
 
 export const Skill_1 = styled.span`
@@ -154,7 +152,7 @@ export const Button = styled.div`
     display: block;
     ${'' /* line-height: 2.5rem !important; */}
     ${'' /* margin-top: 2rem !important; */}
-    margin-bottom: 5rem !important;
+    margin-bottom: 10rem !important;
     margin-right: 2rem !important;
     margin-block-end: 2rem !important;
     text-transform: uppercase;

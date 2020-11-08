@@ -173,7 +173,7 @@ export const HeroHeaderRightContainer = (props) => {
       robotAnimation = <HeroHeaderLottie
           options={AnimationCreateRobot}
           resizeMode="cover"
-          height={250}
+          height={300}
         />;
     } 
 
