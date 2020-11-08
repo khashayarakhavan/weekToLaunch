@@ -69,7 +69,7 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
             <Switch>
               <ErrorBoundary>
                 <Suspense fallback={<Spinner />}>
-                  <Route exact path="/" component={HeroHeader} />
+                  <Route exact path="/" component={Vegeloper} />
                   <Route path="/articles/:slug" component={SingleArticlePage} />
                   <Route exact path="/hello" component={HomePage} />
                   <Route exact path="/landing" component={LandingPage} />
