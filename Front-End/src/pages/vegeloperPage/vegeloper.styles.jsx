@@ -108,12 +108,20 @@ export const VegeloperContainer = styled.div`
       [col-start] minmax(min-content, 1fr) [col-end]
     ) [center-end full-end cover-end];
   grid-template-rows:
-    [first-line] 10vh minmax(30vh, min-content) min-content repeat(
+    [first-line] min-content minmax(30vh, min-content) repeat(
       8,
       [row-start] min-content [row-end]
     )
     [last-line];
 
+  ${respond.mobile.large`
+       grid-template-rows:
+    [first-line] min-content minmax(30vh, min-content) min-content repeat(
+      8,
+      [row-start] min-content [row-end]
+    )
+    [last-line];
+    `}
   ${respond.mobile.max`
        grid-template-columns: [cover-start full-start] 10vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 10vw [full-end cover-end] ;
     `}

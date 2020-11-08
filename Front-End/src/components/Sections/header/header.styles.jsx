@@ -21,28 +21,19 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 //Code
 export const HeaderContainer = styled.div`
   ${mix_containers.header};
+display: none;
   margin-top: -10px;
   height: 10vh;
   grid-column: cover-start / cover-end;
-  grid-row: 1/ span 1;
+  grid-row: 1 / span 1;
   top: 0;
   left: 0;
   z-index: 1000;
-  position: sticky;
-  ;
+
+  ${respond.mobile.large`
+    display: flex;
+  `};
   background-color: rgb(242, 243, 247);
-  ${respond.desktop_large`
-    
-  `};
-  ${respond.desktop_medium`
-    
-  `};
-  ${respond.tablet_large`
-    
-  `};
-  ${respond.tablet_medium`
-    
-  `};
 `;
 
 export const LogoContainer = styled(Link)`

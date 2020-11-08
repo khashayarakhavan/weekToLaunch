@@ -43,6 +43,9 @@ export const HeroHeaderLeft = styled.div`
     align-self: center;
   } */}
 
+  ${respond.mobile.large`
+    grid-row: 3 / 4;
+  `}
   ${respond.pc.min`
     grid-column: center-start / col-end 4;
     height: 70vh;
@@ -51,8 +54,9 @@ export const HeroHeaderLeft = styled.div`
 `;
 export const HeroHeaderRight = styled.div`
   grid-column: center-start / center-end;
-  grid-row: 3 / 4;
-  height: 40vh;
+  grid-row: 1 / 2;
+  height: 50vh;
+  ${'' /* padding-top: 20vh; */}
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -63,10 +67,12 @@ export const HeroHeaderRight = styled.div`
     align-self: center;
   }
   ${respond.mobile.medium`
-    height: 50vh;
+    ${'' /* height: 50vh; */}
   `}
+  
   ${respond.mobile.large`
-    height: 60vh;
+    height: 40vh;
+    grid-row: 2/3;
   `}
   ${respond.pc.min`
     grid-row: 2 / 3;

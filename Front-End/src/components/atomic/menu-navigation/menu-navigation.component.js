@@ -1,8 +1,9 @@
 import React from 'react';
+import {NavContainer} from './nav.styles';
 
 const Template = () => {
     return (
-       <div className="navigation">
+       <NavContainer>
            <input type="checkbox" className="navigation__checkbox" id="navigation-toggle"/>
            <label htmlFor="navigation-toggle" className="navigation__button">
                <span className="navigation__icon">&nbsp;</span>
@@ -19,7 +20,7 @@ const Template = () => {
                     <li className="navigation__item"><a href="#" className="navigation__link"><span>05</span>Book Now</a></li>
                </ul>
            </nav>
-       </div>
+       </NavContainer>
     );
 };
 
