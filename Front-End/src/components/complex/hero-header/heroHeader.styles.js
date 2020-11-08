@@ -30,7 +30,7 @@ export const HeroHeaderLeft = styled.div`
   padding-top: 5vh;
   grid-column: center-start / center-end;
   grid-row: 2 / 3;
-  height: min-content;
+  height: 50vh;
   max-width: 100%;
   ${'' /* background-color: red; */}
   ${'' /* display: grid;
@@ -83,6 +83,7 @@ export const HeroHeaderRight = styled.div`
     grid-column: col-start 5 / center-end;
     height: 70vh;
     padding-top: 0vh;
+    
   `}
 `;
 export const HeroHeaderLottie = styled(Lottie)`
@@ -107,7 +108,19 @@ export const H1 = styled.span`
   width: 100%;
   color: ${colors.primary};
   display: block;
-  line-height: 8vw;
+  line-height: 4vmax;
+  ${respond.mobile.small`
+  font-size: 5vmax;
+  line-height: 5vmax;
+  `}
+  ${respond.pc.min`
+  font-size: 4vmax;
+  line-height: 4vmax;
+  `}
+  ${respond.pc.large`
+  font-size: 3vmax;
+  line-height: 3vmax;
+  `}
   ${'' /* line-height: 20vmin; */}
   ${'' /* font-size-adjust: 0.9;  */}
   ${'' /* line-height: ${sizes.lineHeight.extraLarge}; */}

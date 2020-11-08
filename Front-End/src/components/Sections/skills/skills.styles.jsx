@@ -47,7 +47,10 @@ export const Article = styled.article`
       line-height: ${sizes.lineHeight.extraLarge};
       margin-bottom: ${sizes.margin.large};
       margin-block-end: ${sizes.margin.large};
-      font-size: 5vw;
+      font-size: 3vmax;
+      ${respond.mobile.medium`
+      font-size: 4vmax;
+      `}
       ${'' /* @media (max-width: 600px) {
         font-size: 4.75rem;
       }
@@ -100,7 +103,7 @@ export const WhatIDo = styled.section`
 export const SkillsContainer = styled.div`
   //Container
   grid-column: center-start / center-end;
-  grid-row: 4 / span 1;
+  ${'' /* grid-row: 4 / span 1; */}
   ${"" /* grid-row-start: 2; */}
   ${"" /* margin-top: 50vh; */}
   transition: all 0.5s ease-in-out;
@@ -316,12 +319,7 @@ export const BubbleButton = styled.div`
   align-items: center;
   justify-content: center;
   min-width: 11.5rem;
-  @media (max-width: 400px) {
-    min-width: 5rem;
-  };
-  @media (max-width: 300px) {
-    display: none;
-  };
+  
   height: 25rem;
   border-radius: 60rem;
   ${"" /* position: absolute; */}
@@ -487,7 +485,7 @@ export const Deets = styled.div`
     ${fonts.mixins.heroHeader};
     padding: 0 0 1rem;
     margin: 0;
-    font-size: 3vw;
+    font-size: 2.8vmax;
     ${'' /* @media (max-width: 500px) {
       font-size: 2.75rem;
     }
@@ -515,7 +513,7 @@ export const Deets = styled.div`
       "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */}
     ${fonts.mixins.text};
     ${"" /* font-weight: 300; */}
-    font-size: 2vw;
+    font-size: 2.5vmax;
     ${'' /* @media (max-width: 500px) {
       font-size: 1.75rem;
     }
