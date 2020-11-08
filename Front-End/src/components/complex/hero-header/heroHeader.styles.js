@@ -32,7 +32,7 @@ export const HeroHeaderLeft = styled.div`
   grid-row: 2 / 3;
   height: min-content;
   max-width: 100%;
-  background-color: red;
+  ${'' /* background-color: red; */}
   ${'' /* display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr; */}
@@ -56,7 +56,7 @@ export const HeroHeaderRight = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  background-color: blue;
+  ${'' /* background-color: blue; */}
 
   & > * {
     justify-self: center;
