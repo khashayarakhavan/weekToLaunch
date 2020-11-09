@@ -127,13 +127,13 @@ export const VegeloperContainer = styled.div`
     `}
   ${respond.pc.min`
   
-    grid-template-rows: [first-line] repeat(
+    ${'' /* grid-template-rows: [first-line] repeat(
       10,
       [row-start] min-content [row-end]
-    ) [last-line];
+    ) [last-line]; */}
 
       grid-template-rows:
-    [first-line] 10vh minmax(30vh, min-content) min-content repeat(
+    [first-line] 10vh minmax(30vh, min-content)  min-content repeat(
       8,
       [row-start] min-content [row-end]
     )

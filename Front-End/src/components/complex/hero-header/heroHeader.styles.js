@@ -18,97 +18,28 @@ import {AnimationCreateRobot} from '../../../design/animations.styles';
 
 
 //Code
-export const HeroHeaderContainer = styled.header`
-  grid-column: center-start / center-end;
-  height: 90vh;  
-  justify-items: start;
-  display: grid;
-  grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
-`;
 
-export const HeroHeaderLeft = styled.div`
-  padding-top: 5vh;
-  grid-column: center-start / center-end;
-  grid-row: 2 / 3;
-  height: 50vh;
-  max-width: 100%;
-  ${'' /* background-color: red; */}
-  ${'' /* display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr; */}
-
-
-  ${'' /* & > * {
-    justify-self: flex-start;
-    align-self: center;
-  } */}
-
-  ${respond.mobile.large`
-    grid-row: 3 / 4;
-  `}
-  ${respond.pc.min`
-    grid-column: center-start / col-end 4;
-    height: 70vh;
-    grid-row: 2 / 3;
-  `}
-`;
-export const HeroHeaderRight = styled.div`
-  grid-column: center-start / center-end;
-  grid-row: 1 / 2;
-  height: 50vh;
-  
-  padding-top: 5vh;
-  ${"" /* padding-top: 20vh; */}
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  ${'' /* background: blue; */}
-
-  & > * {
-    justify-self: flex-start;
-    align-self: flex-start;
-  }
-  ${respond.mobile.medium`
-    ${"" /* height: 50vh; */}
-    
-  `}
-
-  ${respond.mobile.large`
-    height: min-content;
-    grid-row: 2/3;
-    padding-top: 0vh;
-  `}
-  ${respond.pc.min`
-    grid-row: 2 / 3;
-    grid-column: col-start 5 / center-end;
-    height: 70vh;
-    padding-top: 0vh;
-    
-  `}
-`;
-export const HeroHeaderLottie = styled(Lottie)`
-  background-color: lightgreen;
-`;
-
-export const TEXT = styled.span`
-  ${fonts.mixins.text};
-  color: ${colors.primary};
-  margin-left: ${sizes.margin.smaller};
-  ${'' /* margin-top: ${sizes.margin.largest} ; */}
-  ${'' /* margin-top: 6vw; */}
-  ${'' /* margin-bottom: ${sizes.margin.large}; */}
-  line-height: ${sizes.lineHeight.large} ;
-  display:block;
-`;
-
-export const H1 = styled.span`
+export const H1 = styled.div`
   ${fonts.mixins.heroHeader};
   font-size: 4vmax;
-  ${'' /* font-size: 20vmin; */}
   width: 100%;
   color: ${colors.primary};
   display: block;
   line-height: 4vmax;
+  position: relative;
+
+  ${'' /* p {
+    z-index: 20;
+    
+  }
+
+  p > span {
+    color: green !important;
+    z-index: 5 !important;
+    position: relative;
+    display: inline-block;
+  } */}
+
   ${respond.mobile.small`
   font-size: 5vmax;
   line-height: 5vmax;
@@ -121,31 +52,124 @@ export const H1 = styled.span`
   font-size: 3vmax;
   line-height: 3vmax;
   `}
-  ${'' /* line-height: 20vmin; */}
-  ${'' /* font-size-adjust: 0.9;  */}
-  ${'' /* line-height: ${sizes.lineHeight.extraLarge}; */}
-  ${'' /* margin-bottom: ${sizes.margin.large};
-  margin-block-end: ${sizes.margin.large}; */}
-  ${'' /* margin-bottom: 3vw; */}
+`;
 
-  ${'' /* @media (max-width: 500px) {
-    font-size: 4.25rem;
-  };
-  @media (max-width: 400px) {
-    font-size: 3.75rem;
-  };
-  @media (max-width: 350px) {
-    font-size: 3.25rem;
-  };
-  @media (max-width: 300px) {
-    font-size: 2.75rem;
-  };
-  @media (max-width: 250px) {
-    font-size: 2.25rem;
-  };
-  @media (max-width: 200px) {
-    font-size: 1.75rem;
-  }; */}
+
+export const HeroHeaderLeft = styled.div`
+  position: relative;
+  ${"" /* z-index: 100  !important; */}
+  height: 50vh;
+  ${'' /* background: red; */}
+  max-width: 100%;
+  padding-top: 15vh;
+  padding-left: 2rem;
+  overflow: visible !important;
+  grid-column: center-start / center-end;
+  grid-row: 2 / 3;
+
+  ${respond.mobile.large`
+    grid-row: 3 / 4;
+  `}
+  ${respond.pc.min`
+    grid-column: center-start / col-end 4;
+    grid-row: 2 / 3;
+    height: 70vh;
+    margin-left: 6rem !important;
+    
+  `}
+`;
+
+
+
+
+
+
+
+
+
+export const HeroHeaderRight = styled.div`
+  grid-column: center-start / center-end;
+  ${"" /* background-color: pink; */}
+  grid-row: 1 / 2;
+  height: min-content;
+  ${"" /* margin-top: 5vh; */}
+  ${"" /* margin-top:  */}
+  ${"" /* width: 60vw; */}
+  position: relative;
+  z-index: 10 !important;
+
+  ${"" /* width: content; */}
+  ${"" /* background: blue; */}
+  ${"" /* padding-top: 5vh; */}
+  ${"" /* padding-top: 20vh; */}
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  ${"" /* background: blue; */}
+
+  & > * {
+    justify-self: flex-start;
+    align-self: flex-start;
+    overflow: visible !important ;
+    z-index: 100 !important;
+    position: relative;
+  }
+  svg {
+    overflow: visible !important;
+  }
+
+  ${respond.mobile.medium`
+    ${"" /* height: 50vh; */}
+  `}
+
+  ${respond.mobile.large`
+    height: min-content;
+    grid-row: 2/3;
+    padding-top: 0vh;
+  `}
+  ${respond.pc.min`
+    grid-row: 2 / 3;
+    grid-column: col-start 5 / center-end;
+    height: 70vh;
+    padding-top: 0vh;    
+    margin-left: -80px !important;
+  `}
+
+ 
+  ${respond.pc.small`
+    
+    margin-left: -100px !important;
+    
+  `}
+`;
+export const HeroHeaderLottie = styled(Lottie)`
+  background-color: lightgreen;
+`;
+
+export const TEXT = styled.span`
+  ${fonts.mixins.text};
+  color: ${colors.primary};
+  max-width: 95%;
+  margin-left: ${sizes.margin.smaller};
+  ${'' /* margin-top: ${sizes.margin.largest} ; */}
+  ${'' /* margin-top: 6vw; */}
+  ${'' /* margin-bottom: ${sizes.margin.large}; */}
+  line-height: ${sizes.lineHeight.large} ;
+  display:block;
+`;
+export const Behind = styled.span`
+  z-index: 5 !important;
+  position: relative;
+  ${"" /* position: fixed; */}
+  ${"" /* z-index: 100 !important; */}
+  ${"" /* color: pink; */}
+`;
+export const Front = styled.span`
+  z-index: 15 !important;
+  position: relative;
+  ${"" /* position: fixed; */}
+  ${"" /* z-index: 100 !important; */}
+  ${"" /* color: pink; */}
 `;
 
 export const Skill_1 = styled.span`
@@ -181,6 +205,14 @@ export const Skill_3 = styled.span`
   &:hover {
     background-color: ${colors.paleBlue};
   }
+`;
+export const SkillTotal = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  ${'' /* align-content: flex-end; */}
+  align-items: center;
+  ${'' /* wrap: none; */}
 `;
 
 export const Button = styled.div`
@@ -228,4 +260,16 @@ export const Button = styled.div`
     box-shadow:  4px 4px 15px 2px rgba(125, 126, 127, 0.42),
            -3px -3px 12px 2px rgba(255, 255, 255, 0.93);
   }
+`;
+
+
+
+
+
+export const HeroHeaderContainer = styled.header`
+  grid-column: center-start / center-end;
+  height: 90vh;
+  justify-items: start;
+  display: grid;
+  grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
 `;
