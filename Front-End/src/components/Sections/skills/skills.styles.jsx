@@ -103,6 +103,7 @@ export const WhatIDo = styled.section`
 export const SkillsContainer = styled.div`
   //Container
   grid-column: center-start / center-end;
+  ${'' /* grid-row: 4/span 1; */}
   ${'' /* grid-row: 4 / span 1; */}
   ${"" /* grid-row-start: 2; */}
   ${"" /* margin-top: 50vh; */}

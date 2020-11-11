@@ -20,8 +20,24 @@ export default {
     light: "grey",
     dark: "darkgrey",
   },
-  
+  neutrals: {
+    lightest: "#FFFFFF",
+    lighter: "#F9F9FA",
+    light: "#F0F0F3",
+    darkest: "#102539",
+  },
+  secondary: {
+    lightest: "#D1D9E6",
+    lighter: "#284F70",
+    darkest: "#143351",
+  },
+  accent: {
+    lightest: "#EB5E28",
+    darkest: "#D65522",
+  },
+
   white: "rgb(248, 248, 249)",
+  black: "#102539",
   primary: "#003153",
   accent: "#D65524",
   black: "black",
@@ -65,6 +81,22 @@ export const ColorsThemeFelal = {
          grayDark: "#444",
          grayDarker: "#222",
        };
+export const ThemeNeumorphic = {
+  neutrals: {
+    lightest: "#ffffff",
+    lighter: "#f9f9fa",
+    light: "#f0f0f3",
+    darkest: "#102539",
+  },
+  secondary: {
+    lightest: "#284f70",
+    darkest: "#143351",
+  },
+  accent: {
+    lightest: "#eb5e28",
+    darkest: "#d65522",
+  },
+};
 
 export const ColorsThemeLight = {
          white: "#fff",

@@ -24,7 +24,7 @@ export const respond = {
       }
     `,
     min: (...args) => css`
-      @media (min-width: 1024px) {
+      @media (min-width: 1024px) and (orientation: landscape) {
         ${css(...args)};
       }
     `,
@@ -36,7 +36,7 @@ export const respond = {
       }
     `,
     large: (...args) => css`
-      @media screen (min-width: 1024px) and (hover: none) {
+      @media (min-width: 1000px) and (orientation: portrait) {
         ${css(...args)};
       }
     `,
@@ -58,7 +58,7 @@ export const respond = {
   },
   mobile: {
     max: (...args) => css`
-      @media (min-width: 640px) {
+      @media (min-width: 600px) {
         ${css(...args)};
       }
     `,
@@ -73,7 +73,7 @@ export const respond = {
       }
     `,
     small: (...args) => css`
-      @media (min-width: 414px) {
+      @media (min-width: 412px) {
         ${css(...args)};
       }
     `,

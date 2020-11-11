@@ -21,9 +21,11 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 //Code
 export const HeaderContainer = styled.div`
   ${mix_containers.header};
-display: none;
+  display: flex;
+  transition: height 0.3s ease-in, opacity 0.5s ease-out; 
+  opacity: 0;
   margin-top: -10px;
-  height: 10vh;
+  height: 1vh;
   grid-column: cover-start / cover-end;
   grid-row: 1 / span 1;
   top: 0;
@@ -31,7 +33,8 @@ display: none;
   z-index: 1000;
 
   ${respond.mobile.large`
-    display: flex;
+    height: 10vh;
+    opacity: 1;
   `};
   background-color: rgb(242, 243, 247);
 `;

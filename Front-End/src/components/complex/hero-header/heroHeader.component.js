@@ -26,7 +26,7 @@ import {
   Front,
   Behind,
   TEXT,
-  H1,
+  Heading,
   HeroHeaderContainer,
   HeroHeaderLeft,
   HeroHeaderRight,
@@ -47,27 +47,22 @@ export const HeroHeaderLeftContainer = (props) => {
 
   return (
     <HeroHeaderLeft>
-      <H1>
+      <Heading>
         <p>
           Hi<Accent_fireOrange>.</Accent_fireOrange>
         </p>
-        <p>
-          <Front>
+        <p>    
             I<Accent_mateBlue>’</Accent_mateBlue>m
-            <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hash
-          </Front>
-          <Behind>i</Behind>
+            <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hashi
         </p>
-      </H1>
+      </Heading>
       <TEXT>
-        <Front>
           a full stack web developer and I love &nbsp;
           <SkillTotal>
             <Skill_1>coding</Skill_1>, &nbsp;
             <Skill_2>science</Skill_2> &&nbsp;
             <Skill_3>nature</Skill_3>
           </SkillTotal>
-        </Front>
       </TEXT>
       <Button>
         Pleased to meet you 😊 <br />
@@ -122,7 +117,7 @@ export const HeroHeaderRightContainer = (props) => {
       robotAnimation = <HeroHeaderLottie
         options={AnimationCreateRobot}
         resizeMode="cover"
-        height={`90%`}
+        height={`80%`}
         
         
       />;

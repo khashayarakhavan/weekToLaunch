@@ -79,7 +79,6 @@ const fonts = {
     heroHeader: (...args) => css`
       font-family: "Rubik Mono One", sans-serif;
       font-weight: 400;
-      font-size: 5rem;
     `,
   },
 };
