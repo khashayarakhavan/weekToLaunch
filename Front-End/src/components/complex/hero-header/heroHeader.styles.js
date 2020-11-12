@@ -19,16 +19,20 @@ import {AnimationCreateRobot} from '../../../design/animations.styles';
 //Code
 
 export const HeroHeaderLeft = styled.div`
+  grid-row: 2 / span 1;
   position: relative;
   text-rendering: optimizeLegibility;
   overflow-wrap: break-word;
   height: 50vh;
   max-width: 100%;
   z-index: 100;
-  ${'' /* background: blue; */}
+  background: blue;
   grid-column: center-start / center-end;
-  grid-row: 2 / span 1;
   display: grid;
+  grid-template-rows: min-content min-content minmax(min-content, 1fr);
+  margin-top: clamp(50px, 16.6666vw, 16.6666vw);
+
+  ${'' /* align-items: center; */}
 
   ${respond.mobile.large`
     height: 45vh;
@@ -90,8 +94,6 @@ export const HeroHeaderRight = styled.div`
 export const Heading = styled.div`
   ${fonts.mixins.heroHeader}
   color: ${colors.secondary.darkest};
-
-
   letter-spacing: 0px;
   font-style: normal;
   overflow-wrap: break-word;
@@ -101,11 +103,10 @@ export const Heading = styled.div`
   padding-left: clamp(30px, 10vw, 10vw);
   font-size: clamp(25px, 8.3vw, 8.3vw);
   line-height: clamp(30px, 10vw, 10vw);
-
   width: 100%;
   display: block;
-
   position: relative;
+
   ${respond.mobile.large`
     padding-top: clamp(54px, 10vw, 10vw);   
   `}
@@ -120,8 +121,10 @@ export const Heading = styled.div`
 
 export const TEXT = styled.span`
   display: block;
+  ${'' /* height: clamp(40px, 6.666vw, 16.666vw); */}
   ${fonts.mixins.text};
   width: 100%;
+  
   color: ${colors.neutrals.darkest};
   letter-spacing: 0px;
   font-style: normal;
@@ -139,7 +142,7 @@ export const TEXT = styled.span`
   font-family: "Poppins", sans-serif;
 
   font-weight: 200;
-  font-size: clamp(9px, 3vw, 3vw);
+  font-size: clamp(10px, 3.333vw, 3.333vw);
   padding-left: clamp(32px, 10.666vw, 10.666vw);
 
   ${respond.mobile.max`
@@ -208,7 +211,7 @@ export const Skill_3 = styled.span`
 export const SkillTotal = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  width: 63%;
+  width: 70.5%;
   justify-content: flex-start;
   justify-content: space-between;
   align-items: center;
@@ -216,78 +219,79 @@ export const SkillTotal = styled.div`
 `;
 
 export const Button = styled.div`
-
   justify-self: flex-start;
-      display: flex;
-      flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  ${'' /* margin-right: 7%; */}
- letter-spacing: 0px;
+  align-self: center;
+  margin-left: clamp(32px, 10.666vw, 10.666vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 0px;
   font-style: normal;
+  font-size: clamp(9px, 3vw, 3vw);
   overflow-wrap: break-word;
   word-break: break-word;
   text-rendering: optimizeLegibility;
   position: relative;
   width: 42%;
-  ${"" /* padding: 0 0.5vw; */}
-  padding-left: 1vw;
-  font-size: clamp(9px, 3vw, 3vw);
-  background-color: ${colors.neutrals.light};
-  background-color: ${colors.highlights.lighter};
-  background-color: ${colors.secondary.lighter};
-  background-color: ${colors.accent.darkest};
-  ${"" /* margin-top: 1rem; */}
-  ${shadows.mixins.neumorphic.original};
-  ${"" /* ${fonts.mixins.CTA.visitProfile};  */}
+  height: min-content;
+  
+  border: none;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
-  
-  span {
-font-family: "Rubik Mono One",  Cambria, "Times New Roman", Times, sans-serif;
-      font-weight: 400;
-      color: ${colors.secondary.lighter};
-      color: ${colors.shadows.light};
-      color: ${colors.neutrals.light};
-  }
-  ${"" /* font-size: clamp(8px, 2.6vw, 2.6vw); */}
-  border: none;
   border-radius: 1rem;
   transition: all 0.4s;
   cursor: pointer;
-
-  margin-left: clamp(32px, 10.666vw, 10.666vw);
+  align-items: flex-start;
+  padding-left: 1vw;
+  background-color: ${colors.accent.lightest};
+  transition: all 0.4s;
+  ${shadows.mixins.neumorphic.original};
 
   ${respond.mobile.max`
     margin-left: clamp(3px, 0.5vw, 0.5vw);
   `}
 
+  span {
+    font-family: "Rubik Mono One", Cambria, "Times New Roman", Times, sans-serif;
+    font-weight: 400;
+    color: ${colors.secondary.lighter};
+    color: ${colors.shadows.light};
+    color: ${colors.neutrals.light};
+  }
+
   &,
   &:link,
   &:visited {
-     color: ${colors.neutrals.lighter};
-    text-transform: uppercase; 
+    color: ${colors.neutrals.lighter};
+    text-transform: uppercase;
     text-decoration: none;
   }
 
   &:hover {
     transform: translateY(-8px);
-    background-color:  #F8F8F9;
-    box-shadow:  4px 4px 15px 2px rgba(125, 126, 127, 0.42),
-           -3px -3px 12px 2px rgba(255, 255, 255, 0.93); 
+    background-color: #f8f8f9;
+    box-shadow: 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
+      -3px -3px 12px 2px rgba(255, 255, 255, 0.93);
+    box-shadow: 0 10rem 20rem rgba(black, 0.2);
+    background-color: ${colors.neutrals.lighter};
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
 
-  &:hover::after {
+  ${"" /* &:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
-  }
+  } */}
 
   &:active {
     outline: none;
-    background-color: #094e7c;
+    background-color: ${colors.accent.darkest};
     color: rgba(252, 253, 253, 0.87);
     transform: translateY(-2px);
-    box-shadow:  4px 4px 15px 2px rgba(125, 126, 127, 0.42),
-           -3px -3px 12px 2px rgba(255, 255, 255, 0.93);
+    box-shadow: 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
+      -3px -3px 12px 2px rgba(255, 255, 255, 0.93);
   }
 `;
 
