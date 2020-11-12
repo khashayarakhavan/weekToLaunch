@@ -6,6 +6,7 @@ import mixins from '../../../design/mixins.styles';
 import fonts from '../../../design/fonts.styles';
 import colors from '../../../design/colors';
 import sizes from '../../../design/sizes';
+import {bubbleGum} from '../../../design/motions.styles';
 import {respond} from '../../../design/responsive';
 import shadows from '../../../design/shadows.styles';
 import events from '../../../design/events.styles';
@@ -26,7 +27,7 @@ export const HeroHeaderLeft = styled.div`
   height: 50vh;
   max-width: 100%;
   z-index: 100;
-  background: blue;
+  ${'' /* background: blue; */}
   grid-column: center-start / center-end;
   display: grid;
   grid-template-rows: min-content min-content minmax(min-content, 1fr);
@@ -219,6 +220,8 @@ export const SkillTotal = styled.div`
 `;
 
 export const Button = styled.div`
+  ${"" /* border-radius: 1rem; */}
+  border: none;
   justify-self: flex-start;
   align-self: center;
   margin-left: clamp(32px, 10.666vw, 10.666vw);
@@ -232,20 +235,24 @@ export const Button = styled.div`
   word-break: break-word;
   text-rendering: optimizeLegibility;
   position: relative;
-  width: 42%;
-  height: min-content;
-  
-  border: none;
+  width: 46%;
+  height: clamp(56px, 18.666vw, 18.666vw);
+
+  border-top-right-radius: 130%;
+  border-bottom-right-radius: 150%;
+  border-top-left-radius: 180%;
+  border-bottom-left-radius: 140%;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
-  border-radius: 1rem;
   transition: all 0.4s;
   cursor: pointer;
   align-items: flex-start;
+  align-items: center;
   padding-left: 1vw;
   background-color: ${colors.accent.lightest};
-  transition: all 0.4s;
+  transition: all  3.4s 2s;
   ${shadows.mixins.neumorphic.original};
+  will-change: border-radius;
 
   ${respond.mobile.max`
     margin-left: clamp(3px, 0.5vw, 0.5vw);
@@ -267,31 +274,42 @@ export const Button = styled.div`
     text-decoration: none;
   }
 
-  &:hover {
-    transform: translateY(-8px);
-    background-color: #f8f8f9;
-    box-shadow: 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
-      -3px -3px 12px 2px rgba(255, 255, 255, 0.93);
-    box-shadow: 0 10rem 20rem rgba(black, 0.2);
-    background-color: ${colors.neutrals.lighter};
-    &::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
-    }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    ${"" /* background-color: ${colors.accent.lightest}; */}
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    ${"" /* opacity: 0; */}
   }
 
-  ${"" /* &:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-  } */}
+  &:hover {
+    ${"" /* transform: translateY(-8px); */}
+    ${"" /* background-color: #f8f8f9; */}
+    ${"" /* box-shadow: 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
+      -3px -3px 12px 2px rgba(255, 255, 255, 0.93);
+    box-shadow: 4rem 10rem 20rem rgba(black, 0.2); */}
+    animation: ${bubbleGum} 2.5s  infinite  linear;
+    ${"" /* background-color: ${colors.neutrals.lighter}; */}
+
+    &::after {
+      pointer-events: auto;
+    }
+  }
 
   &:active {
     outline: none;
     background-color: ${colors.accent.darkest};
-    color: rgba(252, 253, 253, 0.87);
-    transform: translateY(-2px);
-    box-shadow: 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
-      -3px -3px 12px 2px rgba(255, 255, 255, 0.93);
+    ${"" /* color: rgba(252, 253, 253, 0.87); */}
+    transform: translateY(5px);
+    ${"" /* box-shadow: 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
+      -3px -3px 12px 2px rgba(255, 255, 255, 0.93); */}
   }
 `;
 
