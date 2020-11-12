@@ -43,6 +43,10 @@ const fonts = {
     medium: "1rem",
     small: "0.8rem",
   },
+  Abril: (...args) => css`
+    font-family: "Abril Fatface", cursive;
+  `,
+
   mixins: {
     CTA: {
       visitProfile: (...args) => css`
@@ -77,7 +81,7 @@ const fonts = {
       font-weight: 400;
     `,
     heroHeader: (...args) => css`
-      font-family: "Rubik Mono One", sans-serif;
+      font-family: "Rubik Mono One",  Cambria, "Times New Roman", Times, sans-serif;
       font-weight: 400;
     `,
   },

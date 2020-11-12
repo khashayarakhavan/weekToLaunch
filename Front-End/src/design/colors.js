@@ -39,7 +39,7 @@ export default {
   white: "rgb(248, 248, 249)",
   black: "#102539",
   primary: "#003153",
-  accent: "#D65524",
+  
   black: "black",
   palePink: "#fde2e4",
   paleYellow: "#fff1e6",

@@ -1,5 +1,6 @@
 //Libraries
 import styled from 'styled-components';
+import colors from '../../design/colors';
 
 //Design
 import {respond} from '../../design/responsive';
@@ -19,7 +20,17 @@ export const VegeloperContainer = styled.div`
     rgb(242, 223, 247),
     rgb(242, 223, 237),
     rgb(234, 241, 249)
-  );
+  ); 
+  ${'' /* background: linear-gradient(
+    -180deg,
+    ${colors.highlights.lighter},
+    ${colors.highlights.light},
+    ${colors.highlights.dark},
+    rgb(234, 241, 249),
+    rgb(242, 223, 247),
+    rgb(242, 223, 237),
+    rgb(234, 241, 249)
+  ); */}
   grid-template-columns:
     [cover-start full-start center-start] repeat(
       8,

@@ -53,14 +53,14 @@ export const HeroHeaderLeftContainer = (props) => {
         </p>
         <p>    
             I<Accent_mateBlue>’</Accent_mateBlue>m
-            <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hashi
+            <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hashi 
         </p>
       </Heading>
       <TEXT>
-          a full stack web developer and I love &nbsp;
+          <p>a full stack web developer and I love &nbsp;</p>
           <SkillTotal>
-            <Skill_1>coding</Skill_1>, &nbsp;
-            <Skill_2>science</Skill_2> &&nbsp;
+            <Skill_1>coding</Skill_1>,
+            <Skill_2>science</Skill_2>&
             <Skill_3>nature</Skill_3>
           </SkillTotal>
       </TEXT>
