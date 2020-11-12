@@ -119,6 +119,7 @@ export const Heading = styled.div`
 `;
 
 export const TEXT = styled.span`
+  display: block;
   ${fonts.mixins.text};
   width: 100%;
   color: ${colors.neutrals.darkest};
@@ -128,7 +129,6 @@ export const TEXT = styled.span`
   word-break: break-word;
   text-rendering: optimizeLegibility;
   line-height: ${sizes.lineHeight.large};
-  display: block;
   font-family: "Lato", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto Condensed", sans-serif;
@@ -217,24 +217,27 @@ export const SkillTotal = styled.div`
 
 export const Button = styled.div`
 
+  justify-self: flex-start;
       display: flex;
       flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+  ${'' /* margin-right: 7%; */}
  letter-spacing: 0px;
   font-style: normal;
   overflow-wrap: break-word;
   word-break: break-word;
   text-rendering: optimizeLegibility;
   position: relative;
-  width: 50%;
-  justify-self: center;
-  
+  width: 42%;
+  ${"" /* padding: 0 0.5vw; */}
+  padding-left: 1vw;
+  font-size: clamp(9px, 3vw, 3vw);
   background-color: ${colors.neutrals.light};
   background-color: ${colors.highlights.lighter};
+  background-color: ${colors.secondary.lighter};
   background-color: ${colors.accent.darkest};
-  margin-top: 1rem;
-  padding: 0rem 1rem;
+  ${"" /* margin-top: 1rem; */}
   ${shadows.mixins.neumorphic.original};
   ${"" /* ${fonts.mixins.CTA.visitProfile};  */}
   font-family: "Poppins", sans-serif;
@@ -247,12 +250,17 @@ font-family: "Rubik Mono One",  Cambria, "Times New Roman", Times, sans-serif;
       color: ${colors.shadows.light};
       color: ${colors.neutrals.light};
   }
-  font-size: clamp(9px, 3vw, 3vw);
   ${"" /* font-size: clamp(8px, 2.6vw, 2.6vw); */}
   border: none;
   border-radius: 1rem;
   transition: all 0.4s;
   cursor: pointer;
+
+  margin-left: clamp(32px, 10.666vw, 10.666vw);
+
+  ${respond.mobile.max`
+    margin-left: clamp(3px, 0.5vw, 0.5vw);
+  `}
 
   &,
   &:link,
