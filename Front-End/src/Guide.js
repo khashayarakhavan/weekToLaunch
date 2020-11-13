@@ -132,3 +132,23 @@ main {
         }
     }
 }
+
+
+
+/* 
+* how to import SVG in React.js
+*/
+export const SearchBox = ({ toggleCartHidden, itemCount }) => (
+         <SearchContainer>
+           {/* -- Style 1 how to import SVG: direct SVG file & edit partly using Sass -- */}
+           <CrownIcon className="nanai-icon" onClick={toggleCartHidden} />
+
+           {/* -- Style 2 to import SVG: SVG file inside StyledComponents -- */}
+           <StarIcon />
+
+           {/* -- Style 3 to import SVG: using Sprite bundle + StyledComponents "Recommended Method" -- */}
+           <SVG onClick={toggleCartHidden}>
+             <use href={sprite + "#icon-trophy"} />
+           </SVG>
+         </SearchContainer>
+       );

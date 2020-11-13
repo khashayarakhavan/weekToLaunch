@@ -14,6 +14,9 @@ import {background_change} from '../../../design/motions.styles';
 import Lottie from "react-lottie";
 //Assets
 import {AnimationCreateRobot} from '../../../design/animations.styles';
+// import heartSVG from '../../../assets/SVG/heart.svg';
+import HeartSVG from '../../../assets/SVG/heart.svg';
+import { ReactComponent as MyIcon } from "../../../assets/SVG/heart.svg";
 
 
 
@@ -239,14 +242,18 @@ export const Figure = styled.div`
 `;
 
 export const Button = styled.div`
-  ${'' /* transition: all 0.5s ease-out; */}
+  p {
+    ${"" /* transform: translateX(clamp(-1rem, -3.333vw, -3.333vw)); */}
+    padding-left: clamp(0.9rem,3vw, 3vw);
+    align-self: flex-start;
+  }
+  transition: transform 1s;
   margin-top: 1.5rem;
   border: none;
   background: transparent;
   justify-self: flex-start;
   align-self: center;
   margin-left: clamp(3.2rem, 10.666vw, 10.666vw);
-  ${"" /* background-color: ${colors.accent.lightest}; */}
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -273,6 +280,16 @@ export const Button = styled.div`
     & ${Figure} {
       animation: ${bubbleGum} 2.5s infinite linear;
     }
+  }
+
+  &:active {
+    & ${Figure} {
+      animation: ${bubbleGum} 2.5s infinite linear;
+      background-color: ${colors.neutrals.darkest};
+      background-color: ${colors.secondary.darkest};
+    }
+    transform: translateY(5px);
+    outline: none;
   }
 
   ${respond.mobile.max`
@@ -304,15 +321,6 @@ export const Button = styled.div`
     left: 0;
     z-index: 1000;
   }
-
-  &:active {
-    outline: none;
-    background-color: ${colors.neutrals.darkest};
-    ${"" /* color: rgba(252, 253, 253, 0.87); */}
-    transform: translateY(5px);
-    ${"" /* box-shadow: 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
-      -3px -3px 12px 2px rgba(255, 255, 255, 0.93); */}
-  }
 `;
 
 export const HeroHeaderContainer = styled.header`
@@ -321,4 +329,37 @@ export const HeroHeaderContainer = styled.header`
   justify-items: start;
   display: grid;
   grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
+`;
+
+
+export const Heart = styled(HeartSVG)`
+  width: 24px;
+  height: 24px;
+`;
+export const SvgIcon = styled(MyIcon)`
+  width: clamp(1.8rem, 6vw, 6vw);
+  height: clamp(1.8rem, 6vw, 6vw);
+  position: absolute;
+  top: clamp(1rem, 3.333vw, 3.333vw);
+  right: clamp(0.9rem, 3vw, 3vw);
+  fill: currentColor;
+  fill: ${colors.neutrals.darkest};
+  fill: ${colors.accent.darkest};
+  fill: ${colors.secondary.darkest};
+  fill: ${colors.neutrals.lightest};
+`;
+export const CustomSVG = styled.iframe`
+  width: 7px;
+  height: 7px;
+  fill: ${colors.secondary.darkest};
+  color: blue;
+  ${'' /* fill: blue; */}
+`;
+export const NewSVG = styled.svg`
+  width: 3px;
+  height: 3px;
+  fill: currentColor;
+  fill: ${colors.secondary.darkest};
+  
+  ${"" /* fill: blue; */}
 `;

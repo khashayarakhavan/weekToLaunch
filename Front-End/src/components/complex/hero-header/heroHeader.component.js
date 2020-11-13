@@ -18,12 +18,21 @@ import { signOutStart } from "../../../redux/user/user.actions";
 import SectionFeatures from '../../../components/Sections/Features/sectionFeatures';
 //Assets
 import {AnimationCreateRobot} from '../../../design/animations.styles';
+import heartSVG from '../../../assets/SVG/heart.svg';
+import SvgHeart from '../../../assets/svgReact/Heart.js';
+// import CustomSVG from '../../../assets/svgReact/CustomSVG.js';
+import {CustomSVG, NewSVG} from './heroHeader.styles';
+import sprite from '../../../assets/SVG/heart.svg';
+import { ReactComponent as MyIcon } from "../../../assets/SVG/heart.svg";
+import {SvgIcon} from './heroHeader.styles';
+
 //Design
 import { Accent_fireOrange , Accent_mateBlue } from '../../../design/effects.styles';
 import {
   Button,
   SkillTotal,
   Front,
+  Heart,
   Figure,
   Behind,
   TEXT,
@@ -48,6 +57,15 @@ export const HeroHeaderLeftContainer = (props) => {
 
   return (
     <HeroHeaderLeft>
+      {/* <SvgHeart
+        fill="inherit"
+        stroke="none"
+        strokeWidth="2px"
+        width="28px"
+        height="28px"
+        name="icon-home"
+      /> */}
+
       <Heading>
         <p>
           Hi<Accent_fireOrange>.</Accent_fireOrange>
@@ -65,11 +83,10 @@ export const HeroHeaderLeftContainer = (props) => {
         </SkillTotal>
       </TEXT>
       <Button>
-          Pleased to meet you 😊 <br />
-          <span>tea or coffee ? </span>
-          <Figure>
-            
-          </Figure>
+        <p>Pleased to meet you</p> <SvgIcon />
+        <br />
+        <span>tea or coffee ? </span>
+        <Figure></Figure>
       </Button>
     </HeroHeaderLeft>
   );
