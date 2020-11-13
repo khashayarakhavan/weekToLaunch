@@ -39,14 +39,23 @@ export const neon = keyframes`
 `;
 
 export const hoverOff = keyframes`
-100%{
-  height: clamp(5.6rem, 18.333vw, 18.333vw);
+0 {
+  height: clamp(6.3rem, 21vw, 21vw);
+}
+
+50%{
+  height: clamp(5.9rem, 19.66vw, 19.66vw);
     
+   
+}
+
+ 100%{
+   height: clamp(5.6rem, 18.333vw, 18.333vw);
     border-top-right-radius: 130%;
   border-bottom-right-radius: 150%;
   border-top-left-radius: 180%;
   border-bottom-left-radius: 140%;
-}
+ }
 `;
 
 export const bubbleGum = keyframes`

@@ -221,38 +221,28 @@ export const SkillTotal = styled.div`
 `;
 
 
-export const Figure = styled.div`
-  animation: ${hoverOff} 2.5s linear;
-  position: absolute;
-  transition: all 2.5s linear;
-  @media (hover: none) {
-    animation: ${bubbleGum} 2.5s infinite;
-  };
-  width: 100%;
-  height: 100%;
 
+
+export const Figure = styled.div`
+  transition: all 1s ;
+  animation: ${hoverOff} 1s infinite linear;
+  position: absolute;
+  height: clamp(5.6rem, 18.333vw, 18.333vw);
+  width: 100%;
   z-index: -1;
   background-color: ${colors.accent.lightest};
-  ${"" /* background-color: red; */}
-  ${"" /* z-index: 100000; */}
+
   border-top-right-radius: 130%;
   border-bottom-right-radius: 150%;
   border-top-left-radius: 180%;
   border-bottom-left-radius: 140%;
-  ${"" /* ${shadows.mixins.neumorphic.original}; */}
-
-  ${"" /* will-change: border-top-right-radius, border-bottom-right-radius,
-    border-top-left-radius, border-bottom-left-radius; */}
-   
-    ${"" /* transition: all 3.4s; */}
-  ${"" /* ${shadows.mixins.neumorphic.original}; */}
 `;
 
-
 export const Button = styled.div`
+  ${'' /* transition: all 0.5s ease-out; */}
   margin-top: 1.5rem;
-  transition: all 2.5s ease-out;
   border: none;
+  background: transparent;
   justify-self: flex-start;
   align-self: center;
   margin-left: clamp(3.2rem, 10.666vw, 10.666vw);
@@ -279,9 +269,11 @@ export const Button = styled.div`
   align-items: flex-start;
   align-items: center;
   padding-left: 1vw;
-  ${"" /* background-color: ${colors.accent.lightest}; */}
-
-  will-change: border-radius;
+  &:hover {
+    & ${Figure} {
+      animation: ${bubbleGum} 2.5s infinite linear;
+    }
+  }
 
   ${respond.mobile.max`
     margin-left: clamp(3px, 0.5vw, 0.5vw);
@@ -293,7 +285,6 @@ export const Button = styled.div`
     color: ${colors.shadows.light};
     color: ${colors.neutrals.light};
   }
-
   &,
   &:link,
   &:visited {
@@ -307,33 +298,22 @@ export const Button = styled.div`
     height: 100%;
     width: 100%;
     border-radius: 10px;
-    ${"" /* background-color: ${colors.accent.lightest}; */}
+
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1000;
-    ${"" /* opacity: 0; */}
-  }
-  &:hover {
-    background: none;
-
-    & ${Figure} {
-      transition: height 2.5s ease-out;
-      ${'' /* background-color: ${colors.accent.lightest}; */}
-      animation: ${bubbleGum} 2.5s infinite linear;
-    }
   }
 
   &:active {
     outline: none;
-    background-color: ${colors.accent.darkest};
+    background-color: ${colors.neutrals.darkest};
     ${"" /* color: rgba(252, 253, 253, 0.87); */}
     transform: translateY(5px);
     ${"" /* box-shadow: 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
       -3px -3px 12px 2px rgba(255, 255, 255, 0.93); */}
   }
 `;
-
 
 export const HeroHeaderContainer = styled.header`
   grid-column: center-start / center-end;
