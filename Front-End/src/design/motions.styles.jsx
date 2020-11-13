@@ -38,13 +38,22 @@ export const neon = keyframes`
   }
 `;
 
+export const hoverOff = keyframes`
+100%{
+  height: clamp(5.6rem, 18.333vw, 18.333vw);
+    
+    border-top-right-radius: 130%;
+  border-bottom-right-radius: 150%;
+  border-top-left-radius: 180%;
+  border-bottom-left-radius: 140%;
+}
+`;
+
 export const bubbleGum = keyframes`
   
   0%{
-    height: clamp(56px, 18.333vw, 18.333vw);
-    align-items: center;
-
-
+    height: clamp(5.6rem, 18.333vw, 18.333vw);
+    
     border-top-right-radius: 130%;
     border-bottom-right-radius: 150%;
     border-top-left-radius: 180%;
@@ -53,7 +62,7 @@ export const bubbleGum = keyframes`
   
   
   15%{
-    height: clamp(65px, 21vw, 21vw);
+    height: clamp(6.5rem, 21vw, 21vw);
 
 
     border-top-right-radius: 120%;
@@ -65,9 +74,7 @@ export const bubbleGum = keyframes`
   }
   
   30%{
-    height: 75%;
-
-
+    height: clamp(6rem, 20vw, 20vw);
     border-top-right-radius: 130%;
     border-top-left-radius: 195%;
     border-bottom-left-radius: 145%;
@@ -76,8 +83,7 @@ export const bubbleGum = keyframes`
 
   
   45% {
-    height: 71%;
-
+    height: clamp(6.1rem, 21vw, 21vw);
     border-top-right-radius: 135%;
     border-top-left-radius: 145%;  
     border-bottom-left-radius: 165%;
@@ -86,7 +92,7 @@ export const bubbleGum = keyframes`
   }
 
   60% {
-    height: 69%;
+    height: clamp(6.9rem, 23vw, 23vw);
 
     border-top-right-radius: 160%;
     border-bottom-right-radius: 155%;
@@ -95,7 +101,7 @@ export const bubbleGum = keyframes`
   }
 
   75% {
-    height: 75%;
+    height: clamp(7.5rem, 25vw, 25vw);
 
     border-top-left-radius: 180%;
     border-top-right-radius: 160%;
@@ -106,7 +112,7 @@ export const bubbleGum = keyframes`
   }
 
   100%{
-    height: clamp(56px, 18.333vw, 18.333vw);
+    height: clamp(5.6rem, 18.333vw, 18.333vw);
 
 
     border-top-right-radius: 130%;

@@ -64,12 +64,8 @@ html {
     // 1rem = 10px; 10px/16px = 62.5%
     font-size: 62.5%; /* 10px */
     
-    @media (max-width: 1200px) {
-    font-size: 56.25%;
-    };
-    ${respond.tablet.medium`
-      font-size: 50%; /* 8px */
-    `}
+    
+    
 }
 
 body {

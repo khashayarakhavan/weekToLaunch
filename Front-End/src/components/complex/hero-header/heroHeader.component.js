@@ -24,6 +24,7 @@ import {
   Button,
   SkillTotal,
   Front,
+  Figure,
   Behind,
   TEXT,
   Heading,
@@ -51,22 +52,24 @@ export const HeroHeaderLeftContainer = (props) => {
         <p>
           Hi<Accent_fireOrange>.</Accent_fireOrange>
         </p>
-        <p>    
-            I<Accent_mateBlue>’</Accent_mateBlue>m
-            <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hashi 
+        <p>
+          I<Accent_mateBlue>’</Accent_mateBlue>m
+          <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hashi
         </p>
       </Heading>
       <TEXT>
-          <p>a full stack web developer and I love &nbsp;</p>
-          <SkillTotal>
-            <Skill_1>coding</Skill_1>,
-            <Skill_2>science</Skill_2>&
-            <Skill_3>nature</Skill_3>
-          </SkillTotal>
+        <p>a full stack web developer and I love &nbsp;</p>
+        <SkillTotal>
+          <Skill_1>coding</Skill_1>,<Skill_2>science</Skill_2>&
+          <Skill_3>nature</Skill_3>
+        </SkillTotal>
       </TEXT>
       <Button>
-        Pleased to meet you 😊 <br />
-        <span>tea or coffee ? </span>
+          Pleased to meet you 😊 <br />
+          <span>tea or coffee ? </span>
+          <Figure>
+            
+          </Figure>
       </Button>
     </HeroHeaderLeft>
   );
