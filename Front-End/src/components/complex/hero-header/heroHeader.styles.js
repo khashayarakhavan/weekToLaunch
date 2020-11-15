@@ -243,7 +243,6 @@ export const Figure = styled.div`
 
 export const Button = styled.div`
   p {
-    ${"" /* transform: translateX(clamp(-1rem, -3.333vw, -3.333vw)); */}
     padding-left: clamp(0.9rem,3vw, 3vw);
     align-self: flex-start;
   }

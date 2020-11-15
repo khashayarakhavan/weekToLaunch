@@ -97,6 +97,39 @@ export const RightSide = styled.div`
 
 
 
+export const ScrollContainerFlex = styled.div`
+  margin: 5px;
+  width: 300px;
+  width: 100vw;
+  height: 100px;
+  border: 2px solid #341c09;
+  white-space: nowrap;
+  grid-column: full-start/ full-end;
+  font-size: 20px;
+  background-color: lime;
+
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  &::-webkit-scrollbar-button {
+    width: 20px;
+    height: 20px;
+  }
+`;
+
+export const ScrollItemFlex = styled.div`
+  border: 2px solid #b85b14;
+  background-color: #fc7307;
+  width: 120px;
+
+  flex: 0 0 auto;
+`;
 
 
 
@@ -111,6 +144,95 @@ export const RightSide = styled.div`
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const ScrollContainer = styled.div`
+  ${"" /* display: flex;
+  grid-row: 5 / span 1; */}
+
+  grid-column: full-start/ full-end;
+  font-size: 20px;
+  background-color: lime;
+
+  position: relative;
+  top: -30px; // Hide the horizontal scrollbar.
+  left: 0;
+  width: 1000px;
+  ${"" /* width: 10vw; */}
+  height: calc(100vw);
+  height: calc(30vh);
+  ${"" /* height: calc(10vh); */}
+
+  overflow: scroll;
+  transform: rotate(-90deg);
+  transform-origin: center calc(50vh);
+
+  &::-webkit-scrollbar {
+    width: $scrollBarHeight;
+    height: $scrollBarHeight;
+  }
+
+  &::-webkit-scrollbar-button {
+    width: $scrollBarHeight;
+    height: $scrollBarHeight;
+  }
+`;
+
+export const Child = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em auto;
+  padding: 2em;
+  width: 100px;
+  height: 50px;
+  transform: rotate(90deg);
+  border: 1px solid #333;
+  box-shadow: 3px 3px 6px rgba(#333, 0.3);
+  text-align: center;
+`;
 
 
 
@@ -160,4 +282,39 @@ export const SampleContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(10rem, 1fr)) [last-col] 35%;
   grid-template-rows: [first-line] repeat(10, auto) [last-line];
+`;
+
+
+
+export const HorizontalScroll = styled.div`
+  $finalHeight: 50px;
+  $finalWidth: 3 * $finalHeight;
+  $scrollBarHeight: 10px;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: calc(#{$finalHeight} + #{$scrollBarHeight});
+  max-height: $finalWidth;
+  margin: 0;
+  padding-top: $scrollBarHeight;
+  background: #abc;
+  overflow-y: hidden;
+  overflow-x: auto;
+  transform: rotate(90deg) translateY(-$finalHeight);
+  transform-origin: right top;
+  & > div {
+    display: block;
+    padding: 5px;
+    background: #cab;
+    transform: rotate(90deg);
+    transform-origin: right top;
+  }
+
+  padding: $finalHeight 0 0 0;
+  & > div {
+    width: $finalHeight;
+    height: $finalHeight;
+    margin: 10px 0;
+  }
 `;
