@@ -30,13 +30,11 @@ export const HeroHeaderLeft = styled.div`
   height: 50vh;
   max-width: 100%;
   z-index: 100;
-  ${'' /* background: blue; */}
+  background: lightblue;
   grid-column: center-start / center-end;
   display: grid;
   grid-template-rows: min-content min-content minmax(min-content, 1fr);
   margin-top: clamp(50px, 16.6666vw, 16.6666vw);
-
-  ${'' /* align-items: center; */}
 
   ${respond.mobile.large`
     height: 45vh;
@@ -216,7 +214,12 @@ export const Skill_3 = styled.span`
 export const SkillTotal = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  width: 70.5%;
+  ${"" /* overflow-wrap: break-word; */}
+  overflow-wrap: normal;
+  ${"" /* word-break: keep-all;
+  word-break: break-word; */}
+  word-break: normal;
+  width: clamp(180.467px, 60.155666vw, 60.155666vw);
   justify-content: flex-start;
   justify-content: space-between;
   align-items: center;
@@ -226,7 +229,7 @@ export const SkillTotal = styled.div`
 
 
 
-export const Figure = styled.div`
+export const BackgroundFigure = styled.div`
   transition: all 1s ;
   animation: ${hoverOff} 1s infinite linear;
   position: absolute;
@@ -234,7 +237,6 @@ export const Figure = styled.div`
   width: 100%;
   z-index: -1;
   background-color: ${colors.accent.lightest};
-
   border-top-right-radius: 130%;
   border-bottom-right-radius: 150%;
   border-top-left-radius: 180%;
@@ -243,8 +245,9 @@ export const Figure = styled.div`
 
 export const Button = styled.div`
   p {
-    padding-left: clamp(0.9rem,3vw, 3vw);
+    padding-left: clamp(0.9rem, 3vw, 3vw);
     align-self: flex-start;
+    background: transparent;
   }
   transition: transform 1s;
   margin-top: 1.5rem;
@@ -263,7 +266,7 @@ export const Button = styled.div`
   word-break: break-word;
   text-rendering: optimizeLegibility;
   position: relative;
-  width: 46%;
+  width: clamp(129.467px, 43.155666vw, 43.155666vw);
   height: clamp(5.6rem, 18.666vw, 18.666vw);
   border-top-right-radius: 130%;
   border-bottom-right-radius: 150%;
@@ -276,18 +279,19 @@ export const Button = styled.div`
   align-items: center;
   padding-left: 1vw;
   &:hover {
-    & ${Figure} {
+    & ${BackgroundFigure} {
       animation: ${bubbleGum} 2.5s infinite linear;
     }
   }
 
   &:active {
-    & ${Figure} {
+    & ${BackgroundFigure} {
       animation: ${bubbleGum} 2.5s infinite linear;
       background-color: ${colors.neutrals.darkest};
       background-color: ${colors.secondary.darkest};
     }
-    transform: translateY(5px);
+
+    transform: translateY(1.666666vw);
     outline: none;
   }
 
@@ -336,29 +340,26 @@ export const Heart = styled(HeartSVG)`
   height: 24px;
 `;
 export const SvgIcon = styled(MyIcon)`
+  position: absolute;
+  z-index: 10000000;
   width: clamp(1.8rem, 6vw, 6vw);
   height: clamp(1.8rem, 6vw, 6vw);
-  position: absolute;
   top: clamp(1rem, 3.333vw, 3.333vw);
   right: clamp(0.9rem, 3vw, 3vw);
-  fill: currentColor;
-  fill: ${colors.neutrals.darkest};
-  fill: ${colors.accent.darkest};
-  fill: ${colors.secondary.darkest};
+  right: clamp(0.7rem, 2.333333vw, 2.33333vw);
   fill: ${colors.neutrals.lightest};
 `;
+
 export const CustomSVG = styled.iframe`
   width: 7px;
   height: 7px;
   fill: ${colors.secondary.darkest};
   color: blue;
-  ${'' /* fill: blue; */}
 `;
+
 export const NewSVG = styled.svg`
   width: 3px;
   height: 3px;
   fill: currentColor;
   fill: ${colors.secondary.darkest};
-  
-  ${"" /* fill: blue; */}
 `;

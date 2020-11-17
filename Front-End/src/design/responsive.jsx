@@ -3,6 +3,11 @@ import { css } from "styled-components";
 //Code
 export const respond = {
   pc: {
+    max_4k: (...args) => css`
+      @media (min-width: 3800px) {
+        ${css(...args)};
+      }
+    `,
     max: (...args) => css`
       @media (min-width: 2000px) {
         ${css(...args)};

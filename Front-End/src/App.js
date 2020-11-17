@@ -62,10 +62,10 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
             <ThemeProvider theme={noChange}>
               {/* <Header darkMode /> */}
             </ThemeProvider>
-            <UpButton />
+            {/* <UpButton /> */}
             {/* <SectionFeatures /> */}
             {/* <HeroHeader />  */}
-            <MenuNavigation />
+            {/* <MenuNavigation /> */}
             <Switch>
               <ErrorBoundary>
                 <Suspense fallback={<Spinner />}>

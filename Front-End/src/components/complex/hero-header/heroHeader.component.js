@@ -33,7 +33,7 @@ import {
   SkillTotal,
   Front,
   Heart,
-  Figure,
+  BackgroundFigure,
   Behind,
   TEXT,
   Heading,
@@ -86,7 +86,7 @@ export const HeroHeaderLeftContainer = (props) => {
         <p>Pleased to meet you</p> <SvgIcon />
         <br />
         <span>tea or coffee ? </span>
-        <Figure></Figure>
+        <BackgroundFigure></BackgroundFigure>
       </Button>
     </HeroHeaderLeft>
   );

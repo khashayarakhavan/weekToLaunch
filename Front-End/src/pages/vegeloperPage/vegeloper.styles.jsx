@@ -21,24 +21,8 @@ export const VegeloperContainer = styled.div`
     rgb(242, 223, 237),
     rgb(234, 241, 249)
   ); 
-  ${'' /* background: linear-gradient(
-    -180deg,
-    ${colors.highlights.lighter},
-    ${colors.highlights.light},
-    ${colors.highlights.dark},
-    rgb(234, 241, 249),
-    rgb(242, 223, 247),
-    rgb(242, 223, 237),
-    rgb(234, 241, 249)
-  ); */}
-  grid-template-columns:
-    [cover-start full-start center-start] repeat(
-      8,
-      [col-start] minmax(min-content, 1fr) [col-end]
-    )
-    [center-end full-end cover-end];
 
-  grid-template-columns:
+  grid-template-columns: 
     [cover-start leftSide-start] 1vw [leftSide-end full-start] 1vw [center-start] repeat(
       8,
       [col-start] minmax(min-content, 1fr) [col-end]
@@ -48,7 +32,7 @@ export const VegeloperContainer = styled.div`
     [rightSide-end cover-end];
 
   grid-template-rows:
-    [first-line] repeat(10, [row-start] min-content [row-end])
+    [first-line] repeat(auto-fit, [row-start] min-content [row-end])
     [last-line];
 
   ${respond.mobile.max`
