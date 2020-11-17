@@ -9,8 +9,8 @@ import {respond} from '../../design/responsive';
 
 //Code
 export const VegeloperContainer = styled.div`
-  display: grid;
   position: relative;
+  display: grid;
   background-size: cover;
   background: linear-gradient(
     -180deg,
@@ -20,9 +20,13 @@ export const VegeloperContainer = styled.div`
     rgb(242, 223, 247),
     rgb(242, 223, 237),
     rgb(234, 241, 249)
-  ); 
+  );
 
-  grid-template-columns: 
+  grid-template-rows:
+    [first-line] repeat(auto-fit, [row-start] min-content [row-end])
+    [last-line];
+
+  grid-template-columns:
     [cover-start leftSide-start] 1vw [leftSide-end full-start] 1vw [center-start] repeat(
       8,
       [col-start] minmax(min-content, 1fr) [col-end]
@@ -30,10 +34,6 @@ export const VegeloperContainer = styled.div`
     [center-end] 1vw [full-end rightSide-start]
     1vw
     [rightSide-end cover-end];
-
-  grid-template-rows:
-    [first-line] repeat(auto-fit, [row-start] min-content [row-end])
-    [last-line];
 
   ${respond.mobile.max`
     grid-template-columns: [cover-start leftSide-start] 1vw [leftSide-end full-start] 9vw [center-start] repeat(
@@ -44,8 +44,8 @@ export const VegeloperContainer = styled.div`
     [rightSide-end cover-end];
   `}
   ${respond.pc.min`
-    grid-template-columns: [cover-start leftSide-start] minmax(2vw, 1fr) [leftSide-end full-start] 5vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 5vw [full-end rightSide-start]
-     minmax(2vw, 1fr)
+    grid-template-columns: [cover-start leftSide-start] minmax(1vw, 1fr) [leftSide-end full-start] 9vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 9vw [full-end rightSide-start]
+     minmax(1vw, 1fr)
       [rightSide-end cover-end];
   `}
 `;

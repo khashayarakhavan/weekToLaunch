@@ -24,17 +24,20 @@ import { ReactComponent as MyIcon } from "../../../assets/SVG/heart.svg";
 
 export const HeroHeaderLeft = styled.div`
   grid-row: 2 / span 1;
+  grid-column: center-start / center-end;
   position: relative;
-  text-rendering: optimizeLegibility;
-  overflow-wrap: break-word;
+
+  margin-top: clamp(50px, 16.6666vw, 16.6666vw);
   height: 50vh;
   max-width: 100%;
   z-index: 100;
+
   background: lightblue;
-  grid-column: center-start / center-end;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+  
   display: grid;
   grid-template-rows: min-content min-content minmax(min-content, 1fr);
-  margin-top: clamp(50px, 16.6666vw, 16.6666vw);
 
   ${respond.mobile.large`
     height: 45vh;
@@ -244,40 +247,49 @@ export const BackgroundFigure = styled.div`
 `;
 
 export const Button = styled.div`
+  justify-self: flex-start;
+  align-self: flex-start;
+
+  position: relative;
+  width: clamp(129.467px, 43.155666vw, 43.155666vw);
+  height: clamp(5.6rem, 18.666vw, 18.666vw);
+
+  ${'' /* margin-top: 1.5rem; */}
+  margin-top: clamp(15px, 5vw, 5vw);
+  margin-left: clamp(32px, 10.666vw, 10.666vw);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  background: transparent;
+  transition: transform 1s;
+
+  padding-left: 1vw;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(0.9rem, 3vw, 3vw);
+  font-weight: 200;
+  font-style: normal;
+  letter-spacing: 0px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-rendering: optimizeLegibility;
+
+  border-top-right-radius: 130%;
+  border-bottom-right-radius: 150%;
+  border-top-left-radius: 180%;
+  border-bottom-left-radius: 140%;
+
+  cursor: pointer;
+
   p {
     padding-left: clamp(0.9rem, 3vw, 3vw);
     align-self: flex-start;
     background: transparent;
   }
-  transition: transform 1s;
-  margin-top: 1.5rem;
-  border: none;
-  background: transparent;
-  justify-self: flex-start;
-  align-self: center;
-  margin-left: clamp(3.2rem, 10.666vw, 10.666vw);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  letter-spacing: 0px;
-  font-style: normal;
-  font-size: clamp(0.9rem, 3vw, 3vw);
-  overflow-wrap: break-word;
-  word-break: break-word;
-  text-rendering: optimizeLegibility;
-  position: relative;
-  width: clamp(129.467px, 43.155666vw, 43.155666vw);
-  height: clamp(5.6rem, 18.666vw, 18.666vw);
-  border-top-right-radius: 130%;
-  border-bottom-right-radius: 150%;
-  border-top-left-radius: 180%;
-  border-bottom-left-radius: 140%;
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  cursor: pointer;
-  align-items: flex-start;
-  align-items: center;
-  padding-left: 1vw;
+
   &:hover {
     & ${BackgroundFigure} {
       animation: ${bubbleGum} 2.5s infinite linear;
