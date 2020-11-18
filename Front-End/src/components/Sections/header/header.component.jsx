@@ -32,7 +32,7 @@ export const Header = (props) => {
   const { hidden } = props;
 
   return (
-    <HeaderContainer variant="active" id="topMenu">
+    <HeaderContainer id="topMenu">
       <LogoContainer to="/">
           <LogoSVG />
           <LogoLine />

@@ -23,8 +23,10 @@ export const VegeloperContainer = styled.div`
   );
 
   grid-template-rows:
-    [first-line] repeat(auto-fit, [row-start] min-content [row-end])
+    [first-line] repeat(10, [row-start] min-content [row-end])
     [last-line];
+  
+  ${'' /* grid-auto-rows: min-content; */}
 
   grid-template-columns:
     [cover-start leftSide-start] 1vw [leftSide-end full-start] 1vw [center-start] repeat(
@@ -43,6 +45,7 @@ export const VegeloperContainer = styled.div`
     1vw
     [rightSide-end cover-end];
   `}
+
   ${respond.pc.min`
     grid-template-columns: [cover-start leftSide-start] minmax(1vw, 1fr) [leftSide-end full-start] 9vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 9vw [full-end rightSide-start]
      minmax(1vw, 1fr)
