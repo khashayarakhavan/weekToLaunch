@@ -4,7 +4,7 @@ export default {
     lightest: "rgba(125, 126, 127, 0.8)",
     lighter: " rgba(125, 126, 127, 0.6)",
     light: "rgba(125, 126, 127, 0.4)",
-    dark: "rgba(125, 126, 127, 0.2)",
+    dark: "rgba(125, 126, 127, 0.3)",
   },
 
   highlights: {

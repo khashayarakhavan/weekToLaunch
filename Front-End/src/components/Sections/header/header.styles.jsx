@@ -20,9 +20,11 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 
 //Code
 export const HeaderContainer = styled.div`
-  grid-column: cover-start / center-end;
+  grid-column: cover-start / cover-end;
+  grid-column: center-start / center-end;
   grid-row: 1 / span 1;
   width: 100%;
+  z-index: 10000000;
 
   top: 0;
   left: 0;
@@ -42,62 +44,74 @@ export const HeaderContainer = styled.div`
     height: 10vh;
     opacity: 1;
   `};
+  ${respond.pc.min`
+    ${'' /* grid-column: full-start / full-end; */}
+  `};
 `;
 
 export const LogoContainer = styled(Link)`
   ${mix_containers.logo};
- margin-right: auto;
-  ${'' /* margin-left: 6rem; */}
-  
+  margin-right: auto;
+
+  margin-left: clamp(-2rem, -3.33333vw, -3.33333vw);
+  ${"" /* margin-left: 2.6rem; */}
+  ${"" /* margin-left: clamp(2.6rem, 4.33333vw, 4.33333vw); */}
+  ${"" /* margin-left: -5vw; */}
 `;
 
 export const LogoSVG = styled(VegeloperLogo)`
   width: 7rem;
   height: 7rem;
-  ${'' /* padding: 0.1vw; */}
-  ${'' /* ${respond.tablet_medium`
-    display: none;
-  `}; */}
+  ${"" /* margin-left: clamp(2.6rem, 4.33333vw, 4.33333vw); */}
 `;
 
 export const LogoText = styled.p`
   ${fonts.mixins.logo};
+  font-size: 3rem;
   color: ${colors.primary};
   margin-left: ${sizes.margin.small};
+  margin-left: 0.7rem;
 `;
 
 export const LogoLine = styled(WebWeaverLine)`
   width: 1rem;
   height: 3rem;
   fill: ${colors.primary};
-  margin-left: 1rem;
-  margin-top: -0.5rem;
+  ${'' /* margin-left: 1rem; */}
+  margin-top: .5rem;
 `;
 
 export const MenuButtonsContainer = styled.div`
   ${mix_containers.menuButton}
   ${"" /* margin-right: ${sizes.margin.larger}; */}
   ${"" /* width: 50%; */}
-  height: 100%;
-
-  
+  height: 100%;  
+  ${'' /* margin-right: 10vw; */}
 `;
 
 
 export const MenuButton = styled(Link)`
-
   ${shadows.mixins.neumorphic.button};
+  ${shadows.mixins.neumorphic.original};
   ${fonts.mixins.menuButton}
+  ${'' /* font-family: "Rubik Mono One",  Cambria, "Times New Roman", Times, sans-serif;
+  font-weight: 400; */}
+  font-size: 1.2rem;
+  ${'' /* font-size: 1rem; */}
+  ${"" /* font-family: "Poppins", sans-serif;
+  
+  font-weight: 400;
+  font-size: clamp(15px, 1.66666vw, 1.66666vw); */}
   ${mix_flex.center};
   color: ${colors.primary};
 
   ${"" /* margin-right: ${sizes.margin.small}; */}
-  height: 4rem;
-  width: 8rem;
+  height: 4.2rem;
+  width: 7rem;
   cursor: pointer;
-  
+
   transition: background-color 0.3s ease;
-  border-radius: 1px;
+  border-radius: 15px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   position: relative;
@@ -106,12 +120,11 @@ export const MenuButton = styled(Link)`
 
   :not(:last-of-type) {
     margin-right: clamp(5px, 1.66666vw, 1.66666vw);
-    ${'' /* background: red !important; */}
-    
+    ${"" /* background: red !important; */}
   }
 
   &:hover ${PrussianBlue_To_Orange} {
-    color: ${colors.accent};
+    color: ${colors.accent.lightest};
   }
 
   &::before {
@@ -127,14 +140,14 @@ export const MenuButton = styled(Link)`
   &::before,
   &::after {
     border: ${({ variant }) =>
-      variant === "active" ? "3px solid transparent" : "none"};
+      variant === "active" ? "5px solid transparent" : "none"};
     border-radius: 1px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     width: 0;
     height: 0;
   }
-
+  ${"" /* 
   &:hover::before,
   &:hover::after {
     width: 100%;
@@ -161,8 +174,8 @@ export const MenuButton = styled(Link)`
       // 0.5s Wait for height
       border-bottom-color 0s 1.5s,
       width 0.5s ease 1.5s; // And then exanding width
-  }
-
+  } */}
+  ${"" /* border-radius: 5px; */}
   &:hover {
     background-color: white;
   }
@@ -175,6 +188,13 @@ export const MenuButton = styled(Link)`
 
 export const MenuButtonOrange = styled(MenuButton)`
   ${shadows.mixins.neumorphic.onActive_orange};
+  transition: box-shadow 0.2s linear;
+  &:hover {
+    box-shadow: ${shadows.neumorphic.orange2};
+  }
+
+  
+
   background-color: #fff !important;
 `;
 
