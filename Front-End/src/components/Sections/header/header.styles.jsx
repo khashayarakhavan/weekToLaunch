@@ -60,22 +60,30 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const LogoSVG = styled(VegeloperLogo)`
-  width: 7rem;
-  height: 7rem;
+  ${'' /* width: 7rem; */}
+  ${"" /* width: 11.666666%; */}
+  width: clamp(7rem, 11.6666vw, 11.6666vw);
+
+  ${'' /* height: 7rem; */}
+  height: clamp(7rem, 11.6666vw, 11.6666vw);
+  ${"" /* height: 87.5%; */}
   ${"" /* margin-left: clamp(2.6rem, 4.33333vw, 4.33333vw); */}
 `;
 
 export const LogoText = styled.p`
   ${fonts.mixins.logo};
-  font-size: 3rem;
+  ${'' /* font-size: 3rem; */}
+  font-size: clamp(3rem, 5vw, 5vw);
   color: ${colors.primary};
   margin-left: ${sizes.margin.small};
   margin-left: 0.7rem;
 `;
 
 export const LogoLine = styled(WebWeaverLine)`
-  width: 1rem;
+  width: 1.5rem;
+  width: clamp(1.5rem, 2.5vw, 2.5vw);
   height: 3rem;
+  height: clamp(3rem, 5vw, 5vw);
   fill: ${colors.primary};
   ${'' /* margin-left: 1rem; */}
   margin-top: .5rem;
@@ -94,10 +102,11 @@ export const MenuButton = styled(Link)`
   ${shadows.mixins.neumorphic.button};
   ${shadows.mixins.neumorphic.original};
   ${fonts.mixins.menuButton}
-  ${'' /* font-family: "Rubik Mono One",  Cambria, "Times New Roman", Times, sans-serif;
+  ${"" /* font-family: "Rubik Mono One",  Cambria, "Times New Roman", Times, sans-serif;
   font-weight: 400; */}
   font-size: 1.2rem;
-  ${'' /* font-size: 1rem; */}
+  font-size: clamp(1.2rem, 2vw, 2vw);
+  ${"" /* font-size: 1rem; */}
   ${"" /* font-family: "Poppins", sans-serif;
   
   font-weight: 400;
@@ -107,7 +116,9 @@ export const MenuButton = styled(Link)`
 
   ${"" /* margin-right: ${sizes.margin.small}; */}
   height: 4.2rem;
+  height: clamp(4.2rem, 7vw, 7vw);
   width: 7rem;
+  width: clamp(7rem, 11.66666vw, 11.66666vw);
   cursor: pointer;
 
   transition: background-color 0.3s ease;
