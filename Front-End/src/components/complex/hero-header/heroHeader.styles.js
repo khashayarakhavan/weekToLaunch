@@ -40,7 +40,7 @@ export const HeroHeaderLeft = styled.div`
   display: grid;
   grid-template-rows: min-content min-content minmax(min-content, 1fr);
 
-  ${respond.mobile.large`
+  ${respond.mobile.max`
   margin-top: 0;
   `}
 

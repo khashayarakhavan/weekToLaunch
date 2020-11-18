@@ -49,7 +49,7 @@ const shadows = {
           -3px -3px 10px 0px ${colors.highlights.lightest}`,
     orange: `4px 4px 10px 0px ${colors.shadows.lighter},
           -3px -3px 10px 0px ${colors.highlights.lightest},
-          inset 0px -4px 0px 0px ${colors.accent}`,
+          inset 0px -4px 0px 0px ${colors.accent.lightest}`,
     orange2: `4px 4px 15px 2px ${colors.shadows.lighter},
           -3px -3px 12px 2px ${colors.highlights.lightest},
            0px 4px 20px 5px ${colors.accent}`,

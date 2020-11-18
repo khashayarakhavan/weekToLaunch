@@ -101,6 +101,7 @@ export const mix_containers = {
     }
     display: flex;
     align-items: center;
+    
     justify-content: flex-end;
     
   }`,

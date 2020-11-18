@@ -20,36 +20,41 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 
 //Code
 export const HeaderContainer = styled.div`
-  ${mix_containers.header};
-  display: flex;
-  transition: height 0.3s ease-in, opacity 0.5s ease-out; 
-  opacity: 0;
-  margin-top: -10px;
-  height: 1vh;
-  grid-column: cover-start / cover-end;
+  grid-column: cover-start / center-end;
   grid-row: 1 / span 1;
+  width: 100%;
+
   top: 0;
   left: 0;
-  z-index: 1000;
 
-  ${respond.mobile.large`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: rgb(242, 243, 247);
+  transition: height 0.3s ease-in, opacity 0.1s ease-out;
+
+  //Hiding menu before reaching tablet viewport.
+  height: 0vh;
+  opacity: 0;
+
+  ${respond.mobile.max`
     height: 10vh;
     opacity: 1;
   `};
-  background-color: rgb(242, 243, 247);
 `;
 
 export const LogoContainer = styled(Link)`
   ${mix_containers.logo};
-  height: 5rem;
-  margin-left: 3rem;
+ margin-right: auto;
+  ${'' /* margin-left: 6rem; */}
   
 `;
 
 export const LogoSVG = styled(VegeloperLogo)`
-  width: 6rem;
-  height: 6rem;
-  padding: 0.1vw;
+  width: 7rem;
+  height: 7rem;
+  ${'' /* padding: 0.1vw; */}
   ${'' /* ${respond.tablet_medium`
     display: none;
   `}; */}
@@ -71,21 +76,26 @@ export const LogoLine = styled(WebWeaverLine)`
 
 export const MenuButtonsContainer = styled.div`
   ${mix_containers.menuButton}
-  margin-right: ${sizes.margin.larger};
-  width: 50%;
+  ${"" /* margin-right: ${sizes.margin.larger}; */}
+  ${"" /* width: 50%; */}
   height: 100%;
+
+  
 `;
 
 
 export const MenuButton = styled(Link)`
+
   ${shadows.mixins.neumorphic.button};
   ${fonts.mixins.menuButton}
   ${mix_flex.center};
   color: ${colors.primary};
-  margin-right: ${sizes.margin.small};
+
+  ${"" /* margin-right: ${sizes.margin.small}; */}
   height: 4rem;
   width: 8rem;
   cursor: pointer;
+  
   transition: background-color 0.3s ease;
   border-radius: 1px;
   border-bottom-left-radius: 0px;
@@ -93,6 +103,12 @@ export const MenuButton = styled(Link)`
   position: relative;
   vertical-align: middle;
   overflow: hidden;
+
+  :not(:last-of-type) {
+    margin-right: clamp(5px, 1.66666vw, 1.66666vw);
+    ${'' /* background: red !important; */}
+    
+  }
 
   &:hover ${PrussianBlue_To_Orange} {
     color: ${colors.accent};
@@ -126,8 +142,8 @@ export const MenuButton = styled(Link)`
   }
 
   &:hover::before {
-    border-top-color: ${colors.accent};
-    border-right-color: ${colors.accent};
+    border-top-color: ${colors.accent.lightest};
+    border-right-color: ${colors.accent.lightest};
     transition: 
       // Height expands first
       height 0.5s ease,
@@ -137,8 +153,8 @@ export const MenuButton = styled(Link)`
   }
 
   &:hover::after {
-    border-bottom-color: ${colors.accent}; // Make borders visible
-    border-left-color: ${colors.accent};
+    border-bottom-color: ${colors.accent.lightest}; // Make borders visible
+    border-left-color: ${colors.accent.lightest};
     transition: 
       // 1s Wait for ::before
       height 0.5s ease 1s, border-left-color 0s 1s,

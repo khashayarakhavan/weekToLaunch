@@ -33,17 +33,17 @@ export const Header = (props) => {
 
   return (
     <HeaderContainer id="topMenu">
-      <LogoContainer to="/">
-          <LogoSVG />
-          <LogoLine />
-          <LogoText>vegeloper</LogoText>
+      <LogoContainer variant="active" to="/">
+        <LogoSVG />
+        <LogoLine />
+        <LogoText>vegeloper</LogoText>
       </LogoContainer>
       <MenuButtonsContainer>
-        <MenuButtonOrange variant="active" to="/sayHi">         
+        <MenuButtonOrange variant="active" to="/sayHi">
           /say
           <PrussianBlue_To_Orange>Hi</PrussianBlue_To_Orange>
         </MenuButtonOrange>
-        <MenuButton  to="/aboutMe">
+        <MenuButton to="/aboutMe">
           /about
           <PrussianBlue_To_Orange>Me</PrussianBlue_To_Orange>
         </MenuButton>
@@ -52,7 +52,7 @@ export const Header = (props) => {
           <PrussianBlue_To_Orange>Works</PrussianBlue_To_Orange>
         </MenuButton>
       </MenuButtonsContainer>
-      {hidden ? null : <CartDropdown />} 
+      {hidden ? null : <CartDropdown />}
     </HeaderContainer>
   );
 };
