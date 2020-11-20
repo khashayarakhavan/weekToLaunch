@@ -55,7 +55,11 @@ export const LogoContainer = styled(Link)`
   display: flex;
 
   margin-left: clamp(-2rem, -3.33333vw, -3.33333vw);
-  ${'' /* margin-left: -3rem; */}
+  margin-left: -3.33333333vw;
+  ${respond.pc.min`
+    ${'' /* margin-left: -5vw; */}
+  `}
+  ${"" /* margin-left: -3rem; */}
   ${"" /* margin-left: 2.6rem; */}
   ${"" /* margin-left: clamp(2.6rem, 4.33333vw, 4.33333vw); */}
   ${"" /* margin-left: -5vw; */}
@@ -65,12 +69,20 @@ export const LogoSVG = styled(VegeloperLogo)`
   width: clamp(7rem, 11.6666vw, 11.6666vw);
   height: clamp(7rem, 11.6666vw, 11.6666vw);
   height: clamp(7rem, 8.75vh, 11.6666vw);
+
+  ${respond.pc.min`
+    width: clamp(7rem, 6.8359375vw, 6.8359375vw);
+    height: clamp(7rem, 6.8359375vw, 6.8359375vw);
+  `}
 `;
 
 export const LogoText = styled.p`
   ${fonts.mixins.logo};
-  ${'' /* font-size: 3rem; */}
+  ${"" /* font-size: 3rem; */}
   font-size: clamp(3rem, 5vw, 5vw);
+  ${respond.pc.min`
+    font-size: clamp(3rem, 2.9296875vw, 2.9296875vw);
+  `}
   color: ${colors.primary};
   margin-left: ${sizes.margin.small};
   margin-left: 0.7rem;
@@ -99,23 +111,19 @@ export const MenuButton = styled(Link)`
   ${shadows.mixins.neumorphic.button};
   ${shadows.mixins.neumorphic.original};
   ${fonts.mixins.menuButton}
-  ${"" /* font-family: "Rubik Mono One",  Cambria, "Times New Roman", Times, sans-serif;
-  font-weight: 400; */}
-  font-size: 1.2rem;
-  font-size: clamp(1.2rem, 2vw, 2vw);
-  ${"" /* font-size: 1rem; */}
-  ${"" /* font-family: "Poppins", sans-serif;
-  
-  font-weight: 400;
-  font-size: clamp(15px, 1.66666vw, 1.66666vw); */}
+
   ${mix_flex.center};
   color: ${colors.primary};
 
-  ${"" /* margin-right: ${sizes.margin.small}; */}
-  height: 4.2rem;
+  font-size: clamp(1.2rem, 2vw, 2vw);
+
   height: clamp(4.2rem, 7vw, 7vw);
-  width: 7rem;
   width: clamp(7rem, 11.66666vw, 11.66666vw);
+  ${respond.pc.min`
+    height: clamp(4.2rem, 4.1015625vw, 4.1015625vw);
+    width: clamp(7rem, 6.8359375vw, 6.8359375vw);
+    font-size: clamp(1.2rem, 1.171875vw, 1.171875vw);
+  `}
   cursor: pointer;
 
   transition: background-color 0.3s ease;

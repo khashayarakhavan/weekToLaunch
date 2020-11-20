@@ -6,7 +6,7 @@ import mixins from '../../../design/mixins.styles';
 import fonts from '../../../design/fonts.styles';
 import colors from '../../../design/colors';
 import sizes from '../../../design/sizes';
-import {bubbleGum, hoverOff} from '../../../design/motions.styles';
+import {bubbleGum, bubbleGumScale, hoverOff, ScaleY} from '../../../design/motions.styles';
 import {respond} from '../../../design/responsive';
 import shadows from '../../../design/shadows.styles';
 import events from '../../../design/events.styles';
@@ -46,7 +46,6 @@ export const HeroHeaderLeft = styled.div`
 
   ${respond.pc.min`
     grid-column: center-start / col-end 4;
-
   `}
 
   ${respond.tablet.large`
@@ -110,24 +109,25 @@ export const Heading = styled.div`
     padding-left: 0; 
   `}
   ${respond.pc.min`
-    font-size: 4.39rem;
-
+    font-size: clamp(3.9rem, 3.80859375vw, 3.80859375vw);
+    line-height: clamp(60px, 5.8593vw, 5.8593vw);  
+    padding-top: clamp(1rem, 5.859375vw, 5.859375vw);
   `}
 `;
 
 export const TEXT = styled.span`
   display: block;
-  ${'' /* height: clamp(40px, 6.666vw, 16.666vw); */}
+  ${"" /* height: clamp(40px, 6.666vw, 16.666vw); */}
   ${fonts.mixins.text};
   width: 100%;
-  
+
   color: ${colors.neutrals.darkest};
   letter-spacing: 0px;
   font-style: normal;
   overflow-wrap: break-word;
   word-break: break-word;
   text-rendering: optimizeLegibility;
-  ${'' /* line-height: ${sizes.lineHeight.large}; */}
+  ${"" /* line-height: ${sizes.lineHeight.large}; */}
   line-height: clamp(30px, 10vw, 10vw);
   font-family: "Lato", sans-serif;
   font-family: "Open Sans", sans-serif;
@@ -137,7 +137,6 @@ export const TEXT = styled.span`
   font-family: "Cabin", sans-serif;
   font-family: "Roboto Slab", serif;
   font-family: "Poppins", sans-serif;
-
   font-weight: 200;
   font-size: clamp(10px, 3.333vw, 3.333vw);
   padding-left: clamp(32px, 10.666vw, 10.666vw);
@@ -147,7 +146,8 @@ export const TEXT = styled.span`
   `}
   ${respond.pc.min`
     padding-left: clamp(3px, 0.5vw, 0.5vw);
-    font-size: 2rem;
+    font-size: clamp(1rem, 0.9765625vw, 0.9765625vw);
+    line-height: clamp(30px, 2.9296vw, 2.9296vw);  
   `}
 `;
 
@@ -232,32 +232,38 @@ export const SkillTotal = styled.div`
   flex-wrap: nowrap;
   overflow-wrap: normal;
   word-break: normal;
+  justify-content: space-between;
+  align-items: center;
   width: clamp(180px, 60vw, 60vw);
 
   & > * {
     height: clamp(20px, 6.66666vw, 6.66666vw);
-    ${"" /* flex: 0 0 30% !important; */}
+    ${respond.pc.min`
+      height: clamp(20px, 1.95312vw, 1.95312vw);
+    `}
     border-radius: clamp(5px, 1.66666vw, 1.66666vw);
   }
-  ${"" /* overflow-wrap: break-word; */}
-  ${"" /* word-break: keep-all;
-  word-break: break-word; */}
-  justify-content: center;
-  justify-content: flex-start;
-  justify-content: space-between;
-  align-items: center;
-  ${"" /* width: 200px !important; */}
+
+  ${respond.pc.min`
+     width: clamp(180px, 17.578vw, 17.578vw);
+  `}
 `;
 
 
 
 
 export const BackgroundFigure = styled.div`
-  transition: all 1s ;
+  transition: all 0.5s;
+  ${'' /* animation: ${hoverOff} 1s infinite linear; */}
   animation: ${hoverOff} 1s infinite linear;
+  animation: ${ScaleY} 1s infinite linear;
   position: absolute;
-  height: clamp(5.6rem, 18.333vw, 18.333vw);
   width: 100%;
+  height: clamp(5.6rem, 18.333vw, 18.333vw);
+  ${respond.pc.min`
+    height: clamp(56px, 5.4687vw, 5.4687vw);
+    
+  `}
   z-index: -1;
   background-color: ${colors.accent.lightest};
   border-top-right-radius: 130%;
@@ -269,15 +275,13 @@ export const BackgroundFigure = styled.div`
 export const Button = styled.div`
   justify-self: flex-start;
   align-self: flex-start;
-
-  position: relative;
-  width: clamp(129.467px, 43.155666vw, 43.155666vw);
-  height: clamp(5.6rem, 18.666vw, 18.666vw);
-
-  ${"" /* margin-top: 1.5rem; */}
   margin-top: clamp(20px, 6.6666vw, 6.6666vw);
   margin-bottom: clamp(10px, 3.33333vw, 3.33333vw);
   margin-left: clamp(32px, 10.666vw, 10.666vw);
+  position: relative;
+  width: clamp(129.467px, 43.155666vw, 43.155666vw);
+  height: clamp(5.6rem, 18.666vw, 18.666vw);
+  padding-left: 1vw;
 
   display: flex;
   flex-direction: column;
@@ -286,17 +290,18 @@ export const Button = styled.div`
 
   border: none;
   background: transparent;
-  transition: transform 1s;
+  transition: all 1s;
 
-  padding-left: 1vw;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+  word-break: break-word;
+
   font-family: "Poppins", sans-serif;
   font-size: clamp(0.9rem, 3vw, 3vw);
+
   font-weight: 200;
   font-style: normal;
   letter-spacing: 0px;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  text-rendering: optimizeLegibility;
 
   border-top-right-radius: 130%;
   border-bottom-right-radius: 150%;
@@ -305,39 +310,54 @@ export const Button = styled.div`
 
   cursor: pointer;
 
-  p {
-    padding-left: clamp(0.9rem, 3vw, 3vw);
-    align-self: flex-start;
-    background: transparent;
-  }
+  ${respond.pc.min`
+  width: clamp(129.467px, 12.64326vw, 12.64326vw);
+  height: clamp(5.6rem, 5.4687vw, 5.4687vw);
+  padding-left: 0.5vw;
+  font-size: clamp(0.9rem, 0.87890vw, 0.87890vw);
+
+  margin-top: clamp(20px, 1.95312vw, 1.95312vw);
+  margin-bottom: clamp(10px, 0.97656vw, 0.97656vw);
+  margin-left: clamp(32px, 3.125vw, 3.125vw);
+  `}
 
   &:hover {
     & ${BackgroundFigure} {
       animation: ${bubbleGum} 2.5s infinite linear;
+      animation: ${bubbleGumScale} 2.5s infinite linear;
     }
   }
 
   &:active {
     & ${BackgroundFigure} {
       animation: ${bubbleGum} 2.5s infinite linear;
-      background-color: ${colors.neutrals.darkest};
+      animation: ${bubbleGumScale} 2.5s infinite linear;
       background-color: ${colors.secondary.darkest};
     }
 
-    transform: translateY(1.666666vw);
+    transform: translateY(5px);
     outline: none;
   }
 
   ${respond.mobile.max`
     margin-left: clamp(3px, 0.5vw, 0.5vw);  
   `}
+
+  p {
+    padding-left: clamp(0.9rem, 3vw, 3vw);
+    align-self: flex-start;
+    background: transparent;
+    ${respond.pc.min`
+       padding-left: clamp(0.9rem, 0.87890vw, 0.87890vw);
+    `}
+  }
+
   span {
     font-family: "Rubik Mono One", Cambria, "Times New Roman", Times, sans-serif;
     font-weight: 400;
-    color: ${colors.secondary.lighter};
-    color: ${colors.shadows.light};
     color: ${colors.neutrals.light};
   }
+
   &,
   &:link,
   &:visited {
@@ -377,9 +397,17 @@ export const SvgIcon = styled(MyIcon)`
   z-index: 10000000;
   width: clamp(1.8rem, 6vw, 6vw);
   height: clamp(1.8rem, 6vw, 6vw);
+  ${respond.pc.min`
+    width: clamp(1.8rem, 1.7578vw, 1.7578vw);
+    height: clamp(1.8rem, 1.7578vw, 1.7578vw);
+  `}
+  ${"" /* right: clamp(0.9rem, 3vw, 3vw); */}
   top: clamp(1rem, 3.333vw, 3.333vw);
-  right: clamp(0.9rem, 3vw, 3vw);
   right: clamp(0.7rem, 2.333333vw, 2.33333vw);
+  ${respond.pc.min`
+    top: clamp(1rem, 0.97656vw, 0.97656vw);
+    right: clamp(0.5rem, 0.13671875vw, 0.13671875vw);
+  `}
   fill: ${colors.neutrals.lightest};
 `;
 
