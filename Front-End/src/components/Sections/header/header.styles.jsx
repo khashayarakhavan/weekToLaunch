@@ -41,7 +41,7 @@ export const HeaderContainer = styled.div`
   opacity: 0;
 
   ${respond.mobile.max`
-    height: 10vh;
+    height: clamp(96px, 12vh, 12vh);
     opacity: 1;
   `};
   ${respond.pc.min`
@@ -52,22 +52,19 @@ export const HeaderContainer = styled.div`
 export const LogoContainer = styled(Link)`
   ${mix_containers.logo};
   margin-right: auto;
+  display: flex;
 
   margin-left: clamp(-2rem, -3.33333vw, -3.33333vw);
+  ${'' /* margin-left: -3rem; */}
   ${"" /* margin-left: 2.6rem; */}
   ${"" /* margin-left: clamp(2.6rem, 4.33333vw, 4.33333vw); */}
   ${"" /* margin-left: -5vw; */}
 `;
 
 export const LogoSVG = styled(VegeloperLogo)`
-  ${'' /* width: 7rem; */}
-  ${"" /* width: 11.666666%; */}
   width: clamp(7rem, 11.6666vw, 11.6666vw);
-
-  ${'' /* height: 7rem; */}
   height: clamp(7rem, 11.6666vw, 11.6666vw);
-  ${"" /* height: 87.5%; */}
-  ${"" /* margin-left: clamp(2.6rem, 4.33333vw, 4.33333vw); */}
+  height: clamp(7rem, 8.75vh, 11.6666vw);
 `;
 
 export const LogoText = styled.p`

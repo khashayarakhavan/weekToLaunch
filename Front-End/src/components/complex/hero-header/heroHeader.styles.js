@@ -33,7 +33,7 @@ export const HeroHeaderLeft = styled.div`
   max-width: 100%;
   z-index: 100;
 
-  background: lightblue;
+  ${"" /* background: lightblue; */}
   text-rendering: optimizeLegibility;
   overflow-wrap: break-word;
 
@@ -46,8 +46,9 @@ export const HeroHeaderLeft = styled.div`
 
   ${respond.pc.min`
     grid-column: center-start / col-end 4;
-    height: 90vh;
+
   `}
+
   ${respond.tablet.large`
     grid-column: center-start / center-end !important;
   `}
@@ -95,10 +96,8 @@ export const Heading = styled.div`
   color: ${colors.secondary.darkest};
   letter-spacing: 0px;
   font-style: normal;
-  overflow-wrap: break-word;
-  word-break: break-word;
+
   text-rendering: optimizeLegibility;
-  
   padding-top: clamp(6rem, 20vw, 20vw);
   padding-left: clamp(30px, 10vw, 10vw);
   font-size: clamp(2.5rem, 8.3vw, 8.3vw);
@@ -111,8 +110,8 @@ export const Heading = styled.div`
     padding-left: 0; 
   `}
   ${respond.pc.min`
-    ${'' /* font-size: clamp(4rem, 4vw, 4vw);
-    line-height: clamp(5rem, 5vw, 5vw); */}
+    font-size: 4.39rem;
+
   `}
 `;
 
@@ -145,6 +144,10 @@ export const TEXT = styled.span`
 
   ${respond.mobile.max`
     padding-left: clamp(3px, 0.5vw, 0.5vw);
+  `}
+  ${respond.pc.min`
+    padding-left: clamp(3px, 0.5vw, 0.5vw);
+    font-size: 2rem;
   `}
 `;
 
