@@ -46,6 +46,8 @@ export const HeroHeaderLeft = styled.div`
 
   ${respond.pc.min`
     grid-column: center-start / col-end 4;
+    height: 50vh;
+    height: 70vh;
   `}
 
   ${respond.tablet.large`
@@ -72,7 +74,7 @@ export const HeroHeaderRight = styled.div`
 
   & > * {
     justify-self: flex-start;
-    align-self: center;
+    align-self: flex-start;
     overflow: visible !important ;
   }
   svg {
@@ -85,8 +87,10 @@ export const HeroHeaderRight = styled.div`
   ${respond.pc.min`
     grid-row: 2 / span 1;
     grid-column: col-start 5 / center-end;
-    height: 90vh;
-    padding-top: 0vh;   
+    height: 50vh;
+    height: 70vh;
+    padding-bottom: 5vh;   
+    ${'' /* margin-top: -5vh; */}
   `}
 `;
 

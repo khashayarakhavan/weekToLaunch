@@ -54,6 +54,7 @@ export const LogoContainer = styled(Link)`
   margin-right: auto;
   display: flex;
 
+  height: 100%;
   margin-left: clamp(-2rem, -3.33333vw, -3.33333vw);
   margin-left: -3.33333333vw;
   ${respond.pc.min`
@@ -73,6 +74,7 @@ export const LogoSVG = styled(VegeloperLogo)`
   ${respond.pc.min`
     width: clamp(7rem, 6.8359375vw, 6.8359375vw);
     height: clamp(7rem, 6.8359375vw, 6.8359375vw);
+    
   `}
 `;
 
@@ -121,8 +123,15 @@ export const MenuButton = styled(Link)`
   width: clamp(7rem, 11.66666vw, 11.66666vw);
   ${respond.pc.min`
     height: clamp(4.2rem, 4.1015625vw, 4.1015625vw);
+    
     width: clamp(7rem, 6.8359375vw, 6.8359375vw);
     font-size: clamp(1.2rem, 1.171875vw, 1.171875vw);
+  `}
+  ${respond.pc.large`
+    ${
+      "" /* height: clamp(4.2rem, 5.46875vh, 4.1015625vw);
+    width: clamp(7rem, 6.8359375vw, 6.8359375vw); */
+    }
   `}
   cursor: pointer;
 
