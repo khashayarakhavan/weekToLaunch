@@ -26,7 +26,7 @@ export const HeroHeaderLeft = styled.div`
   grid-row: 2 / span 1;
   grid-column: center-start / center-end;
   position: relative;
-
+background: lightblue;
   ${"" /* margin-top: clamp(50px, 16.6666vw, 16.6666vw); //before */}
   margin-top: clamp(30px, 10vw, 10vw);
   height: clamp(88.83333vw, 50vh, 50vh);
@@ -95,19 +95,20 @@ export const HeroHeaderRight = styled.div`
 `;
 
 export const Heading = styled.div`
+  position: relative;
+  display: block;
+  width: 100%;
+
   ${fonts.mixins.heroHeader}
-  color: ${colors.secondary.darkest};
+  font-size: clamp(2.5rem, 8.3vw, 8.3vw);
+  line-height: clamp(3rem, 10vw, 10vw);
   letter-spacing: 0px;
   font-style: normal;
+  color: ${colors.secondary.darkest};
 
   text-rendering: optimizeLegibility;
   padding-top: clamp(6rem, 20vw, 20vw);
   padding-left: clamp(30px, 10vw, 10vw);
-  font-size: clamp(2.5rem, 8.3vw, 8.3vw);
-  line-height: clamp(3rem, 10vw, 10vw);
-  width: 100%;
-  display: block;
-  position: relative;
 
   ${respond.mobile.max`
     padding-left: 0; 
@@ -150,7 +151,9 @@ export const TEXT = styled.span`
   `}
   ${respond.pc.min`
     padding-left: clamp(3px, 0.5vw, 0.5vw);
+    padding-left: clamp(2px,0.1953125vw, 0.1953125vw);
     font-size: clamp(1rem, 0.9765625vw, 0.9765625vw);
+    font-size: clamp(1.56rem, 1.5234375vw, 1.5234375vw);
     line-height: clamp(30px, 2.9296vw, 2.9296vw);  
   `}
 `;
@@ -244,12 +247,14 @@ export const SkillTotal = styled.div`
     height: clamp(20px, 6.66666vw, 6.66666vw);
     ${respond.pc.min`
       height: clamp(20px, 1.95312vw, 1.95312vw);
+      height: clamp(40px, 3.90625vw, 3.90625vw);
     `}
     border-radius: clamp(5px, 1.66666vw, 1.66666vw);
   }
 
   ${respond.pc.min`
      width: clamp(180px, 17.578vw, 17.578vw);
+     width: clamp(281px, 27.44140625vw, 27.44140625vw);
   `}
 `;
 
@@ -281,11 +286,15 @@ export const Button = styled.div`
   align-self: flex-start;
   margin-top: clamp(20px, 6.6666vw, 6.6666vw);
   margin-bottom: clamp(10px, 3.33333vw, 3.33333vw);
+  ${"" /* margin-left: clamp(32px, 10.666vw, 10.666vw);
+  margin-left: 20px; */}
+  margin-left: clamp(25px, 4.1666666vw, 4.1666666vw);
   margin-left: clamp(32px, 10.666vw, 10.666vw);
   position: relative;
   width: clamp(129.467px, 43.155666vw, 43.155666vw);
   height: clamp(5.6rem, 18.666vw, 18.666vw);
-  padding-left: 1vw;
+
+  ${"" /* padding-left: 1vw; */}
 
   display: flex;
   flex-direction: column;
@@ -296,7 +305,7 @@ export const Button = styled.div`
   background: transparent;
   transition: all 1s;
 
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed;
   overflow-wrap: break-word;
   word-break: break-word;
 
@@ -314,20 +323,9 @@ export const Button = styled.div`
 
   cursor: pointer;
 
-  ${respond.pc.min`
-  width: clamp(129.467px, 12.64326vw, 12.64326vw);
-  height: clamp(5.6rem, 5.4687vw, 5.4687vw);
-  padding-left: 0.5vw;
-  font-size: clamp(0.9rem, 0.87890vw, 0.87890vw);
-
-  margin-top: clamp(20px, 1.95312vw, 1.95312vw);
-  margin-bottom: clamp(10px, 0.97656vw, 0.97656vw);
-  margin-left: clamp(32px, 3.125vw, 3.125vw);
-  `}
-
   &:hover {
     & ${BackgroundFigure} {
-      animation: ${bubbleGum} 2.5s infinite linear;
+      ${"" /* animation: ${bubbleGum} 2.5s infinite linear; */}
       animation: ${bubbleGumScale} 2.5s infinite linear;
     }
   }
@@ -338,14 +336,36 @@ export const Button = styled.div`
       animation: ${bubbleGumScale} 2.5s infinite linear;
       background-color: ${colors.secondary.darkest};
     }
+    transform: scale(0.95) translateY(5px);
 
-    transform: translateY(5px);
+    ${respond.pc.min`
+    transform: scale(1.2) translateY(5px);
+    `}
+
     outline: none;
   }
 
   ${respond.mobile.max`
-    margin-left: clamp(3px, 0.5vw, 0.5vw);  
+    margin-left: 3px;   
+    margin-left: clamp(3px, 0.5vw, 0.5vw);   
   `}
+
+  ${respond.pc.min`
+  transform: scale(1.2);
+  width: clamp(129.467px, 12.64326vw, 12.64326vw);
+  height: clamp(5.6rem, 5.4687vw, 5.4687vw);
+  ${"" /* padding-left: 0.5vw; */}
+  font-size: clamp(1.56rem, 1.5234375vw, 1.5234375vw);
+  font-size: clamp(0.9rem, 0.87890vw, 0.87890vw);
+
+  margin-top: clamp(20px, 1.95312vw, 1.95312vw);
+  margin-bottom: clamp(10px, 0.97656vw, 0.97656vw);
+  margin-left: clamp(32px, 3.125vw, 3.125vw);
+  margin-left: 15px;
+  margin-left: 16px;
+  margin-left: clamp(16px, 1.5625vw, 1.5625vw);
+  `}
+
 
   p {
     padding-left: clamp(0.9rem, 3vw, 3vw);
