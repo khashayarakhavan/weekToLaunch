@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import {MiniCardsContainer} from './MiniCards.styles'
+import {MiniCardsContainer, FlexContainer, MiniCardContainer, MiniCard} from './MiniCards.styles'
 
 class Template extends Component {
     render() {
 
         return (
-            <MiniCardsContainer className="section-features">
-                <div className="row">
-                    <div className="col-1-of-4">
-                        <div className="feature-box u-center-text">
+            <MiniCardsContainer >
+                <FlexContainer>
+                    <MiniCardContainer>
+                        <MiniCard>
                             <i className="feature-box__icon icon-basic-world"></i>
                             <h3 className="heading-tertiary u-margin-bottom-small">
                                 Explore the world
@@ -17,11 +17,11 @@ class Template extends Component {
                                 shaja baja much loven disch very guten disch shaja baja much
                                 loven disch very guten disch
                   </p>
-                        </div>
-                    </div>
+                        </MiniCard>
+                    </MiniCardContainer>
 
-                    <div className="col-1-of-4">
-                        <div className="feature-box u-center-text">
+                    <MiniCardContainer>
+                        <MiniCard>
                             <i className="feature-box__icon icon-basic-map"></i>
                             <h3 className="heading-tertiary u-margin-bottom-small">
                                 Explore the world
@@ -30,11 +30,11 @@ class Template extends Component {
                                 shaja baja much loven disch very guten disch shaja baja much
                                 loven disch very guten disch
                   </p>
-                        </div>
-                    </div>
+                        </MiniCard>
+                    </MiniCardContainer>
 
-                    <div className="col-1-of-4">
-                        <div className="feature-box u-center-text">
+                    <MiniCardContainer>
+                        <MiniCard>
                             <i className="feature-box__icon icon-basic-heart"></i>
                             <h3 className="heading-tertiary u-margin-bottom-small">
                                 Explore the world
@@ -43,11 +43,11 @@ class Template extends Component {
                                 shaja baja much loven disch very guten disch shaja baja much
                                 loven disch very guten disch
                   </p>
-                        </div>
-                    </div>
+                        </MiniCard>
+                    </MiniCardContainer>
 
-                    <div className="col-1-of-4">
-                        <div className="feature-box u-center-text">
+                    <MiniCardContainer>
+                        <MiniCard>
                             <i className="feature-box__icon icon-basic-compass"></i>
                             <h3 className="heading-tertiary u-margin-bottom-small">
                                 Explore the world
@@ -56,9 +56,9 @@ class Template extends Component {
                                 shaja baja much loven disch very guten disch shaja baja much
                                 loven disch very guten disch
                   </p>
-                        </div>
-                    </div>
-                </div>
+                        </MiniCard>
+                    </MiniCardContainer>
+                </FlexContainer>
             </MiniCardsContainer>
         );
     }
