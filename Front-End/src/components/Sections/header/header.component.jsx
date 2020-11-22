@@ -16,6 +16,7 @@ import CartDropdown from '../../complex/cart-dropdown/cart-dropdown.component';
 //Design
 import { PrussianBlue_To_Orange } from '../../../design/effects.styles';
 import {
+  HigherContainer,
   HeaderContainer,
   LogoContainer,
   LogoSVG,
@@ -32,6 +33,7 @@ export const Header = (props) => {
   const { hidden } = props;
 
   return (
+    <HigherContainer>
     <HeaderContainer id="topMenu">
       <LogoContainer variant="active" to="/">
         <LogoSVG />
@@ -55,6 +57,7 @@ export const Header = (props) => {
       </MenuButtonsContainer>
       {hidden ? null : <CartDropdown />}
     </HeaderContainer>
+    </HigherContainer>
   );
 };
 

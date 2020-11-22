@@ -19,12 +19,46 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 
 
 //Code
-export const HeaderContainer = styled.div`
+
+export const HigherContainer = styled.div`
   grid-column: cover-start / cover-end;
-  grid-column: center-start / center-end;
-  grid-row: 1 / span 1;
+  ${"" /* display: flex;
+  justify-content: center; */}
+  display: grid;
+  grid-template-columns: 10vw min-content 10vw;
+  grid-template-columns: 10vw 1fr 10vw;
+
+  ${respond.mobile.max`
+    grid-template-columns: [cover-start leftSide-start] 1vw [leftSide-end full-start] 9vw [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 1fr) [col-end]
+    ) [center-end] 9vw [full-end rightSide-start]
+    1vw
+    [rightSide-end cover-end];
+  `}
+  ${respond.pc.min`
+    grid-template-columns: [cover-start leftSide-start] minmax(1vw, 1fr) [leftSide-end full-start] 9vw [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 9vw [full-end rightSide-start]
+     minmax(1vw, 1fr)
+      [rightSide-end cover-end];
+  `}
+
   width: 100%;
+  grid-row: 1 / span 1;
   z-index: 10000000;
+  background-color: rgb(242, 243, 247);
+  background-color: transparent;
+  top: 0;
+  left: 0;
+`;
+
+export const HeaderContainer = styled.div`
+  grid-column: 2 / span 1;
+  grid-column: center-start / center-end;
+  ${'' /* width: 100%; */}
+  grid-row: 1 / span 1;
+  z-index: 10000001;
+  ${'' /* flex: 0 0 50%; */}
+
 
   top: 0;
   left: 0;
@@ -34,18 +68,21 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
 
   background-color: rgb(242, 243, 247);
-  transition: height 0.3s ease-in, opacity 0.1s ease-out;
-
+  background-color: transparent;
+  ${"" /* transition: height 0.01s , opacity 0.01s ; */}
+  transform: scale(0.1);
   //Hiding menu before reaching tablet viewport.
   height: 0vh;
   opacity: 0;
+  ${"" /* opacity: 1; */}
 
   ${respond.mobile.max`
     height: clamp(96px, 12vh, 12vh);
+    transform: scale(1);
     opacity: 1;
   `};
   ${respond.pc.min`
-    ${'' /* grid-column: full-start / full-end; */}
+    ${"" /* grid-column: full-start / full-end; */}
   `};
 `;
 

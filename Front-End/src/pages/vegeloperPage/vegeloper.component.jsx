@@ -31,23 +31,23 @@ import {
 const LandingPage = () => (
   <VegeloperContainer>
     <Header />
-    <LeftSide />
+    {/* <LeftSide /> */}
     {/* <SideBar /> */}
     <HeroHeaderLeftContainer />
     <HeroHeaderRightContainer />
-    <ScrollContainerFlex>
+    {/* <ScrollContainerFlex>
       <ScrollItemFlex></ScrollItemFlex>
       <ScrollItemFlex></ScrollItemFlex>
       <ScrollItemFlex></ScrollItemFlex>
       <ScrollItemFlex></ScrollItemFlex>
       <ScrollItemFlex></ScrollItemFlex>
-    </ScrollContainerFlex>
-    <Skills />
+    </ScrollContainerFlex> */}
+    {/* <Skills /> */}
 
-    <Cards />
+    {/* <Cards /> */}
 
     <MiniCards />
-    <Features />
+    {/* <Features /> */}
     <RightSide />
   </VegeloperContainer>
 );

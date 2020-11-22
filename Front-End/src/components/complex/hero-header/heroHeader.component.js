@@ -84,7 +84,7 @@ export const HeroHeaderLeftContainer = (props) => {
       </TEXT>
       <Button>
         <p>Pleased to meet you</p> <SvgIcon />
-        <br />
+        {/* <br /> */}
         <span>tea or coffee ? </span>
         <BackgroundFigure></BackgroundFigure>
       </Button>
