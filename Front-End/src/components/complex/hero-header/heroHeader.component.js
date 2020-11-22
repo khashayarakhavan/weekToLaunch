@@ -1,6 +1,7 @@
 //Baiscs
 import React from 'react';
 //Libraries
+import Lottie from "react-lottie";
 import  {useViewport} from "../../../design/viewPort";
 //State
 import { connect } from 'react-redux';
@@ -31,6 +32,7 @@ import { Accent_fireOrange , Accent_mateBlue } from '../../../design/effects.sty
 import {
   Button,
   SkillTotal,
+  LottieContainer,
   Front,
   Heart,
   BackgroundFigure,
@@ -100,49 +102,68 @@ export const HeroHeaderRightContainer = (props) => {
   const desktopBreak = 1300;
   console.log("this is width: ", width);
   console.log("this is height: ", height);
-  let robotAnimation = <HeroHeaderLottie
-          options={AnimationCreateRobot}
-          width= {370}
-          height={370}
-        />;
+  let robotAnimation = (<Lottie options={AnimationCreateRobot} height={`100%`}/>);
 
-  if ( width <= 450 && width > 400) {
-    robotAnimation = (
-      <HeroHeaderLottie
-        options={AnimationCreateRobot}
-        resizeMode="cover"
-        height={340}
-      />
-    );
-  } else if ( width <= 400 && width > 350) {
-      robotAnimation = <HeroHeaderLottie
-          options={AnimationCreateRobot}
-          resizeMode="cover"
-          height={300}
-        />;
-    } 
-     else if ( width <= 350 && width > 300) {
-      robotAnimation = <HeroHeaderLottie
-          options={AnimationCreateRobot}
-          resizeMode="cover"
-          height={270}
-        />;
-    } else if ( width <= 300) {
-      robotAnimation = <HeroHeaderLottie
-          options={AnimationCreateRobot}
-          resizeMode="cover"
-          height={220}
-        />;
-    } else if (width >= 1024) {
-      robotAnimation = <HeroHeaderLottie
-        options={AnimationCreateRobot}
-        resizeMode="cover"
-        height={`32.5vw`}
+  // if (width >= 1024) {
+  //     robotAnimation = <HeroHeaderLottie
+  //       options={AnimationCreateRobot}
+  //       resizeMode="cover"
+  //       height={`min-content`}        
+  //     />;
+  // }
+  
+
+  // if ( width <= 450 && width > 400) {
+  //   robotAnimation = (
+  //     <HeroHeaderLottie
+  //       options={AnimationCreateRobot}
+  //       resizeMode="cover"
+  //       height={340}
+        
+  //     />
+  //   );
+  // } else if ( width <= 400 && width > 350) {
+  //     robotAnimation = (
+  //       <HeroHeaderLottie
+  //         options={AnimationCreateRobot}
+  //         resizeMode="cover"
+  //         height={300}
+          
+  //       />
+  //     );
+  //   } 
+  //    else if ( width <= 350 && width > 300) {
+  //     robotAnimation = (
+  //       <HeroHeaderLottie
+  //         options={AnimationCreateRobot}
+  //         resizeMode="cover"
+  //         height={270}
+          
+  //       />
+  //     );
+  //   } else if ( width <= 300) {
+  //     robotAnimation = (
+  //       <HeroHeaderLottie
+  //         options={AnimationCreateRobot}
+  //         resizeMode="cover"
+  //         height={220}
+          
+  //       />
+  //     );
+  //   } else if (width >= 1024) {
+  //     robotAnimation = <HeroHeaderLottie
+  //       options={AnimationCreateRobot}
+  //       resizeMode="cover"
+  //       height={`32.5vw`}
         
         
-      />;
-    }
+  //     />;
+  //   }
 
-  return <HeroHeaderRight>{robotAnimation}</HeroHeaderRight>;
+  return (
+    <HeroHeaderRight>
+      <LottieContainer>{robotAnimation}</LottieContainer>
+    </HeroHeaderRight>
+  );
 };
 

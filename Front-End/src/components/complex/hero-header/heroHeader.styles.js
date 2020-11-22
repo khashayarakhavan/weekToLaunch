@@ -65,12 +65,14 @@ export const HeroHeaderRight = styled.div`
   grid-column: center-start / center-end;
   grid-row: 3 / span 1;
   height: 50vh;
+  height: min-content;
+  height: minmax(50vh, min-content);
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   overflow: hidden !important;
-  ${'' /* background: red; */}
+  ${"" /* background: red; */}
 
   & > * {
     justify-self: flex-start;
@@ -90,7 +92,7 @@ export const HeroHeaderRight = styled.div`
     height: 50vh;
     height: 70vh;
     padding-bottom: 5vh;   
-    ${'' /* margin-top: -5vh; */}
+    ${"" /* margin-top: -5vh; */}
   `}
 `;
 
@@ -161,6 +163,18 @@ export const TEXT = styled.span`
 
 export const HeroHeaderLottie = styled(Lottie)`
   background-color: lightgreen;
+`;
+export const LottieContainer = styled.div`
+  height: 40vw;
+  height: min-content;
+  height: 70vw;
+  width: 100%;
+  ${respond.tablet.max`
+    height: 70vw !important;
+  `}
+  ${respond.pc.min`
+    height: 32.5vw; 
+  `}
 `;
 
 
