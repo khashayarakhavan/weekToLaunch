@@ -169,7 +169,7 @@ export const LottieContainer = styled.div`
   height: min-content;
   height: 70vw;
   width: 100%;
-  ${respond.tablet.max`
+  ${respond.tablet.large`
     height: 70vw !important;
   `}
   ${respond.pc.min`
