@@ -11,7 +11,7 @@ class Template extends Component {
                         <MiniCard>
                             <i className="feature-box__icon icon-basic-world"></i>
                             <h3 className="heading-tertiary u-margin-bottom-small">
-                                Explore the world
+                                React
                   </h3>
                             <p className="feature-box__text">
                                 shaja baja much loven disch very guten disch shaja baja much

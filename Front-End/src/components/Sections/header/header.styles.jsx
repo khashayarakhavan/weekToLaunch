@@ -173,12 +173,24 @@ export const MenuButton = styled(Link)`
   cursor: pointer;
 
   transition: background-color 0.3s ease;
+  transition: all 0.4s;
   border-radius: 15px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   position: relative;
   vertical-align: middle;
   overflow: hidden;
+
+  &:hover {
+    background-color: white;
+    box-shadow: 4px 4px 10px 0px ${colors.shadows.dark},
+      -4px -4px 10px 0px ${colors.highlights.lightest};
+  }
+
+  &:active {
+    transform: translateY(2px);
+    transition: transform 0.25s ease;
+  }
 
   :not(:last-of-type) {
     margin-right: clamp(5px, 1.66666vw, 1.66666vw);
@@ -208,43 +220,6 @@ export const MenuButton = styled(Link)`
     border-bottom-right-radius: 0px;
     width: 0;
     height: 0;
-  }
-  ${"" /* 
-  &:hover::before,
-  &:hover::after {
-    width: 100%;
-    height: 100%;
-  }
-
-  &:hover::before {
-    border-top-color: ${colors.accent.lightest};
-    border-right-color: ${colors.accent.lightest};
-    transition: 
-      // Height expands first
-      height 0.5s ease,
-      // 0.5s Delay, then width and borderColor
-      width 0.5s ease 0.5s,
-      border-top-color 0s 0.5s;
-  }
-
-  &:hover::after {
-    border-bottom-color: ${colors.accent.lightest}; // Make borders visible
-    border-left-color: ${colors.accent.lightest};
-    transition: 
-      // 1s Wait for ::before
-      height 0.5s ease 1s, border-left-color 0s 1s,
-      // 0.5s Wait for height
-      border-bottom-color 0s 1.5s,
-      width 0.5s ease 1.5s; // And then exanding width
-  } */}
-  ${"" /* border-radius: 5px; */}
-  &:hover {
-    background-color: white;
-  }
-
-  &:active {
-    transform: translateY(2px);
-    transition: transform 0.25s ease;
   }
 `;
 
