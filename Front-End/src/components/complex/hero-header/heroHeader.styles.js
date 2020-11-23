@@ -46,8 +46,8 @@ ${'' /* background: lightblue; */}
 
   ${respond.pc.min`
     grid-column: center-start / col-end 4;
-    height: 50vh;
     height: 70vh;
+    height: 50vh;
   `}
 
   ${respond.tablet.large`
@@ -89,8 +89,8 @@ export const HeroHeaderRight = styled.div`
   ${respond.pc.min`
     grid-row: 2 / span 1;
     grid-column: col-start 5 / center-end;
-    height: 50vh;
     height: 70vh;
+    height: 50vh;
     padding-bottom: 5vh;   
     ${"" /* margin-top: -5vh; */}
   `}
@@ -175,6 +175,54 @@ export const LottieContainer = styled.div`
   ${respond.pc.min`
     height: 32.5vw; 
   `}
+`;
+
+export const ScrollDownCTA = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+export const ArrowContainer = styled.div`
+  margin-top: -2rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  ${'' /* height: 150px; */}
+`;
+
+export const Arrow = styled.svg`
+   height: 80px;
+  width: 40px;
+
+  path {
+    stroke: #ffffff;
+    stroke: ${colors.accent.lightest};
+    fill: transparent;
+    
+    stroke-width: 4px;
+    animation: arrowDown 2s infinite; 
+  }
+  path.a1 {
+    animation-delay: -0.5s;
+  }
+
+  @keyframes arrowDown /*Safari and Chrome*/ {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  }
 `;
 
 

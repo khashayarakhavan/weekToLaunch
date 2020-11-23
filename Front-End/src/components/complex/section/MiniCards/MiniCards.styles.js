@@ -79,7 +79,7 @@ export const MiniCard = styled.div`
   } */
   }
   &:hover {
-    background: ${colors.neutrals.lighter};
+    background: ${colors.neutrals.light};
     transform: translateY(-1rem) scale(1.05);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.52);
     box-shadow: 4px 4px 10px 0px  ${colors.shadows.dark},

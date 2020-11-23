@@ -30,6 +30,9 @@ import {SvgIcon} from './heroHeader.styles';
 //Design
 import { Accent_fireOrange , Accent_mateBlue } from '../../../design/effects.styles';
 import {
+  Arrow,
+  ArrowContainer,
+  ScrollDownCTA,
   Button,
   SkillTotal,
   LottieContainer,
@@ -90,6 +93,13 @@ export const HeroHeaderLeftContainer = (props) => {
         <span>tea or coffee ? </span>
         <BackgroundFigure></BackgroundFigure>
       </Button>
+      <ScrollDownCTA>
+        <ArrowContainer>
+        <Arrow>
+          <path stroke-linecap="round" class="a1" d="M0 0 L20 22 L40 0"></path>
+        </Arrow>
+        </ArrowContainer>
+      </ScrollDownCTA>
     </HeroHeaderLeft>
   );
 };

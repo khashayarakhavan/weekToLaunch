@@ -21,6 +21,7 @@ export const VegeloperContainer = styled.div`
     rgb(242, 223, 237),
     rgb(234, 241, 249)
   );
+  background: ${colors.neutrals.light};
 
   grid-template-rows:
     [first-line] repeat(10, [row-start] min-content [row-end])
