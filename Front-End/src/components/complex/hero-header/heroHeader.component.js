@@ -93,13 +93,13 @@ export const HeroHeaderLeftContainer = (props) => {
         <span>tea or coffee ? </span>
         <BackgroundFigure></BackgroundFigure>
       </Button>
-      <ScrollDownCTA>
+      {/* <ScrollDownCTA>
         <ArrowContainer>
         <Arrow>
           <path stroke-linecap="round" class="a1" d="M0 0 L20 22 L40 0"></path>
         </Arrow>
         </ArrowContainer>
-      </ScrollDownCTA>
+      </ScrollDownCTA> */}
     </HeroHeaderLeft>
   );
 };

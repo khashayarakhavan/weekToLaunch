@@ -26,7 +26,7 @@ import {
   ScrollItemFlex,
 } from "./vegeloper.styles";
 
-
+import ScrollDownCTA from '../../components/Sections/ScrollDown/ScrollDown.component';
 
 const LandingPage = () => (
   <VegeloperContainer>
@@ -35,6 +35,7 @@ const LandingPage = () => (
     {/* <SideBar /> */}
     <HeroHeaderLeftContainer />
     <HeroHeaderRightContainer />
+    <ScrollDownCTA />
     {/* <ScrollContainerFlex>
       <ScrollItemFlex></ScrollItemFlex>
       <ScrollItemFlex></ScrollItemFlex>

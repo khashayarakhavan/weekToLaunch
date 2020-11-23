@@ -63,7 +63,7 @@ ${'' /* background: lightblue; */}
 
 export const HeroHeaderRight = styled.div`
   grid-column: center-start / center-end;
-  grid-row: 3 / span 1;
+  grid-row: 4 / span 1;
   height: 50vh;
   height: min-content;
   height: minmax(50vh, min-content);
@@ -177,53 +177,54 @@ export const LottieContainer = styled.div`
   `}
 `;
 
-export const ScrollDownCTA = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-`;
-export const ArrowContainer = styled.div`
-  margin-top: -2rem;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  ${'' /* height: 150px; */}
-`;
+// export const ScrollDownCTA = styled.section`
+//   ${'' /* grid-column: center-start/ center-end; */}
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: center;
+// `;
+// export const ArrowContainer = styled.div`
+//   margin-top: -2rem;
+//   display: flex;
+//   position: relative;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   ${'' /* height: 150px; */}
+// `;
 
-export const Arrow = styled.svg`
-   height: 80px;
-  width: 40px;
+// export const Arrow = styled.svg`
+//    height: 80px;
+//   width: 40px;
 
-  path {
-    stroke: #ffffff;
-    stroke: ${colors.accent.lightest};
-    fill: transparent;
+//   path {
+//     stroke: #ffffff;
+//     stroke: ${colors.accent.lightest};
+//     fill: transparent;
     
-    stroke-width: 4px;
-    animation: arrowDown 2s infinite; 
-  }
-  path.a1 {
-    animation-delay: -0.5s;
-  }
+//     stroke-width: 4px;
+//     animation: arrowDown 2s infinite; 
+//   }
+//   path.a1 {
+//     animation-delay: -0.5s;
+//   }
 
-  @keyframes arrowDown /*Safari and Chrome*/ {
-    0% {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    80% {
-      opacity: 1;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-  }
-`;
+//   @keyframes arrowDown /*Safari and Chrome*/ {
+//     0% {
+//       opacity: 0;
+//       transform: translateY(10px);
+//     }
+//     80% {
+//       opacity: 1;
+//       transform: translateY(50px);
+//     }
+//     100% {
+//       opacity: 0;
+//       transform: translateY(50px);
+//     }
+//   }
+// `;
 
 
 export const Behind = styled.span`
