@@ -27,49 +27,60 @@ export const MiniCardContainer = styled.div`
   margin: 4rem 2rem;
 `;
 export const MiniCard = styled.div`
-    display: flex;
-   ${"" /* font-family: 'Poppins', sans-serif; 
+  display: flex;
+  ${"" /* font-family: 'Poppins', sans-serif; 
    font-weight: 400; */}
-    font-family: 'Poppins', sans-serif; 
-    font-weight: 200;
-    flex-direction: column;
-    justify-items: flex-start;
-    overflow-wrap: normal;
-    word-wrap: normal;
-    word-break: keep-all;   
-    width: clamp(50vw, 50vw, 150px);
-    width: 15rem;
-    padding: 3rem 1rem;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.22);
-    ${shadows.mixins.neumorphic.original}
-    ${"" /* background-color: rgba(255, 255, 255, 0.8); */}
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  flex-direction: column;
+  justify-items: flex-start;
+  overflow-wrap: normal;
+  word-wrap: normal;
+  word-break: keep-all;
+  ${"" /* width: clamp(50vw, 50vw, 150px); */}
+  width: 12rem;
+  padding: 1.5rem 1rem 2.5rem;
+  ${'' /* text-align: center; */}
+  border-radius: 15px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.22);
+  ${shadows.mixins.neumorphic.original}
+  ${"" /* background-color: rgba(255, 255, 255, 0.8); */}
     transition: transform 0.4s;
-    transition: all 0.4s;
-  }
+  transition: all 0.4s;
+
+  box-sizing: content-box;
   i {
-    margin-bottom: .5rem;
+    ${'' /* margin-bottom: 0.5rem;
+    margin-right: 0.5rem; */}
+    font-size: 3rem;
+    line-height: 100%;
+    margin-right: 0.5rem;
     display: inline-block;
-    background-image: linear-gradient(to right, #f7bf7b, #B28451);
-    background-image: linear-gradient(to right, ${colors.accent.darkest}, ${
-  colors.accent.darkest
-});
+    background-image: linear-gradient(to right, #f7bf7b, #b28451);
+    background-image: linear-gradient(
+      to right,
+      ${colors.accent.darkest},
+      ${colors.accent.darkest}
+    );
     -webkit-background-clip: text;
     color: transparent;
-  
+  }
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   h3 {
     font-size: clamp(10px, 3vw, 3vw);
-    font-family: "Rubik Mono One",  Cambria, "Times New Roman", Times, sans-serif;
+    font-family: "Rubik Mono One", Cambria, "Times New Roman", Times, sans-serif;
     font-size: 15px;
+    margin: 0 ;
   }
   p {
-     ${"" /* text-align: justify;
+    ${"" /* text-align: justify;
     text-justify: inter-word;  */}
     font-size: clamp(10px, 3vw, 30px);
     font-size: 10px;
-      
   }
   ${
     "" /* @media only screen and (max-width: 56.25em) {
@@ -82,8 +93,8 @@ export const MiniCard = styled.div`
     background: ${colors.neutrals.light};
     transform: translateY(-1rem) scale(1.05);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.52);
-    box-shadow: 4px 4px 10px 0px  ${colors.shadows.dark},
-           -4px -4px 10px 0px ${colors.highlights.lightest};
+    box-shadow: 4px 4px 10px 0px ${colors.shadows.dark},
+      -4px -4px 10px 0px ${colors.highlights.lightest};
   }
   &__icon {
     font-size: 4rem;
