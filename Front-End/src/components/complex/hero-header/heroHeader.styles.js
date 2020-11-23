@@ -26,14 +26,12 @@ export const HeroHeaderLeft = styled.div`
   grid-row: 2 / span 1;
   grid-column: center-start / center-end;
   position: relative;
-${'' /* background: lightblue; */}
-  ${"" /* margin-top: clamp(50px, 16.6666vw, 16.6666vw); //before */}
+
   margin-top: clamp(30px, 10vw, 10vw);
-  height: clamp(88.83333vw, 50vh, 50vh);
+  ${'' /* height: clamp(88.83333vw, 50vh, 50vh); */}
   max-width: 100%;
   z-index: 100;
 
-  ${"" /* background: lightblue; */}
   text-rendering: optimizeLegibility;
   overflow-wrap: break-word;
 
@@ -46,7 +44,7 @@ ${'' /* background: lightblue; */}
 
   ${respond.pc.min`
     grid-column: center-start / col-end 4;
-    height: 70vh;
+    
     height: 50vh;
   `}
 
@@ -89,7 +87,7 @@ export const HeroHeaderRight = styled.div`
   ${respond.pc.min`
     grid-row: 2 / span 1;
     grid-column: col-start 5 / center-end;
-    height: 70vh;
+    
     height: 50vh;
     padding-bottom: 5vh;   
     ${"" /* margin-top: -5vh; */}
