@@ -152,3 +152,8 @@ export const SearchBox = ({ toggleCartHidden, itemCount }) => (
            </SVG>
          </SearchContainer>
        );
+
+
+
+       //TODO: Golden effect
+       background-image: linear-gradient(to right, #f7bf7b, #b28451);

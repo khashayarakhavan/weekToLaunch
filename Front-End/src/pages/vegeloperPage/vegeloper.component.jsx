@@ -49,7 +49,7 @@ const LandingPage = () => (
 
     <MiniCards />
     {/* <Features /> */}
-    <RightSide />
+    {/* <RightSide /> */}
   </VegeloperContainer>
 );
 
