@@ -58,10 +58,12 @@ export const hoverOff = keyframes`
 export const ScaleY = keyframes`
 0 {
   transform: ScaleY(1.125);
+
 }
 
 50%{
   transform: ScaleY(1.05357);
+
 }
 
  100%{
@@ -72,6 +74,21 @@ export const ScaleY = keyframes`
   border-bottom-left-radius: 140%;
  }
 `;
+export const MiniCardHover = keyframes`
+0 {
+  transform: ScaleY(1.125);
+
+}
+
+50%{
+  transform: ScaleY(1.05357);
+
+}
+
+ 100%{
+  transform: ScaleY(1);
+ }
+`;
 
 
 export const bubbleGumScale = keyframes`
@@ -79,7 +96,6 @@ export const bubbleGumScale = keyframes`
   0%{
     ${"" /* height: clamp(5.6rem, 18.333vw, 18.333vw); */}
     transform: ScaleY(1);
-    
     border-top-right-radius: 130%;
     border-bottom-right-radius: 150%;
     border-top-left-radius: 180%;
