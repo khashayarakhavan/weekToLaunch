@@ -1,6 +1,7 @@
 //Libraries
 import styled from 'styled-components';
 import colors from '../../design/colors';
+import shadows from '../../design/shadows.styles';
 
 //Design
 import {respond} from '../../design/responsive';
@@ -9,6 +10,7 @@ import {respond} from '../../design/responsive';
 
 //Code
 export const VegeloperContainer = styled.div`
+ 
   position: relative;
   display: grid;
   background-size: cover;
@@ -26,8 +28,8 @@ export const VegeloperContainer = styled.div`
   grid-template-rows:
     [first-line] repeat(10, [row-start] min-content [row-end])
     [last-line];
-  
-  ${'' /* grid-auto-rows: min-content; */}
+
+  ${"" /* grid-auto-rows: min-content; */}
 
   grid-template-columns:
     [cover-start leftSide-start] 1vw [leftSide-end full-start] 1vw [center-start] repeat(
@@ -86,29 +88,45 @@ export const RightSide = styled.div`
 
 
 export const ScrollContainerFlex = styled.div`
-  margin: 5px;
-  width: 300px;
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+  }
+
+  &::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+    background-color: #f5f5f5;
+  }
+
+  &::-webkit-scrollbar-thumb:horizontal {
+    background-color: ${colors.secondary.lightest};
+    background-color: #0ae;
+    background-image: -webkit-gradient(
+      linear,
+      0 0,
+      0 100%,
+      color-stop(0.5, rgba(255, 255, 255, 0.2)),
+      color-stop(0.5, transparent),
+      to(transparent)
+    );
+  }
+  padding: 2rem 1rem;
   width: 100vw;
   height: 100px;
-  border: 2px solid #341c09;
-  white-space: nowrap;
+  height: min-content;
   grid-column: full-start/ full-end;
+  grid-column: cover-start/ cover-end;
   font-size: 20px;
-  background-color: lime;
 
   display: flex;
   flex-wrap: nowrap;
+  white-space: nowrap; // Allow continuing into the white space.
   overflow: auto;
-
-  &::-webkit-scrollbar {
-    width: 20px;
-    height: 20px;
-  }
-
-  &::-webkit-scrollbar-button {
-    width: 20px;
-    height: 20px;
-  }
+  ${"" /* justify-content: center; */}
+  ${respond.pc.min`
+  justify-content: center; 
+  `}
 `;
 
 export const ScrollItemFlex = styled.div`
@@ -117,8 +135,156 @@ export const ScrollItemFlex = styled.div`
   width: 120px;
 
   flex: 0 0 auto;
+
 `;
 
+
+export const ScrollCardContainer = styled.div`
+  margin: 11.1111vw 5.555555vw;
+  margin: 4rem 6rem 4rem 2rem;
+  margin: 4rem 2rem 4rem 2rem;
+  margin: 13.333333vw 6.6666666vw;
+
+  ${respond.pc.min`
+   margin: 4rem 2rem;
+   margin: 3.90625vw 1.953125vw;
+  `}
+
+  transition: all 0.4s;
+
+  &:first-child {
+    ${'' /* background-color: yellow !important; */}
+    ${"" /* background-color: ${colors.neutrals.lighter} !important; */}
+    & > * {
+      background-color: ${colors.neutrals.lighter} !important;
+    }
+    margin-left: 5rem;
+    margin-left: 16.66666vw;
+    ${respond.pc.min`
+    margin-left: 2rem;
+    margin-left: 1.953125vw;
+    `}
+  }
+
+  ${
+    "" /* ${respond.pc.min`
+  margin: 2rem; 
+  margin: clamp(2rem, 1.953125vw, 1.953125vw); 
+  `} */
+  }
+`;
+
+
+
+
+export const ScrollCardItem = styled.div`
+  white-space: normal;
+  flex: 0 0 auto;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  flex-direction: column;
+  justify-items: flex-start;
+  overflow-wrap: normal;
+  word-wrap: normal;
+  word-break: keep-all;
+  width: 12rem;
+  width: 33.33333vw;
+  padding: 2rem 1rem 3rem;
+  padding: 5.5555555vw 2.7777777vw 8.3333333vw;
+  border-radius: 15px;
+  border-radius: 5vw;
+  border-radius: clamp(15px, 5vw, 40px);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.22);
+  ${shadows.mixins.neumorphic.original}
+  transition: all 0.4s;
+  box-sizing: content-box;
+
+  ${respond.pc.min`
+  padding: 2rem 1rem 3rem;
+  padding: 1.953125vw 0.9765625vw 2.9296875vw;
+  width: 15rem;
+  width: clamp(15rem, 14.6484375vw, 14.6484375vw);
+  `}
+
+  i {
+    font-size: 4rem;
+    font-size: 11.1111111vw;
+    line-height: 100%;
+    margin-right: 0.5rem;
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+      to right,
+      ${colors.accent.lightest},
+      ${colors.accent.darkest}
+    );
+
+    ${respond.pc.min`
+    font-size: 4rem;
+    font-size: 3.90625vw;
+    `}
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    background: ${colors.accent.darkest};
+    height: 4px;
+    height: 1.1111111vw;
+    border: none;
+    width: 50%;
+    left: 0;
+
+    ${respond.pc.min`
+     height: 4px;
+     height: 0.390625vw;
+    `}
+  }
+
+  h3 {
+    font-size: clamp(10px, 3vw, 3vw);
+    font-size: 15px;
+    font-size: 3vw;
+    font-family: "Rubik Mono One", Cambria, "Times New Roman", Times, sans-serif;
+    line-height: 1.5;
+    margin-bottom: 0.4rem;
+    margin-bottom: 0.390625vw;
+
+    ${respond.pc.min`
+    font-size: 15px;
+    font-size: 1.46484375vw;
+    `}
+  }
+
+  p {
+    font-size: clamp(10px, 3vw, 30px);
+    font-size: 10px;
+    font-size: 2.77777777vw;
+    text-align: justify;
+
+    ${respond.pc.min`
+    font-size: 10px;
+    font-size: 0.9765625vw;
+    `}
+  }
+
+  &:hover {
+    background: ${colors.neutrals.lighter};
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.52);
+    box-shadow: 4px 4px 10px 0px ${colors.shadows.dark},
+      -4px -4px 10px 0px ${colors.highlights.lightest};
+  }
+  &:active {
+    transition: all 0.4s;
+    box-shadow: 4px 4px 10px 0px ${colors.shadows.dark},
+      -4px -4px 10px 0px ${colors.accent.lightest};
+    box-shadow: ${shadows.neumorphic.original};
+  }
+`;
 
 
 

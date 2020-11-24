@@ -62,10 +62,7 @@ html {
     box-sizing: border-box;
     // This defines what 1rem is
     // 1rem = 10px; 10px/16px = 62.5%
-    font-size: 62.5%; /* 10px */
-    
-    
-    
+    font-size: 62.5%; /* 10px */    
 }
 
 body {
@@ -74,14 +71,12 @@ body {
     line-height: 1.6;
     background: linear-gradient(45deg,
       rgb(242, 243, 247) ,
-      rgba(229, 229, 229, 0.1) );
+      rgba(229, 229, 229, 0.1) );    
 }
-
 ::selection {
     background-color: ${colors.primary};
     color: ${colors.white};
-}
-
+  }
 `;
 
 

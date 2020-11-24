@@ -24,6 +24,8 @@ import {
   RightSide,
   ScrollContainerFlex,
   ScrollItemFlex,
+  ScrollCardContainer,
+  ScrollCardItem
 } from "./vegeloper.styles";
 
 import ScrollDownCTA from '../../components/Sections/ScrollDown/ScrollDown.component';
@@ -36,13 +38,59 @@ const LandingPage = () => (
     <HeroHeaderLeftContainer />
     <HeroHeaderRightContainer />
     <ScrollDownCTA />
-    {/* <ScrollContainerFlex>
+    <ScrollContainerFlex>
+      <ScrollCardContainer>
+        <ScrollCardItem>
+        <i className="feature-box__icon icon-basic-heart"></i>
+        <h3 className="heading-tertiary ">Explore the world</h3>
+        <span />
+        <p className="feature-box__text">
+          shaja baja much loven disch very guten disch shaja baja much loven
+          disch very guten disch
+        </p>
+        </ScrollCardItem>
+      </ScrollCardContainer>
+      <ScrollCardContainer>
+        <ScrollCardItem>
+        <i className="feature-box__icon icon-basic-heart"></i>
+        <h3 className="heading-tertiary ">Explore the world</h3>
+        <span />
+        <p className="feature-box__text">
+          shaja baja much loven disch very guten disch shaja baja much loven
+          disch very guten disch
+        </p>
+        </ScrollCardItem>
+      </ScrollCardContainer>
+      <ScrollCardContainer>
+        <ScrollCardItem>
+        <i className="feature-box__icon icon-basic-heart"></i>
+        <h3 className="heading-tertiary ">Explore the world</h3>
+        <span />
+        <p className="feature-box__text">
+          shaja baja much loven disch very guten disch shaja baja much loven
+          disch very guten disch
+        </p>
+        </ScrollCardItem>
+      </ScrollCardContainer>
+      <ScrollCardContainer>
+        <ScrollCardItem>
+        <i className="feature-box__icon icon-basic-heart"></i>
+        <h3 className="heading-tertiary ">Explore the world</h3>
+        <span />
+        <p className="feature-box__text">
+          shaja baja much loven disch very guten disch shaja baja much loven
+          disch very guten disch
+        </p>
+        </ScrollCardItem>
+      </ScrollCardContainer>
+      
+      
+      {/* <ScrollItemFlex></ScrollItemFlex>
       <ScrollItemFlex></ScrollItemFlex>
       <ScrollItemFlex></ScrollItemFlex>
       <ScrollItemFlex></ScrollItemFlex>
-      <ScrollItemFlex></ScrollItemFlex>
-      <ScrollItemFlex></ScrollItemFlex>
-    </ScrollContainerFlex> */}
+      <ScrollItemFlex></ScrollItemFlex> */}
+    </ScrollContainerFlex>
     {/* <Skills /> */}
 
     {/* <Cards /> */}

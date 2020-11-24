@@ -8,8 +8,9 @@ import {bubbleGumScale, MiniCardHover, neon} from '../../../../design/motions.st
 
 //Code
 export const MiniCardsContainer = styled.header`
-  grid-column: full-start / full-end;
   grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
+  ${'' /* background: red; */}
   padding: 5rem 1rem; 
 `;
 
