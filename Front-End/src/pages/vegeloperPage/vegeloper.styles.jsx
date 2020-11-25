@@ -88,7 +88,6 @@ export const RightSide = styled.div`
 
 
 export const ScrollContainerFlex = styled.div`
-  
   &::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #f5f5f5;
@@ -127,12 +126,15 @@ export const ScrollContainerFlex = styled.div`
   ${"" /* justify-content: center; */}
 
   ${respond.pc.min`
+  grid-column: full-start/ full-end;
+  width: 100%;
   padding: 5rem 1rem; 
-  flex-wrap: nowrap;
+ 
   flex-direction: row;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
   `}
 `;
 
@@ -151,15 +153,18 @@ export const ScrollCardContainer = styled.div`
   margin: 4rem 6rem 4rem 2rem;
   margin: 4rem 2rem 4rem 2rem;
   margin: 13.333333vw 6.6666666vw;
+  
 
   ${respond.pc.min`
    margin: 4rem 2rem;
    margin: 3.90625vw 1.953125vw;
+   margin: clamp(2rem,1.953125vw,1.953125vw);
   `}
 
   transition: all 0.4s;
   &:last-child {
     padding-right: clamp(5rem, 16.5555vw, 16.66666vw);
+
     ${respond.pc.min`
     padding-right: 0;
     `}
@@ -172,7 +177,7 @@ export const ScrollCardContainer = styled.div`
     }
 
     ${respond.pc.min`
-    margin-left: 0;
+    margin: clamp(2rem,1.953125vw,1.953125vw);
     `}
   }
 `;
@@ -181,7 +186,7 @@ export const ScrollCardContainer = styled.div`
 
 
 export const ScrollCardItem = styled.div`
-  transform: scale(0.9);
+  ${"" /* transform: scale(0.9); */}
   white-space: normal;
   flex: 0 0 auto;
   display: flex;
@@ -196,6 +201,7 @@ export const ScrollCardItem = styled.div`
   width: 33.33333vw;
   padding: 2rem 1rem 3rem;
   padding: 5.5555555vw 2.7777777vw 8.3333333vw;
+  padding: 5.5555555vw 2.7777777vw 3.5555555vw;
   border-radius: 15px;
   border-radius: 5vw;
   border-radius: clamp(15px, 5vw, 20px);
@@ -204,13 +210,54 @@ export const ScrollCardItem = styled.div`
   transition: all 0.4s;
   box-sizing: content-box;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .technologies {
+    align-self: flex-end;
+    margin-top: 1rem;
+    margin-top: 3.3333333vw;
+    ${"" /* background: lightgray; */}
+    width: min-content;
+    ${"" /* width: 80%; */}
+    padding: 0.4rem 0;
+    padding: 1.3333333vw 0;
+
+    display: flex;
+    justify-content: flex-end;
+
+    ${respond.pc.min`
+      margin-top: 1rem;
+      margin-top: 0.9765625vw;
+    `}
+
+    height: 1rem;
+    & > * {
+      font-size: 12px;
+      font-size: 4vw;
+
+      ${respond.pc.min`
+      font-size: 20px;
+      font-size: 1.953125vw;
+      `}
+    }
+    & > * {
+      margin: 0 1px;
+      margin: 0 0.3333333333vw;
+      ${respond.pc.min`
+      margin: 0 0.1333333333vw;
+      `}
+    }
+  }
   ${respond.pc.min`
   padding: 2rem 1rem 3rem;
-  padding: 1.953125vw 0.9765625vw 2.9296875vw;
+  padding: 1.953125vw 0.9765625vw 0.9296875vw;
   width: 15rem;
   width: clamp(15rem, 14.6484375vw, 14.6484375vw);
   `}
-  ${'' /* figure {
+  ${
+    "" /* figure {
     &::before {
       content: "";
       display: block;
@@ -228,7 +275,8 @@ export const ScrollCardItem = styled.div`
       left: 6px;
       left: 2vw;
     }
-  } */}
+  } */
+  }
   .iconTest {
     position: relative;
     display: flex;
@@ -240,7 +288,7 @@ export const ScrollCardItem = styled.div`
     &::before {
       content: "";
       display: block;
-      
+
       height: 40px;
       height: 13.3333333vw;
       height: 120%;
@@ -249,7 +297,7 @@ export const ScrollCardItem = styled.div`
       width: 120%;
       border-radius: 50%;
       position: absolute;
-      background: white;
+      ${"" /* background: white; */}
       z-index: -1;
       ${"" /* top: 12px; */}
       ${"" /* top: 4vw; */}
@@ -262,8 +310,8 @@ export const ScrollCardItem = styled.div`
     font-size: 4rem;
     font-size: 11.1111111vw;
     line-height: 0;
-    ${'' /* margin-right: 0.5rem; */}
-    ${'' /* width: min-content; */}
+    ${"" /* margin-right: 0.5rem; */}
+    ${"" /* width: min-content; */}
     display: inline-block;
     display: block;
     -webkit-background-clip: text;
