@@ -23,7 +23,6 @@ import {
   LeftSide,
   RightSide,
   ScrollContainerFlex,
-  ScrollItemFlex,
   ScrollCardContainer,
   ScrollCardItem
 } from "./vegeloper.styles";
@@ -41,50 +40,54 @@ const LandingPage = () => (
     <ScrollContainerFlex>
       <ScrollCardContainer>
         <ScrollCardItem>
-        <i className="feature-box__icon icon-basic-heart"></i>
-        <h3 className="heading-tertiary ">Explore the world</h3>
-        <span />
-        <p className="feature-box__text">
-          shaja baja much loven disch very guten disch shaja baja much loven
-          disch very guten disch
-        </p>
+          {/* <figure /> */}
+          <div className="iconTest">
+            <i className=" icon-basic-heart"></i>
+          </div>
+          <h3 className="heading-tertiary ">Explore the world</h3>
+          <span />
+          <p className="feature-box__text">
+            shaja baja much loven disch very guten disch shaja baja much loven
+            disch very guten disch
+          </p>
         </ScrollCardItem>
       </ScrollCardContainer>
       <ScrollCardContainer>
         <ScrollCardItem>
-        <i className="feature-box__icon icon-basic-heart"></i>
-        <h3 className="heading-tertiary ">Explore the world</h3>
-        <span />
-        <p className="feature-box__text">
-          shaja baja much loven disch very guten disch shaja baja much loven
-          disch very guten disch
-        </p>
+          
+            <i className=" icon-basic-heart"></i>
+          
+          <h3 className="heading-tertiary ">Explore the world</h3>
+          <span />
+          <p className="feature-box__text">
+            shaja baja much loven disch very guten disch shaja baja much loven
+            disch very guten disch
+          </p>
         </ScrollCardItem>
       </ScrollCardContainer>
       <ScrollCardContainer>
         <ScrollCardItem>
-        <i className="feature-box__icon icon-basic-heart"></i>
-        <h3 className="heading-tertiary ">Explore the world</h3>
-        <span />
-        <p className="feature-box__text">
-          shaja baja much loven disch very guten disch shaja baja much loven
-          disch very guten disch
-        </p>
+          <i className=" icon-basic-heart"></i>
+          <h3 className="heading-tertiary ">Explore the world</h3>
+          <span />
+          <p className="feature-box__text">
+            shaja baja much loven disch very guten disch shaja baja much loven
+            disch very guten disch
+          </p>
         </ScrollCardItem>
       </ScrollCardContainer>
       <ScrollCardContainer>
         <ScrollCardItem>
-        <i className="feature-box__icon icon-basic-heart"></i>
-        <h3 className="heading-tertiary ">Explore the world</h3>
-        <span />
-        <p className="feature-box__text">
-          shaja baja much loven disch very guten disch shaja baja much loven
-          disch very guten disch
-        </p>
+          <i className=" icon-basic-heart"></i>
+          <h3 className="heading-tertiary ">Explore the world</h3>
+          <span />
+          <p className="feature-box__text">
+            shaja baja much loven disch very guten disch shaja baja much loven
+            disch very guten disch
+          </p>
         </ScrollCardItem>
       </ScrollCardContainer>
-      
-      
+
       {/* <ScrollItemFlex></ScrollItemFlex>
       <ScrollItemFlex></ScrollItemFlex>
       <ScrollItemFlex></ScrollItemFlex>

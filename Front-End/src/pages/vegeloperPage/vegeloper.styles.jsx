@@ -88,6 +88,7 @@ export const RightSide = styled.div`
 
 
 export const ScrollContainerFlex = styled.div`
+  
   &::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #f5f5f5;
@@ -111,7 +112,7 @@ export const ScrollContainerFlex = styled.div`
       to(transparent)
     );
   }
-  padding: 2rem 1rem;
+  ${"" /* padding: 2rem 1rem; */}
   width: 100vw;
   height: 100px;
   height: min-content;
@@ -124,19 +125,25 @@ export const ScrollContainerFlex = styled.div`
   white-space: nowrap; // Allow continuing into the white space.
   overflow: auto;
   ${"" /* justify-content: center; */}
+
   ${respond.pc.min`
-  justify-content: center; 
+  padding: 5rem 1rem; 
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   `}
 `;
 
-export const ScrollItemFlex = styled.div`
-  border: 2px solid #b85b14;
-  background-color: #fc7307;
-  width: 120px;
+// export const ScrollItemFlex = styled.div`
+//   border: 2px solid #b85b14;
+//   background-color: #fc7307;
+//   width: 120px;
 
-  flex: 0 0 auto;
+//   flex: 0 0 auto;
 
-`;
+// `;
 
 
 export const ScrollCardContainer = styled.div`
@@ -151,26 +158,22 @@ export const ScrollCardContainer = styled.div`
   `}
 
   transition: all 0.4s;
-
+  &:last-child {
+    padding-right: clamp(5rem, 16.5555vw, 16.66666vw);
+    ${respond.pc.min`
+    padding-right: 0;
+    `}
+  }
   &:first-child {
-    ${'' /* background-color: yellow !important; */}
-    ${"" /* background-color: ${colors.neutrals.lighter} !important; */}
+    margin-left: clamp(5rem, 16.5555vw, 16.66666vw);
+
     & > * {
       background-color: ${colors.neutrals.lighter} !important;
     }
-    margin-left: 5rem;
-    margin-left: 16.66666vw;
-    ${respond.pc.min`
-    margin-left: 2rem;
-    margin-left: 1.953125vw;
-    `}
-  }
 
-  ${
-    "" /* ${respond.pc.min`
-  margin: 2rem; 
-  margin: clamp(2rem, 1.953125vw, 1.953125vw); 
-  `} */
+    ${respond.pc.min`
+    margin-left: 0;
+    `}
   }
 `;
 
@@ -178,6 +181,7 @@ export const ScrollCardContainer = styled.div`
 
 
 export const ScrollCardItem = styled.div`
+  transform: scale(0.9);
   white-space: normal;
   flex: 0 0 auto;
   display: flex;
@@ -194,7 +198,7 @@ export const ScrollCardItem = styled.div`
   padding: 5.5555555vw 2.7777777vw 8.3333333vw;
   border-radius: 15px;
   border-radius: 5vw;
-  border-radius: clamp(15px, 5vw, 40px);
+  border-radius: clamp(15px, 5vw, 20px);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.22);
   ${shadows.mixins.neumorphic.original}
   transition: all 0.4s;
@@ -206,15 +210,65 @@ export const ScrollCardItem = styled.div`
   width: 15rem;
   width: clamp(15rem, 14.6484375vw, 14.6484375vw);
   `}
+  ${'' /* figure {
+    &::before {
+      content: "";
+      display: block;
+      height: 40px;
+      height: 13.3333333vw;
+      width: 40px;
+      width: 13.3333333vw;
+      border-radius: 50%;
+      position: absolute;
+      background: white;
+      z-index: -1;
+      top: 12px;
+      top: 4vw;
 
+      left: 6px;
+      left: 2vw;
+    }
+  } */}
+  .iconTest {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+    margin-bottom: 1rem;
+
+    &::before {
+      content: "";
+      display: block;
+      
+      height: 40px;
+      height: 13.3333333vw;
+      height: 120%;
+      width: 40px;
+      width: 13.3333333vw;
+      width: 120%;
+      border-radius: 50%;
+      position: absolute;
+      background: white;
+      z-index: -1;
+      ${"" /* top: 12px; */}
+      ${"" /* top: 4vw; */}
+
+      ${"" /* left: 6px;
+      left: 2vw; */}
+    }
+  }
   i {
     font-size: 4rem;
     font-size: 11.1111111vw;
-    line-height: 100%;
-    margin-right: 0.5rem;
+    line-height: 0;
+    ${'' /* margin-right: 0.5rem; */}
+    ${'' /* width: min-content; */}
     display: inline-block;
+    display: block;
     -webkit-background-clip: text;
     color: transparent;
+    color: ${colors.accent.darkest};
     background-image: linear-gradient(
       to right,
       ${colors.accent.lightest},
