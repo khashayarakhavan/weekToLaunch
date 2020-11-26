@@ -82,14 +82,16 @@ export const HeroHeaderLeftContainer = (props) => {
           <Accent_fireOrange>K</Accent_fireOrange>hashi
         </p>
       </Heading>
-      <TEXT>
-        <p style={{ display: "inline" }}>a full stack web developer</p>
-        {/* <p className="love" style={{ display: "inline-block" }}>and I love</p>
+      
+        <TEXT>
+          <p style={{ display: "inline" }}>a web developer</p>
+          {/* <p className="love" style={{ display: "inline-block" }}>and I love</p>
         <SkillTotal>
           <Skill_1>coding</Skill_1>,<Skill_2>science</Skill_2>&
           <Skill_3>nature</Skill_3>
         </SkillTotal> */}
-      </TEXT>
+        </TEXT>
+     
       <Button>
         <p>Pleased to meet you</p> <SvgIcon />
         {/* <br /> */}

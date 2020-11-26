@@ -162,15 +162,17 @@ export const TEXT = styled.span`
   line-height: clamp(30px, 10vw, 10vw);
   font-family: "Lato", sans-serif;
   font-family: "Open Sans", sans-serif;
-  font-family: "Roboto Condensed", sans-serif;
   font-family: "Open Sans Condensed", sans-serif;
   font-family: "EB Garamond", serif;
   font-family: "Cabin", sans-serif;
   font-family: "Roboto Slab", serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-size: clamp(10px, 3.333vw, 3.333vw);
   font-size: 5.9vw;
+  font-size: 9.1vw;
+  margin-top: 20px;
   padding-left: clamp(34px, 10.666vw, 10.666vw);
 
   ${respond.mobile.max`
@@ -181,6 +183,7 @@ export const TEXT = styled.span`
     padding-left: clamp(2px,0.1953125vw, 0.1953125vw);
     font-size: clamp(1rem, 0.9765625vw, 0.9765625vw);
     font-size: clamp(1.56rem, 1.5234375vw, 1.5234375vw);
+    font-size: 2vw;
     line-height: clamp(30px, 2.9296vw, 2.9296vw);  
   `}
 
@@ -389,8 +392,8 @@ export const Button = styled.div`
   transform: scale(1.2);
   justify-self: flex-start;
   align-self: flex-start;
-  margin-top: clamp(20px, 6.6666vw, 6.6666vw);
   margin-top: 60px;
+  margin-top: clamp(60px, 20vw, 20vw);
   margin-bottom: clamp(10px, 3.33333vw, 3.33333vw);
   margin-bottom: clamp(30px, 3.33333vw, 3.33333vw);
   ${"" /* margin-left: clamp(32px, 10.666vw, 10.666vw);
