@@ -28,6 +28,7 @@ export const HeroHeaderLeft = styled.div`
   position: relative;
 
   margin-top: clamp(30px, 10vw, 10vw);
+  margin-top: clamp(30px, 10vw, 10vw);
   ${"" /* height: clamp(88.83333vw, 50vh, 50vh); */}
   max-width: 100%;
   z-index: 100;
@@ -101,15 +102,30 @@ export const Heading = styled.div`
   display: block;
   width: 100%;
 
+  ${respond.pc.min`
+  .verb {
+    display: inline-block; 
+  }
+
+  .name {
+    display: inline-block;
+    margin-left: 3.315rem;
+    margin-left: 3.23730468vw;
+  }
+  `}
+
   ${fonts.mixins.heroHeader}
   font-size: clamp(2.5rem, 8.3vw, 8.3vw);
+  font-size: clamp(4.7rem, 15.666666vw, 15.666666vw);
   line-height: clamp(3rem, 10vw, 10vw);
+  line-height: 1;
   letter-spacing: 0px;
   font-style: normal;
   color: ${colors.secondary.darkest};
 
   text-rendering: optimizeLegibility;
   padding-top: clamp(6rem, 20vw, 20vw);
+  padding-top: clamp(30px, 10vw, 10vw);
   padding-left: clamp(30px, 10vw, 10vw);
 
   ${respond.mobile.max`
@@ -118,6 +134,7 @@ export const Heading = styled.div`
   ${respond.pc.min`
     font-size: clamp(3.9rem, 3.80859375vw, 3.80859375vw);
     line-height: clamp(60px, 5.8593vw, 5.8593vw);  
+    line-height: 1;  
     padding-top: clamp(1rem, 5.859375vw, 5.859375vw);
   `}
 `;
@@ -146,6 +163,7 @@ export const TEXT = styled.span`
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-size: clamp(10px, 3.333vw, 3.333vw);
+  font-size: 6.1vw;
   padding-left: clamp(32px, 10.666vw, 10.666vw);
 
   ${respond.mobile.max`
@@ -168,7 +186,12 @@ export const LottieContainer = styled.div`
   height: 40vw;
   height: min-content;
   height: 70vw;
+  height: 96vw;
   width: 100%;
+  
+  ${respond.mobile.max`
+    height: 80vw;
+  `}
   ${respond.tablet.large`
     height: 70vw !important;
   `}
@@ -245,8 +268,8 @@ export const Front = styled.span`
 export const Skill_1 = styled.span`
   ${events.mixins.onHover.palePink};
   ${mixins.flex.inlineCenter};
-  flex: 0 0 30%;
-  flex: 0 0 20%; //before
+  ${'' /* flex: 0 0 30%; */}
+  ${'' /* flex: 0 0 20%; //before */}
   animation: ${background_change(colors.palePink)} 3s 2s infinite;
   ${'' /* width: 60px;
   height: 50px; */}
@@ -259,8 +282,8 @@ export const Skill_1 = styled.span`
 export const Skill_2 = styled.span`
   ${events.mixins.onHover.palePink};
   ${mixins.flex.inlineCenter};
-  flex: 0 0 30%; 
-  flex: 0 0 25%; // before
+  ${'' /* flex: 0 0 30%; 
+  flex: 0 0 25%; // before */}
   animation: ${background_change(colors.paleYellow)} 3s 3.5s infinite;
   &:hover {
     background-color: ${colors.paleYellow};
@@ -280,11 +303,12 @@ export const Skill_2 = styled.span`
     z-index: 1000;
   } */}
 `;
+
 export const Skill_3 = styled.span`
   ${events.mixins.onHover.palePink};
   ${mixins.flex.inlineCenter};
-  flex: 0 0 30%;
-  flex: 0 0 19.75%; //before
+  ${'' /* flex: 0 0 30%;
+  flex: 0 0 19.75%; //before */}
   ${'' /* line-height: 10rem; */}
   
  
@@ -299,15 +323,18 @@ export const Skill_3 = styled.span`
 `;
 export const SkillTotal = styled.div`
   display: flex;
-  flex-wrap: nowrap;
-  overflow-wrap: normal;
   word-break: normal;
   justify-content: space-between;
   align-items: center;
   width: clamp(180px, 60vw, 60vw);
+  width: 92%;
+  ${'' /* flex-wrap: nowrap; */}
+  ${'' /* overflow-wrap: normal; */}
 
   & > * {
     height: clamp(20px, 6.66666vw, 6.66666vw);
+    height: 30px;
+    
     ${respond.pc.min`
       height: clamp(20px, 1.95312vw, 1.95312vw);
       height: clamp(40px, 3.90625vw, 3.90625vw);

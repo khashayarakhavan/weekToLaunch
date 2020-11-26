@@ -72,16 +72,19 @@ export const HeroHeaderLeftContainer = (props) => {
       /> */}
 
       <Heading>
-        <p>
+        <p className="hi">
           Hi<Accent_fireOrange>.</Accent_fireOrange>
         </p>
-        <p>
+        <p className="verb">
           I<Accent_mateBlue>’</Accent_mateBlue>m
-          <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hashi
+        </p>
+        <p className="name">
+          <Accent_fireOrange>K</Accent_fireOrange>hashi
         </p>
       </Heading>
       <TEXT>
-        <p>a full stack web developer and I love &nbsp;</p>
+        <p style={{ display: "inline" }}>a full stack web developer,</p>
+        <p style={{ display: "inline-block" }}>and I love</p>
         <SkillTotal>
           <Skill_1>coding</Skill_1>,<Skill_2>science</Skill_2>&
           <Skill_3>nature</Skill_3>
