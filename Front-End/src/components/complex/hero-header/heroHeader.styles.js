@@ -101,22 +101,29 @@ export const Heading = styled.div`
   position: relative;
   display: block;
   width: 100%;
-
+  overflow-wrap: normal;
+  word-break: keep-all;
   ${respond.pc.min`
   .verb {
-    display: inline-block; 
+    display: inline; 
   }
 
   .name {
-    display: inline-block;
-    margin-left: 3.315rem;
-    margin-left: 3.23730468vw;
+    ${"" /* display: block; */}
+    display: inline;
+    margin-left: 3.315vw;
+    
+    ${"" /* margin-left: 3.315rem;
+    margin-left: 3.23730468vw; */}
   }
   `}
 
   ${fonts.mixins.heroHeader}
   font-size: clamp(2.5rem, 8.3vw, 8.3vw);
   font-size: clamp(4.7rem, 15.666666vw, 15.666666vw);
+  font-size: 12.3333333vw;
+  font-size: 12.2360833vw;
+  font-size: 15.2360833vw;
   line-height: clamp(3rem, 10vw, 10vw);
   line-height: 1;
   letter-spacing: 0px;
@@ -163,8 +170,8 @@ export const TEXT = styled.span`
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-size: clamp(10px, 3.333vw, 3.333vw);
-  font-size: 6.1vw;
-  padding-left: clamp(32px, 10.666vw, 10.666vw);
+  font-size: 5.9vw;
+  padding-left: clamp(34px, 10.666vw, 10.666vw);
 
   ${respond.mobile.max`
     padding-left: clamp(3px, 0.5vw, 0.5vw);
@@ -176,6 +183,10 @@ export const TEXT = styled.span`
     font-size: clamp(1.56rem, 1.5234375vw, 1.5234375vw);
     line-height: clamp(30px, 2.9296vw, 2.9296vw);  
   `}
+
+  .love {
+    margin-top: 3rem; 
+  }
 `;
 
 
@@ -327,13 +338,14 @@ export const SkillTotal = styled.div`
   justify-content: space-between;
   align-items: center;
   width: clamp(180px, 60vw, 60vw);
-  width: 92%;
+  width: 100%;
+  width: 93%;
   ${'' /* flex-wrap: nowrap; */}
   ${'' /* overflow-wrap: normal; */}
 
   & > * {
     height: clamp(20px, 6.66666vw, 6.66666vw);
-    height: 30px;
+    height: 10vw;
     
     ${respond.pc.min`
       height: clamp(20px, 1.95312vw, 1.95312vw);
@@ -353,9 +365,11 @@ export const SkillTotal = styled.div`
 
 export const BackgroundFigure = styled.div`
   transition: all 0.5s;
-  ${'' /* animation: ${hoverOff} 1s infinite linear; */}
+  ${"" /* animation: ${hoverOff} 1s infinite linear; */}
   animation: ${hoverOff} 1s infinite linear;
   animation: ${ScaleY} 1s infinite linear;
+  animation: ${bubbleGumScale} 2.5s infinite linear;
+  animation: ${bubbleGumScale} 4.5s infinite linear;
   position: absolute;
   width: 100%;
   height: clamp(5.6rem, 18.333vw, 18.333vw);
@@ -372,14 +386,18 @@ export const BackgroundFigure = styled.div`
 `;
 
 export const Button = styled.div`
+  transform: scale(1.2);
   justify-self: flex-start;
   align-self: flex-start;
   margin-top: clamp(20px, 6.6666vw, 6.6666vw);
+  margin-top: 60px;
   margin-bottom: clamp(10px, 3.33333vw, 3.33333vw);
+  margin-bottom: clamp(30px, 3.33333vw, 3.33333vw);
   ${"" /* margin-left: clamp(32px, 10.666vw, 10.666vw);
   margin-left: 20px; */}
   margin-left: clamp(25px, 4.1666666vw, 4.1666666vw);
   margin-left: clamp(32px, 10.666vw, 10.666vw);
+  margin-left: clamp(50px, 16.666666vw, 16.666666vw);
   position: relative;
   width: clamp(129.467px, 43.155666vw, 43.155666vw);
   height: clamp(5.6rem, 18.666vw, 18.666vw);
@@ -437,7 +455,7 @@ export const Button = styled.div`
 
   ${respond.mobile.max`
     margin-left: 3px;   
-    margin-left: clamp(3px, 0.5vw, 0.5vw);   
+    margin-left: clamp(35px, 5.833333vw, 5.833333vw);   
   `}
 
   ${respond.pc.min`

@@ -83,12 +83,12 @@ export const HeroHeaderLeftContainer = (props) => {
         </p>
       </Heading>
       <TEXT>
-        <p style={{ display: "inline" }}>a full stack web developer,</p>
-        <p style={{ display: "inline-block" }}>and I love</p>
+        <p style={{ display: "inline" }}>a full stack web developer</p>
+        {/* <p className="love" style={{ display: "inline-block" }}>and I love</p>
         <SkillTotal>
           <Skill_1>coding</Skill_1>,<Skill_2>science</Skill_2>&
           <Skill_3>nature</Skill_3>
-        </SkillTotal>
+        </SkillTotal> */}
       </TEXT>
       <Button>
         <p>Pleased to meet you</p> <SvgIcon />
